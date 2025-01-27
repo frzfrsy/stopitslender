@@ -3,7 +3,7 @@ if fsgui then
 	fsgui:Destroy()
 end
 
-local ver = "8.B"
+local ver = "8.5"
 local G2L = {};
 
 -- Workspace.SGUI
@@ -1414,7 +1414,7 @@ local script = G2L["27"];
 	
 		local function updateDistance()
 			while wait() do
-				distance.Text = mathfloor(parent) .. " m away"
+				distance.Text = mathfloor(parent) .. ""
 			end
 		end
 		
@@ -1453,55 +1453,38 @@ task.spawn(C_27);
 -- Workspace.SGUI.CheatButton.Frame.Slender.LocalScript
 local function C_2b()
 local script = G2L["2b"];
-	script.Parent.MouseButton1Click:Connect(function()
-		for x, y in pairs(workspace:GetDescendants()) do
-			if y:IsA("Model") and y.Name == "SlenderProp" then
-				if y.Parent:FindFirstChildWhichIsA("BillboardGui") then
-					y.Parent:FindFirstChildWhichIsA("BillboardGui"):Destroy()
-				end
-			end
-		end
-		
-		local function mathfloor(var)
-			return math.floor((workspace.CurrentCamera.CFrame.Position - var.CFrame.Position).magnitude)
-		end
-		
-		local function createGuiSlender(parent)
-			local BGui = Instance.new("BillboardGui")
-			BGui.Parent = parent
-			BGui.AlwaysOnTop = true
-			BGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-			BGui.StudsOffset = Vector3.new(0, 3, 0)
-			BGui.Size = UDim2.new(0, 50, 0, 50)
+    for x, y in pairs(workspace:GetChildren()) do
+        if y:IsA("TextLabel") and y.Text == "Slender" then
+            y.Parent:Destroy()
+        end
+    end
 
-			local text = Instance.new("TextLabel")
-			text.Parent = BGui
-			text.Text = "SLENDER"
-			text.Font = Enum.Font.RobotoCondensed
-			text.TextScaled = true
-			text.BackgroundTransparency = 1
-			text.Size = UDim2.new(1, 0, 0, 25)
-			text.TextYAlignment = Enum.TextYAlignment.Bottom
-			text.TextColor3 = Color3.fromRGB(255, 0, 0)
-			text.TextStrokeTransparency = 0
-			
-			local text2 = Instance.new("TextLabel")
-			text2.Parent = BGui
-			text2.Font = Enum.Font.RobotoCondensed
-			text2.TextScaled = true
-			text2.BackgroundTransparency = 1
-			text2.Size = UDim2.new(1, 0, 0, 25)
-			text2.Position = UDim2.new(0, 0, 0, 25)
-			text2.TextYAlignment = Enum.TextYAlignment.Top
-			text2.TextColor3 = Color3.fromRGB(255, 0, 0)
-			text2.TextStrokeTransparency = 0
-			
-			while task.wait() do
-				text2.Text = mathfloor(parent) .. ""
-			end
-		end
-		
-		for _, v in pairs(game.Workspace:GetChildren()) do
+    local function createGuiSlender(parent)
+        local browse = parent:FindFirstChild("STracker")
+        if browse then
+            browse:Destroy()
+        end
+
+		local BGui = Instance.new("BillboardGui")
+		BGui.Parent = parent
+        BGui.Name = "STracker"
+		BGui.AlwaysOnTop = true
+		BGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+		BGui.StudsOffset = Vector3.new(0, 3, 0)
+		BGui.Size = UDim2.new(0, 55, 0, 45)
+	
+		local text = Instance.new("TextLabel")
+		text.Parent = BGui
+		text.Text = "Slender"
+        text.TextStrokeTransparency = 0
+		text.TextScaled = true
+		text.BackgroundTransparency = 1
+		text.Size = UDim2.new(1, 0, 1, 0)
+		text.TextColor3 = Color3.fromRGB(255, 0, 0)
+	end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for _, v in pairs(workspace:GetChildren()) do
 			if v:FindFirstChild("SlenderProp") then
 				createGuiSlender(v)
 			end
