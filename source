@@ -3,7 +3,7 @@ if fsgui then
 	fsgui:Destroy()
 end
 
-local ver = "8.5"
+local ver = "8.09879"
 local G2L = {};
 
 -- Workspace.SGUI
@@ -1462,6 +1462,10 @@ local script = G2L["2b"];
 			end
 		end
 		
+		local function mathfloor(var)
+			return math.floor((workspace.CurrentCamera.CFrame.Position - var.CFrame.Position).magnitude)
+		end
+		
 		local function createGuiSlender(parent)
 			local BGui = Instance.new("BillboardGui")
 			BGui.Parent = parent
@@ -1491,7 +1495,14 @@ local script = G2L["2b"];
 			text2.Position = UDim2.new(0, 0, 0, 25)
 			text2.TextYAlignment = Enum.TextYAlignment.Top
 			text2.TextColor3 = Color3.fromRGB(255, 0, 0)
-			text2.TextStrokeTransparency = 0
+			
+			local function updateDistance()
+				while task.wait() do
+					text2.Text = mathfloor(parent) .. ""
+				end
+			end
+
+			spawn(updateDistance)
 		end
 		
 		for _, v in pairs(game.Workspace:GetChildren()) do
