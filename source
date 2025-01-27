@@ -3,7 +3,7 @@ if fsgui then
 	fsgui:Destroy()
 end
 
-local ver = "8.09879"
+local ver = "8.B"
 local G2L = {};
 
 -- Workspace.SGUI
@@ -1414,7 +1414,7 @@ local script = G2L["27"];
 	
 		local function updateDistance()
 			while wait() do
-				distance.Text = mathfloor(parent) .. ""
+				distance.Text = mathfloor(parent) .. " m away"
 			end
 		end
 		
