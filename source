@@ -3,7 +3,7 @@ if fsgui then
 	fsgui:Destroy()
 end
 
-local ver = "8.boom"
+local ver = "8.5"
 local G2L = {};
 
 -- Workspace.SGUI
@@ -1491,6 +1491,7 @@ local script = G2L["2b"];
 			text2.Position = UDim2.new(0, 0, 0, 25)
 			text2.TextYAlignment = Enum.TextYAlignment.Top
 			text2.TextColor3 = Color3.fromRGB(255, 0, 0)
+			text2.TextStrokeTransparency = 0
 		end
 		
 		for _, v in pairs(game.Workspace:GetChildren()) do
