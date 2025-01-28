@@ -3,1235 +3,1071 @@ if fsgui then
 	fsgui:Destroy()
 end
 
-local ver = "8.5"
-local G2L = {};
-
--- Workspace.SGUI
-G2L["1"] = Instance.new("ScreenGui");
-G2L["1"]["IgnoreGuiInset"] = true;
-G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
-G2L["1"]["Name"] = [[SGUI]];
-
-
--- Workspace.SGUI.HistoryLabel
-G2L["2"] = Instance.new("TextLabel", G2L["1"]);
-G2L["2"]["TextWrapped"] = true;
-G2L["2"]["TextStrokeTransparency"] = 0.7;
-G2L["2"]["BorderSizePixel"] = 0;
-G2L["2"]["TextSize"] = 15;
-G2L["2"]["TextScaled"] = true;
-G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoCondensed.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["2"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2"]["BackgroundTransparency"] = 1;
-G2L["2"]["AnchorPoint"] = Vector2.new(0.5, 1);
-G2L["2"]["Size"] = UDim2.new(0, 300, 0, 50);
-G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2"]["Text"] = [[]];
-G2L["2"]["Name"] = [[HistoryLabel]];
-G2L["2"]["Position"] = UDim2.new(0.5, 0, 1, -25);
-
-
--- Workspace.SGUI.HistoryLabel.LocalScript
-G2L["3"] = Instance.new("LocalScript", G2L["2"]);
-
-
-
--- Workspace.SGUI.HistoryLabel.UITextSizeConstraint
-G2L["4"] = Instance.new("UITextSizeConstraint", G2L["2"]);
-G2L["4"]["MaxTextSize"] = 15;
-
-
--- Workspace.SGUI.HistoryLabel.UIStroke
-G2L["5"] = Instance.new("UIStroke", G2L["2"]);
-G2L["5"]["Thickness"] = 2;
-
-
--- Workspace.SGUI.History
-G2L["6"] = Instance.new("LocalScript", G2L["1"]);
-G2L["6"]["Name"] = [[History]];
-
-
--- Workspace.SGUI.RTOpenLootbox
-G2L["7"] = Instance.new("LocalScript", G2L["1"]);
-G2L["7"]["Name"] = [[RTOpenLootbox]];
-
-
--- Workspace.SGUI.LoadedMessage
-G2L["8"] = Instance.new("LocalScript", G2L["1"]);
-G2L["8"]["Name"] = [[LoadedMessage]];
-
-
--- Workspace.SGUI.PDaccess
-G2L["9"] = Instance.new("LocalScript", G2L["1"]);
-G2L["9"]["Name"] = [[PDaccess]];
-
-
--- Workspace.SGUI.AutoLB
-G2L["a"] = Instance.new("LocalScript", G2L["1"]);
-G2L["a"]["Name"] = [[AutoLB]];
-
-
--- Workspace.SGUI.Warn
-G2L["b"] = Instance.new("Frame", G2L["1"]);
-G2L["b"]["Visible"] = false;
-G2L["b"]["BorderSizePixel"] = 0;
-G2L["b"]["BackgroundColor3"] = Color3.fromRGB(35, 41, 35);
-G2L["b"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["b"]["Size"] = UDim2.new(0, 250, 0, 100);
-G2L["b"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b"]["Name"] = [[Warn]];
-
-
--- Workspace.SGUI.Warn.DropShadowHolder
-G2L["c"] = Instance.new("Frame", G2L["b"]);
-G2L["c"]["ZIndex"] = 0;
-G2L["c"]["BorderSizePixel"] = 0;
-G2L["c"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["c"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-G2L["c"]["Name"] = [[DropShadowHolder]];
-G2L["c"]["BackgroundTransparency"] = 1;
-
-
--- Workspace.SGUI.Warn.DropShadowHolder.DropShadow
-G2L["d"] = Instance.new("ImageLabel", G2L["c"]);
-G2L["d"]["ZIndex"] = 0;
-G2L["d"]["BorderSizePixel"] = 0;
-G2L["d"]["SliceCenter"] = Rect.new(49, 49, 450, 450);
-G2L["d"]["ScaleType"] = Enum.ScaleType.Slice;
-G2L["d"]["ImageTransparency"] = 0.5;
-G2L["d"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["d"]["Image"] = [[rbxassetid://6015897843]];
-G2L["d"]["Size"] = UDim2.new(1, 47, 1, 47);
-G2L["d"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-G2L["d"]["BackgroundTransparency"] = 1;
-G2L["d"]["Name"] = [[DropShadow]];
-G2L["d"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-
-
--- Workspace.SGUI.Warn.TextLabel
-G2L["e"] = Instance.new("TextLabel", G2L["b"]);
-G2L["e"]["TextWrapped"] = true;
-G2L["e"]["BorderSizePixel"] = 0;
-G2L["e"]["TextSize"] = 15;
-G2L["e"]["TextScaled"] = true;
-G2L["e"]["BackgroundColor3"] = Color3.fromRGB(35, 41, 35);
-G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["e"]["AnchorPoint"] = Vector2.new(0.5, 0);
-G2L["e"]["Size"] = UDim2.new(0, 225, 0, 50);
-G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["e"]["Text"] = [[Are you doing this on purpose?]];
-G2L["e"]["Position"] = UDim2.new(0.5, 0, 0, 8);
-
-
--- Workspace.SGUI.Warn.TextLabel.UIStroke
-G2L["f"] = Instance.new("UIStroke", G2L["e"]);
-G2L["f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["f"]["Color"] = Color3.fromRGB(255, 171, 0);
-
-
--- Workspace.SGUI.Warn.TextLabel.UITextSizeConstraint
-G2L["10"] = Instance.new("UITextSizeConstraint", G2L["e"]);
-G2L["10"]["MaxTextSize"] = 15;
-
-
--- Workspace.SGUI.Warn.Yes
-G2L["11"] = Instance.new("TextButton", G2L["b"]);
-G2L["11"]["TextWrapped"] = true;
-G2L["11"]["BorderSizePixel"] = 0;
-G2L["11"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["11"]["TextSize"] = 20;
-G2L["11"]["TextScaled"] = true;
-G2L["11"]["BackgroundColor3"] = Color3.fromRGB(44, 178, 255);
-G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["11"]["AnchorPoint"] = Vector2.new(0, 1);
-G2L["11"]["Size"] = UDim2.new(0, 100, 0, 30);
-G2L["11"]["Name"] = [[Yes]];
-G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["11"]["Text"] = [[Yes]];
-G2L["11"]["Position"] = UDim2.new(0, 12, 1, -6);
-
-
--- Workspace.SGUI.Warn.Yes.UITextSizeConstraint
-G2L["12"] = Instance.new("UITextSizeConstraint", G2L["11"]);
-G2L["12"]["MaxTextSize"] = 20;
-
-
--- Workspace.SGUI.Warn.Yes.LocalScript
-G2L["13"] = Instance.new("LocalScript", G2L["11"]);
-
-
-
--- Workspace.SGUI.Warn.No
-G2L["14"] = Instance.new("TextButton", G2L["b"]);
-G2L["14"]["TextWrapped"] = true;
-G2L["14"]["BorderSizePixel"] = 0;
-G2L["14"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["14"]["TextSize"] = 20;
-G2L["14"]["TextScaled"] = true;
-G2L["14"]["BackgroundColor3"] = Color3.fromRGB(39, 255, 157);
-G2L["14"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["14"]["AnchorPoint"] = Vector2.new(1, 1);
-G2L["14"]["Size"] = UDim2.new(0, 100, 0, 30);
-G2L["14"]["Name"] = [[No]];
-G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["14"]["Text"] = [[No]];
-G2L["14"]["Position"] = UDim2.new(1, -13, 1, -6);
-
-
--- Workspace.SGUI.Warn.No.UITextSizeConstraint
-G2L["15"] = Instance.new("UITextSizeConstraint", G2L["14"]);
-G2L["15"]["MaxTextSize"] = 20;
-
-
--- Workspace.SGUI.Warn.No.LocalScript
-G2L["16"] = Instance.new("LocalScript", G2L["14"]);
-
-
-
--- Workspace.SGUI.Warn2
-G2L["17"] = Instance.new("Frame", G2L["1"]);
-G2L["17"]["Visible"] = false;
-G2L["17"]["BorderSizePixel"] = 0;
-G2L["17"]["BackgroundColor3"] = Color3.fromRGB(35, 41, 35);
-G2L["17"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["17"]["Size"] = UDim2.new(0, 250, 0, 100);
-G2L["17"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["17"]["Name"] = [[Warn2]];
-
-
--- Workspace.SGUI.Warn2.DropShadowHolder
-G2L["18"] = Instance.new("Frame", G2L["17"]);
-G2L["18"]["ZIndex"] = 0;
-G2L["18"]["BorderSizePixel"] = 0;
-G2L["18"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["18"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-G2L["18"]["Name"] = [[DropShadowHolder]];
-G2L["18"]["BackgroundTransparency"] = 1;
-
-
--- Workspace.SGUI.Warn2.DropShadowHolder.DropShadow
-G2L["19"] = Instance.new("ImageLabel", G2L["18"]);
-G2L["19"]["ZIndex"] = 0;
-G2L["19"]["BorderSizePixel"] = 0;
-G2L["19"]["SliceCenter"] = Rect.new(49, 49, 450, 450);
-G2L["19"]["ScaleType"] = Enum.ScaleType.Slice;
-G2L["19"]["ImageTransparency"] = 0.5;
-G2L["19"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["19"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["19"]["Image"] = [[rbxassetid://6015897843]];
-G2L["19"]["Size"] = UDim2.new(1, 47, 1, 47);
-G2L["19"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-G2L["19"]["BackgroundTransparency"] = 1;
-G2L["19"]["Name"] = [[DropShadow]];
-G2L["19"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-
-
--- Workspace.SGUI.Warn2.TextLabel
-G2L["1a"] = Instance.new("TextLabel", G2L["17"]);
-G2L["1a"]["TextWrapped"] = true;
-G2L["1a"]["BorderSizePixel"] = 0;
-G2L["1a"]["TextSize"] = 15;
-G2L["1a"]["TextScaled"] = true;
-G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(35, 41, 35);
-G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1a"]["AnchorPoint"] = Vector2.new(0.5, 0);
-G2L["1a"]["Size"] = UDim2.new(0, 225, 0, 50);
-G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1a"]["Text"] = [[Are you doing this on purpose?]];
-G2L["1a"]["Position"] = UDim2.new(0.5, 0, 0, 8);
-
-
--- Workspace.SGUI.Warn2.TextLabel.UIStroke
-G2L["1b"] = Instance.new("UIStroke", G2L["1a"]);
-G2L["1b"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["1b"]["Color"] = Color3.fromRGB(255, 171, 0);
-
-
--- Workspace.SGUI.Warn2.TextLabel.UITextSizeConstraint
-G2L["1c"] = Instance.new("UITextSizeConstraint", G2L["1a"]);
-G2L["1c"]["MaxTextSize"] = 15;
-
-
--- Workspace.SGUI.Warn2.Yes
-G2L["1d"] = Instance.new("TextButton", G2L["17"]);
-G2L["1d"]["TextWrapped"] = true;
-G2L["1d"]["BorderSizePixel"] = 0;
-G2L["1d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1d"]["TextSize"] = 20;
-G2L["1d"]["TextScaled"] = true;
-G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(44, 178, 255);
-G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1d"]["AnchorPoint"] = Vector2.new(0, 1);
-G2L["1d"]["Size"] = UDim2.new(0, 100, 0, 30);
-G2L["1d"]["Name"] = [[Yes]];
-G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1d"]["Text"] = [[Yes]];
-G2L["1d"]["Position"] = UDim2.new(0, 12, 1, -6);
-
-
--- Workspace.SGUI.Warn2.Yes.UITextSizeConstraint
-G2L["1e"] = Instance.new("UITextSizeConstraint", G2L["1d"]);
-G2L["1e"]["MaxTextSize"] = 20;
-
-
--- Workspace.SGUI.Warn2.Yes.LocalScript
-G2L["1f"] = Instance.new("LocalScript", G2L["1d"]);
-
-
-
--- Workspace.SGUI.Warn2.No
-G2L["20"] = Instance.new("TextButton", G2L["17"]);
-G2L["20"]["TextWrapped"] = true;
-G2L["20"]["BorderSizePixel"] = 0;
-G2L["20"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["20"]["TextSize"] = 20;
-G2L["20"]["TextScaled"] = true;
-G2L["20"]["BackgroundColor3"] = Color3.fromRGB(39, 255, 157);
-G2L["20"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["20"]["AnchorPoint"] = Vector2.new(1, 1);
-G2L["20"]["Size"] = UDim2.new(0, 100, 0, 30);
-G2L["20"]["Name"] = [[No]];
-G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["20"]["Text"] = [[No]];
-G2L["20"]["Position"] = UDim2.new(1, -13, 1, -6);
-
-
--- Workspace.SGUI.Warn2.No.UITextSizeConstraint
-G2L["21"] = Instance.new("UITextSizeConstraint", G2L["20"]);
-G2L["21"]["MaxTextSize"] = 20;
-
-
--- Workspace.SGUI.Warn2.No.LocalScript
-G2L["22"] = Instance.new("LocalScript", G2L["20"]);
-
-
-
--- Workspace.SGUI.CheatButton
-G2L["23"] = Instance.new("TextButton", G2L["1"]);
-G2L["23"]["TextWrapped"] = true;
-G2L["23"]["BorderSizePixel"] = 0;
-G2L["23"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["23"]["TextSize"] = 20;
-G2L["23"]["TextScaled"] = true;
-G2L["23"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["23"]["AnchorPoint"] = Vector2.new(1, 0.5);
-G2L["23"]["Size"] = UDim2.new(0, 32, 0, 32);
-G2L["23"]["BackgroundTransparency"] = 0.5;
-G2L["23"]["Name"] = [[CheatButton]];
-G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["23"]["Text"] = [[🖥]];
-G2L["23"]["Position"] = UDim2.new(1, -60, 0, 20);
-
-
--- Workspace.SGUI.CheatButton.Frame
-G2L["24"] = Instance.new("Frame", G2L["23"]);
-G2L["24"]["BorderSizePixel"] = 0;
-G2L["24"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["24"]["AnchorPoint"] = Vector2.new(1, 0);
-G2L["24"]["Size"] = UDim2.new(0, 100, 0, 105);
-G2L["24"]["Position"] = UDim2.new(1, 0, 1, 6);
-G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["24"]["BackgroundTransparency"] = 1;
-
-
--- Workspace.SGUI.CheatButton.Frame.UICorner
-G2L["25"] = Instance.new("UICorner", G2L["24"]);
-
-
-
--- Workspace.SGUI.CheatButton.Frame.Page
-G2L["26"] = Instance.new("TextButton", G2L["24"]);
-G2L["26"]["TextWrapped"] = true;
-G2L["26"]["BorderSizePixel"] = 2;
-G2L["26"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["26"]["TextSize"] = 17;
-G2L["26"]["TextScaled"] = true;
-G2L["26"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
-G2L["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoCondensed.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["26"]["BorderMode"] = Enum.BorderMode.Middle;
-G2L["26"]["Size"] = UDim2.new(0, 100, 0, 35);
-G2L["26"]["LayoutOrder"] = 1;
-G2L["26"]["Name"] = [[Page]];
-G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["26"]["Text"] = [[PAGE]];
-
-
--- Workspace.SGUI.CheatButton.Frame.Page.LocalScript
-G2L["27"] = Instance.new("LocalScript", G2L["26"]);
-
-
-
--- Workspace.SGUI.CheatButton.Frame.Page.UITextSizeConstraint
-G2L["28"] = Instance.new("UITextSizeConstraint", G2L["26"]);
-G2L["28"]["MaxTextSize"] = 17;
-
-
--- Workspace.SGUI.CheatButton.Frame.UIListLayout
-G2L["29"] = Instance.new("UIListLayout", G2L["24"]);
-G2L["29"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-G2L["29"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-
-
--- Workspace.SGUI.CheatButton.Frame.Slender
-G2L["2a"] = Instance.new("TextButton", G2L["24"]);
-G2L["2a"]["TextWrapped"] = true;
-G2L["2a"]["BorderSizePixel"] = 2;
-G2L["2a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2a"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2a"]["TextSize"] = 17;
-G2L["2a"]["TextScaled"] = true;
-G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
-G2L["2a"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoCondensed.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["2a"]["BorderMode"] = Enum.BorderMode.Middle;
-G2L["2a"]["Size"] = UDim2.new(0, 100, 0, 35);
-G2L["2a"]["LayoutOrder"] = 2;
-G2L["2a"]["Name"] = [[Slender]];
-G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2a"]["Text"] = [[SLENDER]];
-
-
--- Workspace.SGUI.CheatButton.Frame.Slender.LocalScript
-G2L["2b"] = Instance.new("LocalScript", G2L["2a"]);
-
-
-
--- Workspace.SGUI.CheatButton.Frame.Slender.UITextSizeConstraint
-G2L["2c"] = Instance.new("UITextSizeConstraint", G2L["2a"]);
-G2L["2c"]["MaxTextSize"] = 17;
-
-
--- Workspace.SGUI.CheatButton.Frame.Generator
-G2L["2d"] = Instance.new("TextButton", G2L["24"]);
-G2L["2d"]["TextWrapped"] = true;
-G2L["2d"]["BorderSizePixel"] = 2;
-G2L["2d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2d"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2d"]["TextSize"] = 17;
-G2L["2d"]["TextScaled"] = true;
-G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
-G2L["2d"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoCondensed.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["2d"]["BorderMode"] = Enum.BorderMode.Middle;
-G2L["2d"]["Size"] = UDim2.new(0, 100, 0, 35);
-G2L["2d"]["LayoutOrder"] = 3;
-G2L["2d"]["Name"] = [[Generator]];
-G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2d"]["Text"] = [[GENERATOR]];
-
-
--- Workspace.SGUI.CheatButton.Frame.Generator.LocalScript
-G2L["2e"] = Instance.new("LocalScript", G2L["2d"]);
-
-
-
--- Workspace.SGUI.CheatButton.Frame.Generator.UITextSizeConstraint
-G2L["2f"] = Instance.new("UITextSizeConstraint", G2L["2d"]);
-G2L["2f"]["MaxTextSize"] = 17;
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame
-G2L["30"] = Instance.new("ScrollingFrame", G2L["23"]);
-G2L["30"]["ScrollingDirection"] = Enum.ScrollingDirection.X;
-G2L["30"]["BorderSizePixel"] = 0;
-G2L["30"]["ElasticBehavior"] = Enum.ElasticBehavior.Always;
-G2L["30"]["TopImage"] = [[]];
-G2L["30"]["MidImage"] = [[]];
-G2L["30"]["ScrollingEnabled"] = false;
-G2L["30"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["30"]["Selectable"] = false;
-G2L["30"]["HorizontalScrollBarInset"] = Enum.ScrollBarInset.ScrollBar;
-G2L["30"]["BottomImage"] = [[]];
-G2L["30"]["ClipsDescendants"] = false;
-G2L["30"]["Size"] = UDim2.new(0, 33, 0, 105);
-G2L["30"]["Position"] = UDim2.new(1, -3, 1, 6);
-G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["30"]["ScrollBarThickness"] = 0;
-G2L["30"]["BackgroundTransparency"] = 1;
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame.UIListLayout
-G2L["31"] = Instance.new("UIListLayout", G2L["30"]);
-G2L["31"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-G2L["31"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
-G2L["31"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame.FullBright
-G2L["32"] = Instance.new("TextButton", G2L["30"]);
-G2L["32"]["TextWrapped"] = true;
-G2L["32"]["BorderSizePixel"] = 2;
-G2L["32"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["32"]["TextSize"] = 10;
-G2L["32"]["TextScaled"] = true;
-G2L["32"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
-G2L["32"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoCondensed.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["32"]["BorderMode"] = Enum.BorderMode.Middle;
-G2L["32"]["Size"] = UDim2.new(0, 27, 0, 21);
-G2L["32"]["LayoutOrder"] = 1;
-G2L["32"]["Name"] = [[FullBright]];
-G2L["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["32"]["Text"] = [[Fb]];
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame.FullBright.LocalScript
-G2L["33"] = Instance.new("LocalScript", G2L["32"]);
-
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame.ResetCharacter
-G2L["34"] = Instance.new("TextButton", G2L["30"]);
-G2L["34"]["TextWrapped"] = true;
-G2L["34"]["BorderSizePixel"] = 2;
-G2L["34"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["34"]["TextSize"] = 10;
-G2L["34"]["TextScaled"] = true;
-G2L["34"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
-G2L["34"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoCondensed.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["34"]["BorderMode"] = Enum.BorderMode.Middle;
-G2L["34"]["Size"] = UDim2.new(0, 27, 0, 21);
-G2L["34"]["LayoutOrder"] = 3;
-G2L["34"]["Name"] = [[ResetCharacter]];
-G2L["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["34"]["Text"] = [[Rc]];
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame.ResetCharacter.LocalScript
-G2L["35"] = Instance.new("LocalScript", G2L["34"]);
-
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame.PoopEggs
-G2L["36"] = Instance.new("TextButton", G2L["30"]);
-G2L["36"]["TextWrapped"] = true;
-G2L["36"]["BorderSizePixel"] = 2;
-G2L["36"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["36"]["TextSize"] = 10;
-G2L["36"]["TextScaled"] = true;
-G2L["36"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
-G2L["36"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoCondensed.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["36"]["BorderMode"] = Enum.BorderMode.Middle;
-G2L["36"]["Size"] = UDim2.new(0, 27, 0, 21);
-G2L["36"]["LayoutOrder"] = 4;
-G2L["36"]["Name"] = [[PoopEggs]];
-G2L["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["36"]["Text"] = [[Pe]];
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame.PoopEggs.LocalScript
-G2L["37"] = Instance.new("LocalScript", G2L["36"]);
-
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame.UndetectedSpeedHack
-G2L["38"] = Instance.new("TextButton", G2L["30"]);
-G2L["38"]["TextWrapped"] = true;
-G2L["38"]["BorderSizePixel"] = 2;
-G2L["38"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["38"]["TextSize"] = 10;
-G2L["38"]["TextScaled"] = true;
-G2L["38"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
-G2L["38"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoCondensed.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["38"]["BorderMode"] = Enum.BorderMode.Middle;
-G2L["38"]["Size"] = UDim2.new(0, 27, 0, 21);
-G2L["38"]["LayoutOrder"] = 5;
-G2L["38"]["Name"] = [[UndetectedSpeedHack]];
-G2L["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["38"]["Text"] = [[Sh]];
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame.UndetectedSpeedHack.LocalScript
-G2L["39"] = Instance.new("LocalScript", G2L["38"]);
-
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame.ImmuneAgainstSlender
-G2L["3a"] = Instance.new("TextButton", G2L["30"]);
-G2L["3a"]["TextWrapped"] = true;
-G2L["3a"]["BorderSizePixel"] = 2;
-G2L["3a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3a"]["TextSize"] = 10;
-G2L["3a"]["TextScaled"] = true;
-G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
-G2L["3a"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoCondensed.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3a"]["BorderMode"] = Enum.BorderMode.Middle;
-G2L["3a"]["Size"] = UDim2.new(0, 27, 0, 21);
-G2L["3a"]["LayoutOrder"] = 6;
-G2L["3a"]["Name"] = [[ImmuneAgainstSlender]];
-G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3a"]["Text"] = [[Im]];
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame.ImmuneAgainstSlender.LocalScript
-G2L["3b"] = Instance.new("LocalScript", G2L["3a"]);
-
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame2
-G2L["3c"] = Instance.new("ScrollingFrame", G2L["23"]);
-G2L["3c"]["BorderSizePixel"] = 0;
-G2L["3c"]["ScrollingEnabled"] = false;
-G2L["3c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3c"]["Name"] = [[ScrollingFrame2]];
-G2L["3c"]["Selectable"] = false;
-G2L["3c"]["ClipsDescendants"] = false;
-G2L["3c"]["Size"] = UDim2.new(0, 33, 0, 105);
-G2L["3c"]["Position"] = UDim2.new(1, 24, 1, 6);
-G2L["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3c"]["BackgroundTransparency"] = 1;
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame2.UIListLayout
-G2L["3d"] = Instance.new("UIListLayout", G2L["3c"]);
-G2L["3d"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-G2L["3d"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
-G2L["3d"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame2.Lay
-G2L["3e"] = Instance.new("TextButton", G2L["3c"]);
-G2L["3e"]["TextWrapped"] = true;
-G2L["3e"]["BorderSizePixel"] = 2;
-G2L["3e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3e"]["TextSize"] = 14;
-G2L["3e"]["TextScaled"] = true;
-G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
-G2L["3e"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoCondensed.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3e"]["BorderMode"] = Enum.BorderMode.Middle;
-G2L["3e"]["Size"] = UDim2.new(0, 27, 0, 21);
-G2L["3e"]["LayoutOrder"] = 1;
-G2L["3e"]["Name"] = [[Lay]];
-G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3e"]["Text"] = [[Ld]];
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame2.Lay.LocalScript
-G2L["3f"] = Instance.new("LocalScript", G2L["3e"]);
-
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame2.Provoke
-G2L["40"] = Instance.new("TextButton", G2L["3c"]);
-G2L["40"]["TextWrapped"] = true;
-G2L["40"]["BorderSizePixel"] = 2;
-G2L["40"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["40"]["TextSize"] = 14;
-G2L["40"]["TextScaled"] = true;
-G2L["40"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
-G2L["40"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoCondensed.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["40"]["BorderMode"] = Enum.BorderMode.Middle;
-G2L["40"]["Size"] = UDim2.new(0, 27, 0, 21);
-G2L["40"]["LayoutOrder"] = 3;
-G2L["40"]["Name"] = [[Provoke]];
-G2L["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["40"]["Text"] = [[Pr]];
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame2.Provoke.LocalScript
-G2L["41"] = Instance.new("LocalScript", G2L["40"]);
-
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame2.Refresh
-G2L["42"] = Instance.new("TextButton", G2L["3c"]);
-G2L["42"]["TextWrapped"] = true;
-G2L["42"]["BorderSizePixel"] = 2;
-G2L["42"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["42"]["TextSize"] = 14;
-G2L["42"]["TextScaled"] = true;
-G2L["42"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
-G2L["42"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoCondensed.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
-G2L["42"]["BorderMode"] = Enum.BorderMode.Middle;
-G2L["42"]["Size"] = UDim2.new(0, 27, 0, 21);
-G2L["42"]["LayoutOrder"] = 4;
-G2L["42"]["Name"] = [[Refresh]];
-G2L["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["42"]["Text"] = [[Rs]];
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame2.Refresh.LocalScript
-G2L["43"] = Instance.new("LocalScript", G2L["42"]);
-
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame2.DestroyGUI
-G2L["44"] = Instance.new("TextButton", G2L["3c"]);
-G2L["44"]["TextWrapped"] = true;
-G2L["44"]["BorderSizePixel"] = 2;
-G2L["44"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["44"]["TextSize"] = 14;
-G2L["44"]["TextScaled"] = true;
-G2L["44"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
-G2L["44"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoCondensed.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
-G2L["44"]["BorderMode"] = Enum.BorderMode.Middle;
-G2L["44"]["Size"] = UDim2.new(0, 27, 0, 21);
-G2L["44"]["LayoutOrder"] = 5;
-G2L["44"]["Name"] = [[DestroyGUI]];
-G2L["44"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["44"]["Text"] = [[De]];
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame2.DestroyGUI.LocalScript
-G2L["45"] = Instance.new("LocalScript", G2L["44"]);
-
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame2.TrollSounds
-G2L["46"] = Instance.new("TextButton", G2L["3c"]);
-G2L["46"]["TextWrapped"] = true;
-G2L["46"]["BorderSizePixel"] = 2;
-G2L["46"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["46"]["TextSize"] = 14;
-G2L["46"]["TextScaled"] = true;
-G2L["46"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
-G2L["46"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoCondensed.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["46"]["BorderMode"] = Enum.BorderMode.Middle;
-G2L["46"]["Size"] = UDim2.new(0, 27, 0, 21);
-G2L["46"]["LayoutOrder"] = 2;
-G2L["46"]["Name"] = [[TrollSounds]];
-G2L["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["46"]["Text"] = [[Ts]];
-
-
--- Workspace.SGUI.CheatButton.ScrollingFrame2.TrollSounds.LocalScript
-G2L["47"] = Instance.new("LocalScript", G2L["46"]);
-
-
-
--- Workspace.SGUI.CheatButton.WhoIsSlender
-G2L["48"] = Instance.new("TextLabel", G2L["23"]);
-G2L["48"]["TextWrapped"] = true;
-G2L["48"]["BorderSizePixel"] = 0;
-G2L["48"]["TextSize"] = 14;
-G2L["48"]["TextXAlignment"] = Enum.TextXAlignment.Right;
-G2L["48"]["TextScaled"] = true;
-G2L["48"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["48"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoCondensed.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["48"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["48"]["BackgroundTransparency"] = 1;
-G2L["48"]["AnchorPoint"] = Vector2.new(1, 0);
-G2L["48"]["Size"] = UDim2.new(0, 200, 0, 16);
-G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["48"]["Text"] = [[SLENDER:]];
-G2L["48"]["Name"] = [[WhoIsSlender]];
-G2L["48"]["Position"] = UDim2.new(1, -100, 1, 6);
-
-
--- Workspace.SGUI.CheatButton.WhoIsSlender.UIPadding
-G2L["49"] = Instance.new("UIPadding", G2L["48"]);
-G2L["49"]["PaddingRight"] = UDim.new(0, 4);
-
-
--- Workspace.SGUI.CheatButton.WhoIsSlender.UITextSizeConstraint
-G2L["4a"] = Instance.new("UITextSizeConstraint", G2L["48"]);
-G2L["4a"]["MaxTextSize"] = 14;
-
-
--- Workspace.SGUI.CheatButton.WhoIsSlender.LocalScript
-G2L["4b"] = Instance.new("LocalScript", G2L["48"]);
-
-
-
--- Workspace.SGUI.CheatButton.WhoIsSlender.UIStroke
-G2L["4c"] = Instance.new("UIStroke", G2L["48"]);
-G2L["4c"]["Thickness"] = 2;
-
-
--- Workspace.SGUI.CheatButton.Pages
-G2L["4d"] = Instance.new("TextLabel", G2L["23"]);
-G2L["4d"]["TextWrapped"] = true;
-G2L["4d"]["BorderSizePixel"] = 0;
-G2L["4d"]["TextSize"] = 14;
-G2L["4d"]["TextXAlignment"] = Enum.TextXAlignment.Right;
-G2L["4d"]["TextScaled"] = true;
-G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4d"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoCondensed.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["4d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4d"]["BackgroundTransparency"] = 1;
-G2L["4d"]["AnchorPoint"] = Vector2.new(1, 0);
-G2L["4d"]["Size"] = UDim2.new(0, 200, 0, 16);
-G2L["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4d"]["Text"] = [[TOTAL PAGES:]];
-G2L["4d"]["Name"] = [[Pages]];
-G2L["4d"]["Position"] = UDim2.new(1, -100, 1, 22);
-
-
--- Workspace.SGUI.CheatButton.Pages.UIPadding
-G2L["4e"] = Instance.new("UIPadding", G2L["4d"]);
-G2L["4e"]["PaddingRight"] = UDim.new(0, 4);
-
-
--- Workspace.SGUI.CheatButton.Pages.UITextSizeConstraint
-G2L["4f"] = Instance.new("UITextSizeConstraint", G2L["4d"]);
-G2L["4f"]["MaxTextSize"] = 14;
-
-
--- Workspace.SGUI.CheatButton.Pages.LocalScript
-G2L["50"] = Instance.new("LocalScript", G2L["4d"]);
-
-
-
--- Workspace.SGUI.CheatButton.Pages.UIStroke
-G2L["51"] = Instance.new("UIStroke", G2L["4d"]);
-G2L["51"]["Thickness"] = 2;
-
-
--- Workspace.SGUI.CheatButton.SoundSystem
-G2L["52"] = Instance.new("LocalScript", G2L["23"]);
-G2L["52"]["Name"] = [[SoundSystem]];
-
-
--- Workspace.SGUI.CheatButton.clicking
-G2L["53"] = Instance.new("Sound", G2L["23"]);
-G2L["53"]["Volume"] = 1;
-G2L["53"]["Name"] = [[clicking]];
-G2L["53"]["SoundId"] = [[rbxassetid://9125397823]];
-
-
--- Workspace.SGUI.CheatButton.LocalScript
-G2L["54"] = Instance.new("LocalScript", G2L["23"]);
-
-
-
--- Workspace.SGUI.CheatButton.AccountAge
-G2L["55"] = Instance.new("TextLabel", G2L["23"]);
-G2L["55"]["TextWrapped"] = true;
-G2L["55"]["BorderSizePixel"] = 0;
-G2L["55"]["TextSize"] = 14;
-G2L["55"]["TextXAlignment"] = Enum.TextXAlignment.Right;
-G2L["55"]["TextScaled"] = true;
-G2L["55"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["55"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoCondensed.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["55"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["55"]["BackgroundTransparency"] = 1;
-G2L["55"]["AnchorPoint"] = Vector2.new(1, 0);
-G2L["55"]["Size"] = UDim2.new(0, 200, 0, 16);
-G2L["55"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["55"]["Text"] = [[ACCOUNT AGE:]];
-G2L["55"]["Name"] = [[AccountAge]];
-G2L["55"]["Position"] = UDim2.new(1, -100, 1, 38);
-
-
--- Workspace.SGUI.CheatButton.AccountAge.UITextSizeConstraint
-G2L["56"] = Instance.new("UITextSizeConstraint", G2L["55"]);
-G2L["56"]["MaxTextSize"] = 14;
-
-
--- Workspace.SGUI.CheatButton.AccountAge.LocalScript
-G2L["57"] = Instance.new("LocalScript", G2L["55"]);
-
-
-
--- Workspace.SGUI.CheatButton.AccountAge.UIPadding
-G2L["58"] = Instance.new("UIPadding", G2L["55"]);
-G2L["58"]["PaddingRight"] = UDim.new(0, 4);
-
-
--- Workspace.SGUI.CheatButton.AccountAge.UIStroke
-G2L["59"] = Instance.new("UIStroke", G2L["55"]);
-G2L["59"]["Thickness"] = 2;
-
-
--- Workspace.SGUI.CheatButton.ButtonInfoTeller
-G2L["5a"] = Instance.new("TextLabel", G2L["23"]);
-G2L["5a"]["TextWrapped"] = true;
-G2L["5a"]["BorderSizePixel"] = 0;
-G2L["5a"]["TextSize"] = 20;
-G2L["5a"]["TextXAlignment"] = Enum.TextXAlignment.Right;
-G2L["5a"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5a"]["TextScaled"] = true;
-G2L["5a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5a"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoCondensed.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["5a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5a"]["BackgroundTransparency"] = 1;
-G2L["5a"]["AnchorPoint"] = Vector2.new(1, 0);
-G2L["5a"]["Size"] = UDim2.new(0, 300, 0, 14);
-G2L["5a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5a"]["Text"] = [[]];
-G2L["5a"]["Name"] = [[ButtonInfoTeller]];
-G2L["5a"]["Position"] = UDim2.new(1, 54, 0, 150);
-
-
--- Workspace.SGUI.CheatButton.ButtonInfoTeller.UIStroke
-G2L["5b"] = Instance.new("UIStroke", G2L["5a"]);
-G2L["5b"]["Thickness"] = 2;
-
-
--- Workspace.SGUI.CheatButton.Versi0n
-G2L["5c"] = Instance.new("TextLabel", G2L["23"]);
-G2L["5c"]["TextWrapped"] = true;
-G2L["5c"]["BorderSizePixel"] = 0;
-G2L["5c"]["TextSize"] = 14;
-G2L["5c"]["TextXAlignment"] = Enum.TextXAlignment.Right;
-G2L["5c"]["TextScaled"] = true;
-G2L["5c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5c"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoCondensed.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["5c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5c"]["BackgroundTransparency"] = 1;
-G2L["5c"]["AnchorPoint"] = Vector2.new(1, 0);
-G2L["5c"]["Size"] = UDim2.new(0, 200, 0, 16);
-G2L["5c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5c"]["Text"] = [[HACK VERSION:]];
-G2L["5c"]["Name"] = [[Versi0n]];
-G2L["5c"]["Position"] = UDim2.new(1, -100, 1, 54);
-
-
--- Workspace.SGUI.CheatButton.Versi0n.UIPadding
-G2L["5d"] = Instance.new("UIPadding", G2L["5c"]);
-G2L["5d"]["PaddingRight"] = UDim.new(0, 4);
-
-
--- Workspace.SGUI.CheatButton.Versi0n.UITextSizeConstraint
-G2L["5e"] = Instance.new("UITextSizeConstraint", G2L["5c"]);
-G2L["5e"]["MaxTextSize"] = 14;
-
-
--- Workspace.SGUI.CheatButton.Versi0n.LocalScript
-G2L["5f"] = Instance.new("LocalScript", G2L["5c"]);
-
-
-
--- Workspace.SGUI.CheatButton.Versi0n.UIStroke
-G2L["60"] = Instance.new("UIStroke", G2L["5c"]);
-G2L["60"]["Thickness"] = 2;
-
-
--- Workspace.SGUI.CheatButton.UICorner
-G2L["61"] = Instance.new("UICorner", G2L["23"]);
-
-
-
--- Workspace.SGUI.CheatButton.UITextSizeConstraint
-G2L["62"] = Instance.new("UITextSizeConstraint", G2L["23"]);
-G2L["62"]["MaxTextSize"] = 20;
-
-
--- Workspace.SGUI.UsersOnJoin
-G2L["63"] = Instance.new("LocalScript", G2L["1"]);
-G2L["63"]["Name"] = [[UsersOnJoin]];
-
-
--- Workspace.SGUI.Noticer
-G2L["64"] = Instance.new("TextLabel", G2L["1"]);
-G2L["64"]["TextWrapped"] = true;
-G2L["64"]["TextStrokeTransparency"] = 0.7;
-G2L["64"]["BorderSizePixel"] = 0;
-G2L["64"]["TextSize"] = 15;
-G2L["64"]["TextScaled"] = true;
-G2L["64"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
-G2L["64"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoCondensed.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["64"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["64"]["AnchorPoint"] = Vector2.new(0.5, 1);
-G2L["64"]["Size"] = UDim2.new(0.5, 0, 0, 25);
-G2L["64"]["Visible"] = false;
-G2L["64"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["64"]["Text"] = [[???]];
-G2L["64"]["Name"] = [[Noticer]];
-G2L["64"]["Position"] = UDim2.new(0.5, 0, 1, -30);
-
-
--- Workspace.SGUI.Noticer.LocalScript
-G2L["65"] = Instance.new("LocalScript", G2L["64"]);
-
-
-
--- Workspace.SGUI.Noticer.UITextSizeConstraint
-G2L["66"] = Instance.new("UITextSizeConstraint", G2L["64"]);
-G2L["66"]["MaxTextSize"] = 15;
-
-
--- Workspace.SGUI.Noticer.UICorner
-G2L["67"] = Instance.new("UICorner", G2L["64"]);
-G2L["67"]["CornerRadius"] = UDim.new(1, 0);
-
-
--- Workspace.SGUI.Noticer.UIStroke
-G2L["68"] = Instance.new("UIStroke", G2L["64"]);
-G2L["68"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["68"]["Thickness"] = 2;
-
-
--- Workspace.SGUI.Interfacedit
-G2L["69"] = Instance.new("LocalScript", G2L["1"]);
-G2L["69"]["Name"] = [[Interfacedit]];
-
-
--- Workspace.SGUI.laugh
-G2L["6a"] = Instance.new("Sound", G2L["1"]);
-G2L["6a"]["Volume"] = 1;
-G2L["6a"]["Name"] = [[laugh]];
-G2L["6a"]["SoundId"] = [[rbxassetid://1601659619]];
-
-
--- Workspace.SGUI.AutoC
-G2L["6b"] = Instance.new("LocalScript", G2L["1"]);
-G2L["6b"]["Name"] = [[AutoC]];
-
-
--- Workspace.SGUI.Warn3
-G2L["6c"] = Instance.new("Frame", G2L["1"]);
-G2L["6c"]["Visible"] = false;
-G2L["6c"]["BorderSizePixel"] = 0;
-G2L["6c"]["BackgroundColor3"] = Color3.fromRGB(35, 41, 35);
-G2L["6c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["6c"]["Size"] = UDim2.new(0, 250, 0, 100);
-G2L["6c"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["6c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6c"]["Name"] = [[Warn3]];
-
-
--- Workspace.SGUI.Warn3.DropShadowHolder
-G2L["6d"] = Instance.new("Frame", G2L["6c"]);
-G2L["6d"]["ZIndex"] = 0;
-G2L["6d"]["BorderSizePixel"] = 0;
-G2L["6d"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["6d"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-G2L["6d"]["Name"] = [[DropShadowHolder]];
-G2L["6d"]["BackgroundTransparency"] = 1;
-
-
--- Workspace.SGUI.Warn3.DropShadowHolder.DropShadow
-G2L["6e"] = Instance.new("ImageLabel", G2L["6d"]);
-G2L["6e"]["ZIndex"] = 0;
-G2L["6e"]["BorderSizePixel"] = 0;
-G2L["6e"]["SliceCenter"] = Rect.new(49, 49, 450, 450);
-G2L["6e"]["ScaleType"] = Enum.ScaleType.Slice;
-G2L["6e"]["ImageTransparency"] = 0.5;
-G2L["6e"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["6e"]["Image"] = [[rbxassetid://6015897843]];
-G2L["6e"]["Size"] = UDim2.new(1, 47, 1, 47);
-G2L["6e"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-G2L["6e"]["BackgroundTransparency"] = 1;
-G2L["6e"]["Name"] = [[DropShadow]];
-G2L["6e"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-
-
--- Workspace.SGUI.Warn3.TextLabel
-G2L["6f"] = Instance.new("TextLabel", G2L["6c"]);
-G2L["6f"]["TextWrapped"] = true;
-G2L["6f"]["BorderSizePixel"] = 0;
-G2L["6f"]["TextSize"] = 15;
-G2L["6f"]["TextScaled"] = true;
-G2L["6f"]["BackgroundColor3"] = Color3.fromRGB(35, 41, 35);
-G2L["6f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["6f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6f"]["AnchorPoint"] = Vector2.new(0.5, 0);
-G2L["6f"]["Size"] = UDim2.new(0, 225, 0, 50);
-G2L["6f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6f"]["Text"] = [[Are you doing this on purpose?]];
-G2L["6f"]["Position"] = UDim2.new(0.5, 0, 0, 8);
-
-
--- Workspace.SGUI.Warn3.TextLabel.UIStroke
-G2L["70"] = Instance.new("UIStroke", G2L["6f"]);
-G2L["70"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["70"]["Color"] = Color3.fromRGB(255, 171, 0);
-
-
--- Workspace.SGUI.Warn3.TextLabel.UITextSizeConstraint
-G2L["71"] = Instance.new("UITextSizeConstraint", G2L["6f"]);
-G2L["71"]["MaxTextSize"] = 15;
-
-
--- Workspace.SGUI.Warn3.Yes
-G2L["72"] = Instance.new("TextButton", G2L["6c"]);
-G2L["72"]["TextWrapped"] = true;
-G2L["72"]["BorderSizePixel"] = 0;
-G2L["72"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["72"]["TextSize"] = 20;
-G2L["72"]["TextScaled"] = true;
-G2L["72"]["BackgroundColor3"] = Color3.fromRGB(44, 178, 255);
-G2L["72"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["72"]["AnchorPoint"] = Vector2.new(0, 1);
-G2L["72"]["Size"] = UDim2.new(0, 100, 0, 30);
-G2L["72"]["Name"] = [[Yes]];
-G2L["72"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["72"]["Text"] = [[Yes]];
-G2L["72"]["Position"] = UDim2.new(0, 12, 1, -6);
-
-
--- Workspace.SGUI.Warn3.Yes.UITextSizeConstraint
-G2L["73"] = Instance.new("UITextSizeConstraint", G2L["72"]);
-G2L["73"]["MaxTextSize"] = 20;
-
-
--- Workspace.SGUI.Warn3.Yes.LocalScript
-G2L["74"] = Instance.new("LocalScript", G2L["72"]);
-
-
-
--- Workspace.SGUI.Warn3.No
-G2L["75"] = Instance.new("TextButton", G2L["6c"]);
-G2L["75"]["TextWrapped"] = true;
-G2L["75"]["BorderSizePixel"] = 0;
-G2L["75"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["75"]["TextSize"] = 20;
-G2L["75"]["TextScaled"] = true;
-G2L["75"]["BackgroundColor3"] = Color3.fromRGB(39, 255, 157);
-G2L["75"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["75"]["AnchorPoint"] = Vector2.new(1, 1);
-G2L["75"]["Size"] = UDim2.new(0, 100, 0, 30);
-G2L["75"]["Name"] = [[No]];
-G2L["75"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["75"]["Text"] = [[No]];
-G2L["75"]["Position"] = UDim2.new(1, -13, 1, -6);
-
-
--- Workspace.SGUI.Warn3.No.UITextSizeConstraint
-G2L["76"] = Instance.new("UITextSizeConstraint", G2L["75"]);
-G2L["76"]["MaxTextSize"] = 20;
-
-
--- Workspace.SGUI.Warn3.No.LocalScript
-G2L["77"] = Instance.new("LocalScript", G2L["75"]);
-
-
-
--- Workspace.SGUI.HolderButtonInfo
-G2L["78"] = Instance.new("LocalScript", G2L["1"]);
-G2L["78"]["Name"] = [[HolderButtonInfo]];
-
-
--- Workspace.SGUI.Warn4
-G2L["79"] = Instance.new("Frame", G2L["1"]);
-G2L["79"]["Visible"] = false;
-G2L["79"]["BorderSizePixel"] = 0;
-G2L["79"]["BackgroundColor3"] = Color3.fromRGB(35, 41, 35);
-G2L["79"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["79"]["Size"] = UDim2.new(0, 250, 0, 100);
-G2L["79"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["79"]["Name"] = [[Warn4]];
-
-
--- Workspace.SGUI.Warn4.DropShadowHolder
-G2L["7a"] = Instance.new("Frame", G2L["79"]);
-G2L["7a"]["ZIndex"] = 0;
-G2L["7a"]["BorderSizePixel"] = 0;
-G2L["7a"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["7a"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-G2L["7a"]["Name"] = [[DropShadowHolder]];
-G2L["7a"]["BackgroundTransparency"] = 1;
-
-
--- Workspace.SGUI.Warn4.DropShadowHolder.DropShadow
-G2L["7b"] = Instance.new("ImageLabel", G2L["7a"]);
-G2L["7b"]["ZIndex"] = 0;
-G2L["7b"]["BorderSizePixel"] = 0;
-G2L["7b"]["SliceCenter"] = Rect.new(49, 49, 450, 450);
-G2L["7b"]["ScaleType"] = Enum.ScaleType.Slice;
-G2L["7b"]["ImageTransparency"] = 0.5;
-G2L["7b"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7b"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["7b"]["Image"] = [[rbxassetid://6015897843]];
-G2L["7b"]["Size"] = UDim2.new(1, 47, 1, 47);
-G2L["7b"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-G2L["7b"]["BackgroundTransparency"] = 1;
-G2L["7b"]["Name"] = [[DropShadow]];
-G2L["7b"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-
-
--- Workspace.SGUI.Warn4.TextLabel
-G2L["7c"] = Instance.new("TextLabel", G2L["79"]);
-G2L["7c"]["TextWrapped"] = true;
-G2L["7c"]["BorderSizePixel"] = 0;
-G2L["7c"]["TextSize"] = 15;
-G2L["7c"]["TextScaled"] = true;
-G2L["7c"]["BackgroundColor3"] = Color3.fromRGB(35, 41, 35);
-G2L["7c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["7c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7c"]["AnchorPoint"] = Vector2.new(0.5, 0);
-G2L["7c"]["Size"] = UDim2.new(0, 225, 0, 50);
-G2L["7c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7c"]["Text"] = [[Are you doing this on purpose?]];
-G2L["7c"]["Position"] = UDim2.new(0.5, 0, 0, 8);
-
-
--- Workspace.SGUI.Warn4.TextLabel.UIStroke
-G2L["7d"] = Instance.new("UIStroke", G2L["7c"]);
-G2L["7d"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["7d"]["Color"] = Color3.fromRGB(255, 171, 0);
-
-
--- Workspace.SGUI.Warn4.TextLabel.UITextSizeConstraint
-G2L["7e"] = Instance.new("UITextSizeConstraint", G2L["7c"]);
-G2L["7e"]["MaxTextSize"] = 15;
-
-
--- Workspace.SGUI.Warn4.Yes
-G2L["7f"] = Instance.new("TextButton", G2L["79"]);
-G2L["7f"]["TextWrapped"] = true;
-G2L["7f"]["BorderSizePixel"] = 0;
-G2L["7f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7f"]["TextSize"] = 20;
-G2L["7f"]["TextScaled"] = true;
-G2L["7f"]["BackgroundColor3"] = Color3.fromRGB(44, 178, 255);
-G2L["7f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["7f"]["AnchorPoint"] = Vector2.new(0, 1);
-G2L["7f"]["Size"] = UDim2.new(0, 100, 0, 30);
-G2L["7f"]["Name"] = [[Yes]];
-G2L["7f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7f"]["Text"] = [[Yes]];
-G2L["7f"]["Position"] = UDim2.new(0, 12, 1, -6);
-
-
--- Workspace.SGUI.Warn4.Yes.UITextSizeConstraint
-G2L["80"] = Instance.new("UITextSizeConstraint", G2L["7f"]);
-G2L["80"]["MaxTextSize"] = 20;
-
-
--- Workspace.SGUI.Warn4.Yes.LocalScript
-G2L["81"] = Instance.new("LocalScript", G2L["7f"]);
-
-
-
--- Workspace.SGUI.Warn4.No
-G2L["82"] = Instance.new("TextButton", G2L["79"]);
-G2L["82"]["TextWrapped"] = true;
-G2L["82"]["BorderSizePixel"] = 0;
-G2L["82"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["82"]["TextSize"] = 20;
-G2L["82"]["TextScaled"] = true;
-G2L["82"]["BackgroundColor3"] = Color3.fromRGB(39, 255, 157);
-G2L["82"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["82"]["AnchorPoint"] = Vector2.new(1, 1);
-G2L["82"]["Size"] = UDim2.new(0, 100, 0, 30);
-G2L["82"]["Name"] = [[No]];
-G2L["82"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["82"]["Text"] = [[No]];
-G2L["82"]["Position"] = UDim2.new(1, -13, 1, -6);
-
-
--- Workspace.SGUI.Warn4.No.UITextSizeConstraint
-G2L["83"] = Instance.new("UITextSizeConstraint", G2L["82"]);
-G2L["83"]["MaxTextSize"] = 20;
-
-
--- Workspace.SGUI.Warn4.No.LocalScript
-G2L["84"] = Instance.new("LocalScript", G2L["82"]);
-
-
-G2L["1"]["Parent"] = game.CoreGui;
--- Workspace.SGUI.HistoryLabel.LocalScript
-local function C_3()
-local script = G2L["3"];
+local ver = "8.6"
+local SGUI = Instance.new("ScreenGui")
+local HistoryLabel = Instance.new("TextLabel")
+local UIStroke = Instance.new("UIStroke")
+local Warn = Instance.new("Frame")
+local DropShadowHolder = Instance.new("Frame")
+local DropShadow_2 = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local UIStroke_2 = Instance.new("UIStroke")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local Yes = Instance.new("TextButton")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local No = Instance.new("TextButton")
+local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
+local Warn2 = Instance.new("Frame")
+local DropShadowHolder_2 = Instance.new("Frame")
+local DropShadow_4 = Instance.new("ImageLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local UIStroke_3 = Instance.new("UIStroke")
+local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
+local Yes_2 = Instance.new("TextButton")
+local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
+local No_2 = Instance.new("TextButton")
+local UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint")
+local CheatButton = Instance.new("TextButton")
+local Frame = Instance.new("Frame")
+local Page = Instance.new("TextButton")
+local UIStroke_4 = Instance.new("UIStroke")
+local Slender = Instance.new("TextButton")
+local UIStroke_5 = Instance.new("UIStroke")
+local Generator = Instance.new("TextButton")
+local UIStroke_6 = Instance.new("UIStroke")
+local UIListLayout = Instance.new("UIListLayout")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local FullBright = Instance.new("TextButton")
+local UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint")
+local UIStroke_7 = Instance.new("UIStroke")
+local ResetCharacter = Instance.new("TextButton")
+local UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint")
+local UIStroke_8 = Instance.new("UIStroke")
+local PoopEggs = Instance.new("TextButton")
+local UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint")
+local UIStroke_9 = Instance.new("UIStroke")
+local UndetectedSpeedHack = Instance.new("TextButton")
+local UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint")
+local UIStroke_10 = Instance.new("UIStroke")
+local ImmuneAgainstSlender = Instance.new("TextButton")
+local UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint")
+local UIStroke_11 = Instance.new("UIStroke")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local clicking = Instance.new("Sound")
+local UICorner = Instance.new("UICorner")
+local UITextSizeConstraint_12 = Instance.new("UITextSizeConstraint")
+local ScrollingFrame_2 = Instance.new("ScrollingFrame")
+local DestroyGUI = Instance.new("TextButton")
+local UITextSizeConstraint_13 = Instance.new("UITextSizeConstraint")
+local UIStroke_12 = Instance.new("UIStroke")
+local Provoke = Instance.new("TextButton")
+local UITextSizeConstraint_14 = Instance.new("UITextSizeConstraint")
+local UIStroke_13 = Instance.new("UIStroke")
+local Refresh = Instance.new("TextButton")
+local UITextSizeConstraint_15 = Instance.new("UITextSizeConstraint")
+local UIStroke_14 = Instance.new("UIStroke")
+local TrollSounds = Instance.new("TextButton")
+local UITextSizeConstraint_16 = Instance.new("UITextSizeConstraint")
+local UIStroke_15 = Instance.new("UIStroke")
+local Lay_3 = Instance.new("TextButton")
+local UITextSizeConstraint_17 = Instance.new("UITextSizeConstraint")
+local UIStroke_16 = Instance.new("UIStroke")
+local UIListLayout_3 = Instance.new("UIListLayout")
+local Noticer = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local UIStroke_17 = Instance.new("UIStroke")
+local UITextSizeConstraint_18 = Instance.new("UITextSizeConstraint")
+local laugh = Instance.new("Sound")
+local Warn3 = Instance.new("Frame")
+local DropShadowHolder_3 = Instance.new("Frame")
+local DropShadow_6 = Instance.new("ImageLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local UIStroke_18 = Instance.new("UIStroke")
+local UITextSizeConstraint_19 = Instance.new("UITextSizeConstraint")
+local Yes_3 = Instance.new("TextButton")
+local UITextSizeConstraint_20 = Instance.new("UITextSizeConstraint")
+local No_4 = Instance.new("TextButton")
+local UITextSizeConstraint_21 = Instance.new("UITextSizeConstraint")
+local Warn4 = Instance.new("Frame")
+local DropShadowHolder_4 = Instance.new("Frame")
+local DropShadow_8 = Instance.new("ImageLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local UIStroke_19 = Instance.new("UIStroke")
+local UITextSizeConstraint_22 = Instance.new("UITextSizeConstraint")
+local Yes_4 = Instance.new("TextButton")
+local UITextSizeConstraint_23 = Instance.new("UITextSizeConstraint")
+local No_5 = Instance.new("TextButton")
+local UITextSizeConstraint_24 = Instance.new("UITextSizeConstraint")
+local AccountAge = Instance.new("TextLabel")
+local UIStroke_20 = Instance.new("UIStroke")
+local UICorner_3 = Instance.new("UICorner")
+local UITextSizeConstraint_25 = Instance.new("UITextSizeConstraint")
+local Pages = Instance.new("TextLabel")
+local UIStroke_21 = Instance.new("UIStroke")
+local UICorner_4 = Instance.new("UICorner")
+local UITextSizeConstraint_26 = Instance.new("UITextSizeConstraint")
+local Versi0n = Instance.new("TextLabel")
+local UIStroke_22 = Instance.new("UIStroke")
+local UICorner_5 = Instance.new("UICorner")
+local UITextSizeConstraint_27 = Instance.new("UITextSizeConstraint")
+local WhoIsSlender = Instance.new("TextLabel")
+local UIStroke_23 = Instance.new("UIStroke")
+local UICorner_6 = Instance.new("UICorner")
+local UITextSizeConstraint_28 = Instance.new("UITextSizeConstraint")
+local InfoTeller = Instance.new("TextLabel")
+local UIStroke_24 = Instance.new("UIStroke")
+local UIPadding = Instance.new("UIPadding")
+
+SGUI.Name = "SGUI"
+SGUI.IgnoreGuiInset = true
+SGUI.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
+
+HistoryLabel.Name = "HistoryLabel"
+HistoryLabel.AnchorPoint = Vector2.new(0.5, 1)
+HistoryLabel.Size = UDim2.new(0.5, 0, 0, 20)
+HistoryLabel.BorderColor3 = Color3.new(0, 0, 0)
+HistoryLabel.BorderSizePixel = 0
+HistoryLabel.BackgroundTransparency = 1
+HistoryLabel.Position = UDim2.new(0.5, 0, 1, -55)
+HistoryLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+HistoryLabel.TextStrokeTransparency = 0.699999988079071
+HistoryLabel.TextColor3 = Color3.new(1, 1, 1)
+HistoryLabel.Text = ""
+HistoryLabel.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+HistoryLabel.TextWrapped = true
+HistoryLabel.Parent = SGUI
+
+UIStroke.Name = "UIStroke"
+UIStroke.Parent = HistoryLabel
+
+Warn.Name = "Warn"
+Warn.AnchorPoint = Vector2.new(0.5, 0.5)
+Warn.Visible = false
+Warn.Size = UDim2.new(0, 250, 0, 100)
+Warn.BorderColor3 = Color3.new(0, 0, 0)
+Warn.BorderSizePixel = 0
+Warn.Position = UDim2.new(0.5, 0, 0.5, 0)
+Warn.BackgroundColor3 = Color3.new(0, 0, 0)
+Warn.Parent = SGUI
+
+DropShadowHolder.Name = "DropShadowHolder"
+DropShadowHolder.ZIndex = 0
+DropShadowHolder.Size = UDim2.new(1, 0, 1, 0)
+DropShadowHolder.BorderColor3 = Color3.new(0, 0, 0)
+DropShadowHolder.BorderSizePixel = 0
+DropShadowHolder.BackgroundTransparency = 1
+DropShadowHolder.Parent = Warn
+
+DropShadow_2.Name = "DropShadow"
+DropShadow_2.AnchorPoint = Vector2.new(0.5, 0.5)
+DropShadow_2.ZIndex = 0
+DropShadow_2.Size = UDim2.new(1, 47, 1, 47)
+DropShadow_2.BorderColor3 = Color3.new(0, 0, 0)
+DropShadow_2.BorderSizePixel = 0
+DropShadow_2.BackgroundTransparency = 1
+DropShadow_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+DropShadow_2.ImageColor3 = Color3.new(0, 0, 0)
+DropShadow_2.ScaleType = Enum.ScaleType.Slice
+DropShadow_2.ImageTransparency = 0.5
+DropShadow_2.Image = "rbxassetid://6015897843"
+DropShadow_2.SliceCenter = Rect.new(Vector2.new(49, 49), Vector2.new(450, 450))
+DropShadow_2.Parent = DropShadowHolder
+
+TextLabel.Name = "TextLabel"
+TextLabel.AnchorPoint = Vector2.new(0.5, 0)
+TextLabel.Size = UDim2.new(0, 225, 0, 50)
+TextLabel.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.5, 0, 0, 8)
+TextLabel.BackgroundColor3 = Color3.new(0, 0, 0)
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.Text = "Click Yes to lie down, means your character will be in a flat position. Are you doing this on purpose?"
+TextLabel.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+TextLabel.TextWrapped = true
+TextLabel.TextScaled = true
+TextLabel.Parent = Warn
+
+UIStroke_2.Name = "UIStroke"
+UIStroke_2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_2.Parent = TextLabel
+
+UITextSizeConstraint.Name = "UITextSizeConstraint"
+UITextSizeConstraint.MaxTextSize = 15
+UITextSizeConstraint.Parent = TextLabel
+
+Yes.Name = "Yes"
+Yes.AutoButtonColor = true
+Yes.AnchorPoint = Vector2.new(0, 1)
+Yes.Size = UDim2.new(0, 100, 0, 30)
+Yes.BorderColor3 = Color3.new(0, 0, 0)
+Yes.BorderSizePixel = 0
+Yes.Position = UDim2.new(0, 12, 1, -6)
+Yes.BackgroundColor3 = Color3.new(0, 0, 0)
+Yes.TextColor3 = Color3.new(0, 0, 0)
+Yes.Text = "Yes"
+Yes.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Yes.TextWrapped = true
+Yes.TextScaled = true
+Yes.Parent = Warn
+
+UITextSizeConstraint_2.Name = "UITextSizeConstraint"
+UITextSizeConstraint_2.MaxTextSize = 20
+UITextSizeConstraint_2.Parent = Yes
+
+No.Name = "No"
+No.AutoButtonColor = true
+No.AnchorPoint = Vector2.new(1, 1)
+No.Size = UDim2.new(0, 100, 0, 30)
+No.BorderColor3 = Color3.new(0, 0, 0)
+No.BorderSizePixel = 0
+No.Position = UDim2.new(1, -13, 1, -6)
+No.BackgroundColor3 = Color3.new(0, 0, 0)
+No.TextColor3 = Color3.new(0, 0, 0)
+No.Text = "No"
+No.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+No.TextWrapped = true
+No.TextScaled = true
+No.Parent = Warn
+
+UITextSizeConstraint_3.Name = "UITextSizeConstraint"
+UITextSizeConstraint_3.MaxTextSize = 20
+UITextSizeConstraint_3.Parent = No
+
+Warn2.Name = "Warn2"
+Warn2.AnchorPoint = Vector2.new(0.5, 0.5)
+Warn2.Visible = false
+Warn2.Size = UDim2.new(0, 250, 0, 100)
+Warn2.BorderColor3 = Color3.new(0, 0, 0)
+Warn2.BorderSizePixel = 0
+Warn2.Position = UDim2.new(0.5, 0, 0.5, 0)
+Warn2.BackgroundColor3 = Color3.new(0, 0, 0)
+Warn2.Parent = SGUI
+
+DropShadowHolder_2.Name = "DropShadowHolder"
+DropShadowHolder_2.ZIndex = 0
+DropShadowHolder_2.Size = UDim2.new(1, 0, 1, 0)
+DropShadowHolder_2.BorderColor3 = Color3.new(0, 0, 0)
+DropShadowHolder_2.BorderSizePixel = 0
+DropShadowHolder_2.BackgroundTransparency = 1
+DropShadowHolder_2.Parent = Warn2
+
+DropShadow_4.Name = "DropShadow"
+DropShadow_4.AnchorPoint = Vector2.new(0.5, 0.5)
+DropShadow_4.ZIndex = 0
+DropShadow_4.Size = UDim2.new(1, 47, 1, 47)
+DropShadow_4.BorderColor3 = Color3.new(0, 0, 0)
+DropShadow_4.BorderSizePixel = 0
+DropShadow_4.BackgroundTransparency = 1
+DropShadow_4.Position = UDim2.new(0.5, 0, 0.5, 0)
+DropShadow_4.ImageColor3 = Color3.new(0, 0, 0)
+DropShadow_4.ScaleType = Enum.ScaleType.Slice
+DropShadow_4.ImageTransparency = 0.5
+DropShadow_4.Image = "rbxassetid://6015897843"
+DropShadow_4.SliceCenter = Rect.new(Vector2.new(49, 49), Vector2.new(450, 450))
+DropShadow_4.Parent = DropShadowHolder_2
+
+TextLabel_2.Name = "TextLabel"
+TextLabel_2.AnchorPoint = Vector2.new(0.5, 0)
+TextLabel_2.Size = UDim2.new(0, 225, 0, 50)
+TextLabel_2.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.5, 0, 0, 8)
+TextLabel_2.BackgroundColor3 = Color3.new(0, 0, 0)
+TextLabel_2.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_2.Text = "Click Yes to stop damaging you when you looking at Slender. Are you doing this on purpose?"
+TextLabel_2.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+TextLabel_2.TextWrapped = true
+TextLabel_2.TextScaled = true
+TextLabel_2.Parent = Warn2
+
+UIStroke_3.Name = "UIStroke"
+UIStroke_3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_3.Parent = TextLabel_2
+
+UITextSizeConstraint_4.Name = "UITextSizeConstraint"
+UITextSizeConstraint_4.MaxTextSize = 15
+UITextSizeConstraint_4.Parent = TextLabel_2
+
+Yes_2.Name = "Yes"
+Yes_2.AutoButtonColor = true
+Yes_2.AnchorPoint = Vector2.new(0, 1)
+Yes_2.Size = UDim2.new(0, 100, 0, 30)
+Yes_2.BorderColor3 = Color3.new(0, 0, 0)
+Yes_2.BorderSizePixel = 0
+Yes_2.Position = UDim2.new(0, 12, 1, -6)
+Yes_2.BackgroundColor3 = Color3.new(0, 0, 0)
+Yes_2.TextColor3 = Color3.new(0, 0, 0)
+Yes_2.Text = "Yes"
+Yes_2.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Yes_2.TextWrapped = true
+Yes_2.TextScaled = true
+Yes_2.Parent = Warn2
+
+UITextSizeConstraint_5.Name = "UITextSizeConstraint"
+UITextSizeConstraint_5.MaxTextSize = 20
+UITextSizeConstraint_5.Parent = Yes_2
+
+No_2.Name = "No"
+No_2.AutoButtonColor = true
+No_2.AnchorPoint = Vector2.new(1, 1)
+No_2.Size = UDim2.new(0, 100, 0, 30)
+No_2.BorderColor3 = Color3.new(0, 0, 0)
+No_2.BorderSizePixel = 0
+No_2.Position = UDim2.new(1, -13, 1, -6)
+No_2.BackgroundColor3 = Color3.new(0, 0, 0)
+No_2.TextColor3 = Color3.new(0, 0, 0)
+No_2.Text = "No"
+No_2.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+No_2.TextWrapped = true
+No_2.TextScaled = true
+No_2.Parent = Warn2
+
+UITextSizeConstraint_6.Name = "UITextSizeConstraint"
+UITextSizeConstraint_6.MaxTextSize = 20
+UITextSizeConstraint_6.Parent = No_2
+
+CheatButton.Name = "CheatButton"
+CheatButton.AutoButtonColor = true
+CheatButton.AnchorPoint = Vector2.new(1, 0)
+CheatButton.Size = UDim2.new(0, 32, 0, 32)
+CheatButton.BorderColor3 = Color3.new(0, 0, 0)
+CheatButton.BorderSizePixel = 0
+CheatButton.BackgroundTransparency = 0.5
+CheatButton.Position = UDim2.new(1, -60, 0, 4)
+CheatButton.BackgroundColor3 = Color3.new(0, 0, 0)
+CheatButton.TextColor3 = Color3.new(1, 1, 1)
+CheatButton.Text = "🖥"
+CheatButton.FontFace = Font.new("rbxasset://fonts/families/Arial.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+CheatButton.TextWrapped = true
+CheatButton.TextScaled = true
+CheatButton.Parent = SGUI
+
+Frame.Name = "Frame"
+Frame.AnchorPoint = Vector2.new(1, 0)
+Frame.Size = UDim2.new(0, 100, 0, 105)
+Frame.BorderColor3 = Color3.new(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.BackgroundTransparency = 1
+Frame.Position = UDim2.new(1, -17, 1, 6)
+Frame.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame.Parent = CheatButton
+
+Page.Name = "Page"
+Page.AutoButtonColor = true
+Page.LayoutOrder = 1
+Page.AnchorPoint = Vector2.new(0.5, 0.5)
+Page.Size = UDim2.new(1, 0, 0, 35)
+Page.BorderColor3 = Color3.new(0, 0, 0)
+Page.BorderSizePixel = 0
+Page.BackgroundTransparency = 0.5
+Page.Position = UDim2.new(0.5, 0, 0.5, -35)
+Page.BackgroundColor3 = Color3.new(0, 0, 0)
+Page.TextColor3 = Color3.new(1, 1, 1)
+Page.Text = "Page"
+Page.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Page.TextWrapped = true
+Page.Parent = Frame
+
+UIStroke_4.Name = "UIStroke"
+UIStroke_4.Parent = Page
+
+Slender.Name = "Slender"
+Slender.AutoButtonColor = true
+Slender.LayoutOrder = 1
+Slender.AnchorPoint = Vector2.new(0.5, 0.5)
+Slender.Size = UDim2.new(1, 0, 0, 35)
+Slender.BorderColor3 = Color3.new(0, 0, 0)
+Slender.BorderSizePixel = 0
+Slender.BackgroundTransparency = 0.5
+Slender.Position = UDim2.new(0.5, 0, 0.5, 0)
+Slender.BackgroundColor3 = Color3.new(0, 0, 0)
+Slender.TextStrokeColor3 = Color3.new(1, 1, 1)
+Slender.TextColor3 = Color3.new(1, 1, 1)
+Slender.Text = "Slender"
+Slender.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Slender.TextWrapped = true
+Slender.Parent = Frame
+
+UIStroke_5.Name = "UIStroke"
+UIStroke_5.Parent = Slender
+
+Generator.Name = "Generator"
+Generator.AutoButtonColor = true
+Generator.LayoutOrder = 1
+Generator.AnchorPoint = Vector2.new(0.5, 0.5)
+Generator.Size = UDim2.new(1, 0, 0, 35)
+Generator.BorderColor3 = Color3.new(0, 0, 0)
+Generator.BorderSizePixel = 0
+Generator.BackgroundTransparency = 0.5
+Generator.Position = UDim2.new(0.5, 0, 0.5, 35)
+Generator.BackgroundColor3 = Color3.new(0, 0, 0)
+Generator.TextStrokeColor3 = Color3.new(1, 1, 1)
+Generator.TextColor3 = Color3.new(1, 1, 1)
+Generator.Text = "Generator"
+Generator.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Generator.TextWrapped = true
+Generator.Parent = Frame
+
+UIStroke_6.Name = "UIStroke"
+UIStroke_6.Parent = Generator
+
+UIListLayout.Name = "UIListLayout"
+UIListLayout.Parent = Frame
+
+ScrollingFrame.Name = "ScrollingFrame"
+ScrollingFrame.Size = UDim2.new(0, 33, 0, 105)
+ScrollingFrame.ClipsDescendants = false
+ScrollingFrame.BorderColor3 = Color3.new(0, 0, 0)
+ScrollingFrame.Selectable = false
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.BackgroundTransparency = 1
+ScrollingFrame.Position = UDim2.new(1, -15, 1, 6)
+ScrollingFrame.BackgroundColor3 = Color3.new(0, 0, 0)
+ScrollingFrame.ScrollingDirection = Enum.ScrollingDirection.X
+ScrollingFrame.MidImage = ""
+ScrollingFrame.ElasticBehavior = Enum.ElasticBehavior.Always
+ScrollingFrame.TopImage = ""
+ScrollingFrame.ScrollingEnabled = false
+ScrollingFrame.BottomImage = ""
+ScrollingFrame.ScrollBarThickness = 0
+ScrollingFrame.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+ScrollingFrame.Parent = CheatButton
+
+FullBright.Name = "FullBright"
+FullBright.AutoButtonColor = true
+FullBright.LayoutOrder = 1
+FullBright.AnchorPoint = Vector2.new(0.5, 0.5)
+FullBright.Size = UDim2.new(1, 0, 0, 21)
+FullBright.BorderColor3 = Color3.new(0, 0, 0)
+FullBright.BorderSizePixel = 0
+FullBright.BackgroundTransparency = 0.5
+FullBright.Position = UDim2.new(0.5, 0, 0.5, -42)
+FullBright.BackgroundColor3 = Color3.new(0, 0, 0)
+FullBright.TextColor3 = Color3.new(1, 1, 1)
+FullBright.Text = "Fb"
+FullBright.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+FullBright.TextWrapped = true
+FullBright.TextScaled = true
+FullBright.Parent = ScrollingFrame
+
+UITextSizeConstraint_7.Name = "UITextSizeConstraint"
+UITextSizeConstraint_7.MaxTextSize = 16
+UITextSizeConstraint_7.Parent = FullBright
+
+UIStroke_7.Name = "UIStroke"
+UIStroke_7.Parent = FullBright
+
+ResetCharacter.Name = "ResetCharacter"
+ResetCharacter.AutoButtonColor = true
+ResetCharacter.LayoutOrder = 1
+ResetCharacter.AnchorPoint = Vector2.new(0.5, 0.5)
+ResetCharacter.Size = UDim2.new(1, 0, 0, 21)
+ResetCharacter.BorderColor3 = Color3.new(0, 0, 0)
+ResetCharacter.BorderSizePixel = 0
+ResetCharacter.BackgroundTransparency = 0.5
+ResetCharacter.Position = UDim2.new(0.5, 0, 0.5, -21)
+ResetCharacter.BackgroundColor3 = Color3.new(0, 0, 0)
+ResetCharacter.TextColor3 = Color3.new(1, 1, 1)
+ResetCharacter.Text = "Rc"
+ResetCharacter.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+ResetCharacter.TextWrapped = true
+ResetCharacter.TextScaled = true
+ResetCharacter.Parent = ScrollingFrame
+
+UITextSizeConstraint_8.Name = "UITextSizeConstraint"
+UITextSizeConstraint_8.MaxTextSize = 16
+UITextSizeConstraint_8.Parent = ResetCharacter
+
+UIStroke_8.Name = "UIStroke"
+UIStroke_8.Parent = ResetCharacter
+
+PoopEggs.Name = "PoopEggs"
+PoopEggs.AutoButtonColor = true
+PoopEggs.LayoutOrder = 1
+PoopEggs.AnchorPoint = Vector2.new(0.5, 0.5)
+PoopEggs.Size = UDim2.new(1, 0, 0, 21)
+PoopEggs.BorderColor3 = Color3.new(0, 0, 0)
+PoopEggs.BorderSizePixel = 0
+PoopEggs.BackgroundTransparency = 0.5
+PoopEggs.Position = UDim2.new(0.5, 0, 0.5, 0)
+PoopEggs.BackgroundColor3 = Color3.new(0, 0, 0)
+PoopEggs.TextColor3 = Color3.new(1, 1, 1)
+PoopEggs.Text = "Pe"
+PoopEggs.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+PoopEggs.TextWrapped = true
+PoopEggs.TextScaled = true
+PoopEggs.Parent = ScrollingFrame
+
+UITextSizeConstraint_9.Name = "UITextSizeConstraint"
+UITextSizeConstraint_9.MaxTextSize = 16
+UITextSizeConstraint_9.Parent = PoopEggs
+
+UIStroke_9.Name = "UIStroke"
+UIStroke_9.Parent = PoopEggs
+
+UndetectedSpeedHack.Name = "UndetectedSpeedHack"
+UndetectedSpeedHack.AutoButtonColor = true
+UndetectedSpeedHack.LayoutOrder = 1
+UndetectedSpeedHack.AnchorPoint = Vector2.new(0.5, 0.5)
+UndetectedSpeedHack.Size = UDim2.new(1, 0, 0, 21)
+UndetectedSpeedHack.BorderColor3 = Color3.new(0, 0, 0)
+UndetectedSpeedHack.BorderSizePixel = 0
+UndetectedSpeedHack.BackgroundTransparency = 0.5
+UndetectedSpeedHack.Position = UDim2.new(0.5, 0, 0.5, 21)
+UndetectedSpeedHack.BackgroundColor3 = Color3.new(0, 0, 0)
+UndetectedSpeedHack.TextColor3 = Color3.new(1, 1, 1)
+UndetectedSpeedHack.Text = "Sh"
+UndetectedSpeedHack.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UndetectedSpeedHack.TextWrapped = true
+UndetectedSpeedHack.TextScaled = true
+UndetectedSpeedHack.Parent = ScrollingFrame
+
+UITextSizeConstraint_10.Name = "UITextSizeConstraint"
+UITextSizeConstraint_10.MaxTextSize = 16
+UITextSizeConstraint_10.Parent = UndetectedSpeedHack
+
+UIStroke_10.Name = "UIStroke"
+UIStroke_10.Parent = UndetectedSpeedHack
+
+ImmuneAgainstSlender.Name = "ImmuneAgainstSlender"
+ImmuneAgainstSlender.AutoButtonColor = true
+ImmuneAgainstSlender.LayoutOrder = 1
+ImmuneAgainstSlender.AnchorPoint = Vector2.new(0.5, 0.5)
+ImmuneAgainstSlender.Size = UDim2.new(1, 0, 0, 21)
+ImmuneAgainstSlender.BorderColor3 = Color3.new(0, 0, 0)
+ImmuneAgainstSlender.BorderSizePixel = 0
+ImmuneAgainstSlender.BackgroundTransparency = 0.5
+ImmuneAgainstSlender.Position = UDim2.new(0.5, 0, 0.5, 42)
+ImmuneAgainstSlender.BackgroundColor3 = Color3.new(0, 0, 0)
+ImmuneAgainstSlender.TextColor3 = Color3.new(1, 1, 1)
+ImmuneAgainstSlender.Text = "Im"
+ImmuneAgainstSlender.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+ImmuneAgainstSlender.TextWrapped = true
+ImmuneAgainstSlender.TextScaled = true
+ImmuneAgainstSlender.Parent = ScrollingFrame
+
+UITextSizeConstraint_11.Name = "UITextSizeConstraint"
+UITextSizeConstraint_11.MaxTextSize = 16
+UITextSizeConstraint_11.Parent = ImmuneAgainstSlender
+
+UIStroke_11.Name = "UIStroke"
+UIStroke_11.Parent = ImmuneAgainstSlender
+
+UIListLayout_2.Name = "UIListLayout"
+UIListLayout_2.Parent = ScrollingFrame
+
+clicking.Name = "clicking"
+clicking.Volume = 1
+clicking.TimeLength = 0.8169375
+clicking.SoundId = "rbxassetid://9125397823"
+clicking.Parent = CheatButton
+
+UICorner.Name = "UICorner"
+UICorner.Parent = CheatButton
+
+UITextSizeConstraint_12.Name = "UITextSizeConstraint"
+UITextSizeConstraint_12.MaxTextSize = 20
+UITextSizeConstraint_12.Parent = CheatButton
+
+ScrollingFrame_2.Name = "ScrollingFrame"
+ScrollingFrame_2.Size = UDim2.new(0, 33, 0, 105)
+ScrollingFrame_2.ClipsDescendants = false
+ScrollingFrame_2.BorderColor3 = Color3.new(0, 0, 0)
+ScrollingFrame_2.Selectable = false
+ScrollingFrame_2.BorderSizePixel = 0
+ScrollingFrame_2.BackgroundTransparency = 1
+ScrollingFrame_2.Position = UDim2.new(1, 20, 1, 6)
+ScrollingFrame_2.BackgroundColor3 = Color3.new(0, 0, 0)
+ScrollingFrame_2.ScrollingDirection = Enum.ScrollingDirection.X
+ScrollingFrame_2.MidImage = ""
+ScrollingFrame_2.ElasticBehavior = Enum.ElasticBehavior.Always
+ScrollingFrame_2.TopImage = ""
+ScrollingFrame_2.ScrollingEnabled = false
+ScrollingFrame_2.BottomImage = ""
+ScrollingFrame_2.ScrollBarThickness = 0
+ScrollingFrame_2.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+ScrollingFrame_2.Parent = CheatButton
+
+DestroyGUI.Name = "DestroyGUI"
+DestroyGUI.AutoButtonColor = true
+DestroyGUI.LayoutOrder = 1
+DestroyGUI.AnchorPoint = Vector2.new(0.5, 0.5)
+DestroyGUI.Size = UDim2.new(1, 0, 0, 21)
+DestroyGUI.BorderColor3 = Color3.new(0, 0, 0)
+DestroyGUI.BorderSizePixel = 0
+DestroyGUI.BackgroundTransparency = 0.5
+DestroyGUI.Position = UDim2.new(0.5, 0, 0.5, 42)
+DestroyGUI.BackgroundColor3 = Color3.new(0, 0, 0)
+DestroyGUI.TextColor3 = Color3.new(1, 1, 1)
+DestroyGUI.Text = "De"
+DestroyGUI.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+DestroyGUI.TextWrapped = true
+DestroyGUI.TextScaled = true
+DestroyGUI.Parent = ScrollingFrame_2
+
+UITextSizeConstraint_13.Name = "UITextSizeConstraint"
+UITextSizeConstraint_13.MaxTextSize = 16
+UITextSizeConstraint_13.Parent = DestroyGUI
+
+UIStroke_12.Name = "UIStroke"
+UIStroke_12.Parent = DestroyGUI
+
+Provoke.Name = "Provoke"
+Provoke.AutoButtonColor = true
+Provoke.LayoutOrder = 1
+Provoke.AnchorPoint = Vector2.new(0.5, 0.5)
+Provoke.Size = UDim2.new(1, 0, 0, 21)
+Provoke.BorderColor3 = Color3.new(0, 0, 0)
+Provoke.BorderSizePixel = 0
+Provoke.BackgroundTransparency = 0.5
+Provoke.Position = UDim2.new(0.5, 0, 0.5, -42)
+Provoke.BackgroundColor3 = Color3.new(0, 0, 0)
+Provoke.TextColor3 = Color3.new(1, 1, 1)
+Provoke.Text = "Pr"
+Provoke.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Provoke.TextWrapped = true
+Provoke.TextScaled = true
+Provoke.Parent = ScrollingFrame_2
+
+UITextSizeConstraint_14.Name = "UITextSizeConstraint"
+UITextSizeConstraint_14.MaxTextSize = 16
+UITextSizeConstraint_14.Parent = Provoke
+
+UIStroke_13.Name = "UIStroke"
+UIStroke_13.Parent = Provoke
+
+Refresh.Name = "Refresh"
+Refresh.AutoButtonColor = true
+Refresh.LayoutOrder = 1
+Refresh.AnchorPoint = Vector2.new(0.5, 0.5)
+Refresh.Size = UDim2.new(1, 0, 0, 21)
+Refresh.BorderColor3 = Color3.new(0, 0, 0)
+Refresh.BorderSizePixel = 0
+Refresh.BackgroundTransparency = 0.5
+Refresh.Position = UDim2.new(0.5, 0, 0.5, 21)
+Refresh.BackgroundColor3 = Color3.new(0, 0, 0)
+Refresh.TextColor3 = Color3.new(1, 1, 1)
+Refresh.Text = "Rs"
+Refresh.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Refresh.TextWrapped = true
+Refresh.TextScaled = true
+Refresh.Parent = ScrollingFrame_2
+
+UITextSizeConstraint_15.Name = "UITextSizeConstraint"
+UITextSizeConstraint_15.MaxTextSize = 16
+UITextSizeConstraint_15.Parent = Refresh
+
+UIStroke_14.Name = "UIStroke"
+UIStroke_14.Parent = Refresh
+
+TrollSounds.Name = "TrollSounds"
+TrollSounds.AutoButtonColor = true
+TrollSounds.LayoutOrder = 1
+TrollSounds.AnchorPoint = Vector2.new(0.5, 0.5)
+TrollSounds.Size = UDim2.new(1, 0, 0, 21)
+TrollSounds.BorderColor3 = Color3.new(0, 0, 0)
+TrollSounds.BorderSizePixel = 0
+TrollSounds.BackgroundTransparency = 0.5
+TrollSounds.Position = UDim2.new(0.5, 0, 0.5, -21)
+TrollSounds.BackgroundColor3 = Color3.new(0, 0, 0)
+TrollSounds.TextColor3 = Color3.new(1, 1, 1)
+TrollSounds.Text = "Ts"
+TrollSounds.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+TrollSounds.TextWrapped = true
+TrollSounds.TextScaled = true
+TrollSounds.Parent = ScrollingFrame_2
+
+UITextSizeConstraint_16.Name = "UITextSizeConstraint"
+UITextSizeConstraint_16.MaxTextSize = 16
+UITextSizeConstraint_16.Parent = TrollSounds
+
+UIStroke_15.Name = "UIStroke"
+UIStroke_15.Parent = TrollSounds
+
+Lay_3.Name = "Lay"
+Lay_3.AutoButtonColor = true
+Lay_3.LayoutOrder = 1
+Lay_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Lay_3.Size = UDim2.new(1, 0, 0, 21)
+Lay_3.BorderColor3 = Color3.new(0, 0, 0)
+Lay_3.BorderSizePixel = 0
+Lay_3.BackgroundTransparency = 0.5
+Lay_3.Position = UDim2.new(0.5, 0, 0.5, 0)
+Lay_3.BackgroundColor3 = Color3.new(0, 0, 0)
+Lay_3.TextColor3 = Color3.new(1, 1, 1)
+Lay_3.Text = "Ld"
+Lay_3.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Lay_3.TextWrapped = true
+Lay_3.TextScaled = true
+Lay_3.Parent = ScrollingFrame_2
+
+UITextSizeConstraint_17.Name = "UITextSizeConstraint"
+UITextSizeConstraint_17.MaxTextSize = 16
+UITextSizeConstraint_17.Parent = Lay_3
+
+UIStroke_16.Name = "UIStroke"
+UIStroke_16.Parent = Lay_3
+
+UIListLayout_3.Name = "UIListLayout"
+UIListLayout_3.Parent = ScrollingFrame_2
+
+Noticer.Name = "Noticer"
+Noticer.AnchorPoint = Vector2.new(0.5, 1)
+Noticer.Visible = false
+Noticer.Size = UDim2.new(0.5, 0, 0, 25)
+Noticer.BorderColor3 = Color3.new(0, 0, 0)
+Noticer.BorderSizePixel = 0
+Noticer.BackgroundTransparency = 0.5
+Noticer.Position = UDim2.new(0.5, 0, 1, -30)
+Noticer.BackgroundColor3 = Color3.new(0, 0, 0)
+Noticer.TextColor3 = Color3.new(1, 1, 1)
+Noticer.Text = "???"
+Noticer.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Noticer.TextWrapped = true
+Noticer.TextScaled = true
+Noticer.Parent = SGUI
+
+UICorner_2.Name = "UICorner"
+UICorner_2.CornerRadius = UDim.new(1, 0)
+UICorner_2.Parent = Noticer
+
+UIStroke_17.Name = "UIStroke"
+UIStroke_17.Parent = Noticer
+
+UITextSizeConstraint_18.Name = "UITextSizeConstraint"
+UITextSizeConstraint_18.MaxTextSize = 25
+UITextSizeConstraint_18.Parent = Noticer
+
+laugh.Name = "laugh"
+laugh.Volume = 1
+laugh.TimeLength = 0.768
+laugh.SoundId = "rbxassetid://79502215207744"
+laugh.Parent = SGUI
+
+Warn3.Name = "Warn3"
+Warn3.AnchorPoint = Vector2.new(0.5, 0.5)
+Warn3.Visible = false
+Warn3.Size = UDim2.new(0, 250, 0, 100)
+Warn3.BorderColor3 = Color3.new(0, 0, 0)
+Warn3.BorderSizePixel = 0
+Warn3.Position = UDim2.new(0.5, 0, 0.5, 0)
+Warn3.BackgroundColor3 = Color3.new(0, 0, 0)
+Warn3.Parent = SGUI
+
+DropShadowHolder_3.Name = "DropShadowHolder"
+DropShadowHolder_3.ZIndex = 0
+DropShadowHolder_3.Size = UDim2.new(1, 0, 1, 0)
+DropShadowHolder_3.BorderColor3 = Color3.new(0, 0, 0)
+DropShadowHolder_3.BorderSizePixel = 0
+DropShadowHolder_3.BackgroundTransparency = 1
+DropShadowHolder_3.Parent = Warn3
+
+DropShadow_6.Name = "DropShadow"
+DropShadow_6.AnchorPoint = Vector2.new(0.5, 0.5)
+DropShadow_6.ZIndex = 0
+DropShadow_6.Size = UDim2.new(1, 47, 1, 47)
+DropShadow_6.BorderColor3 = Color3.new(0, 0, 0)
+DropShadow_6.BorderSizePixel = 0
+DropShadow_6.BackgroundTransparency = 1
+DropShadow_6.Position = UDim2.new(0.5, 0, 0.5, 0)
+DropShadow_6.ImageColor3 = Color3.new(0, 0, 0)
+DropShadow_6.ScaleType = Enum.ScaleType.Slice
+DropShadow_6.ImageTransparency = 0.5
+DropShadow_6.Image = "rbxassetid://6015897843"
+DropShadow_6.SliceCenter = Rect.new(Vector2.new(49, 49), Vector2.new(450, 450))
+DropShadow_6.Parent = DropShadowHolder_3
+
+TextLabel_3.Name = "TextLabel"
+TextLabel_3.AnchorPoint = Vector2.new(0.5, 0)
+TextLabel_3.Size = UDim2.new(0, 225, 0, 50)
+TextLabel_3.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.5, 0, 0, 8)
+TextLabel_3.BackgroundColor3 = Color3.new(0, 0, 0)
+TextLabel_3.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_3.Text = "Click Yes to reset character. Are you doing this on purpose?"
+TextLabel_3.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+TextLabel_3.TextWrapped = true
+TextLabel_3.TextScaled = true
+TextLabel_3.Parent = Warn3
+
+UIStroke_18.Name = "UIStroke"
+UIStroke_18.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_18.Parent = TextLabel_3
+
+UITextSizeConstraint_19.Name = "UITextSizeConstraint"
+UITextSizeConstraint_19.MaxTextSize = 15
+UITextSizeConstraint_19.Parent = TextLabel_3
+
+Yes_3.Name = "Yes"
+Yes_3.AutoButtonColor = true
+Yes_3.AnchorPoint = Vector2.new(0, 1)
+Yes_3.Size = UDim2.new(0, 100, 0, 30)
+Yes_3.BorderColor3 = Color3.new(0, 0, 0)
+Yes_3.BorderSizePixel = 0
+Yes_3.Position = UDim2.new(0, 12, 1, -6)
+Yes_3.BackgroundColor3 = Color3.new(0, 0, 0)
+Yes_3.TextColor3 = Color3.new(0, 0, 0)
+Yes_3.Text = "Yes"
+Yes_3.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Yes_3.TextWrapped = true
+Yes_3.TextScaled = true
+Yes_3.Parent = Warn3
+
+UITextSizeConstraint_20.Name = "UITextSizeConstraint"
+UITextSizeConstraint_20.MaxTextSize = 20
+UITextSizeConstraint_20.Parent = Yes_3
+
+No_4.Name = "No"
+No_4.AutoButtonColor = true
+No_4.AnchorPoint = Vector2.new(1, 1)
+No_4.Size = UDim2.new(0, 100, 0, 30)
+No_4.BorderColor3 = Color3.new(0, 0, 0)
+No_4.BorderSizePixel = 0
+No_4.Position = UDim2.new(1, -13, 1, -6)
+No_4.BackgroundColor3 = Color3.new(0, 0, 0)
+No_4.TextColor3 = Color3.new(0, 0, 0)
+No_4.Text = "No"
+No_4.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+No_4.TextWrapped = true
+No_4.TextScaled = true
+No_4.Parent = Warn3
+
+UITextSizeConstraint_21.Name = "UITextSizeConstraint"
+UITextSizeConstraint_21.MaxTextSize = 20
+UITextSizeConstraint_21.Parent = No_4
+
+Warn4.Name = "Warn4"
+Warn4.AnchorPoint = Vector2.new(0.5, 0.5)
+Warn4.Visible = false
+Warn4.Size = UDim2.new(0, 250, 0, 100)
+Warn4.BorderColor3 = Color3.new(0, 0, 0)
+Warn4.BorderSizePixel = 0
+Warn4.Position = UDim2.new(0.5, 0, 0.5, 0)
+Warn4.BackgroundColor3 = Color3.new(0, 0, 0)
+Warn4.Parent = SGUI
+
+DropShadowHolder_4.Name = "DropShadowHolder"
+DropShadowHolder_4.ZIndex = 0
+DropShadowHolder_4.Size = UDim2.new(1, 0, 1, 0)
+DropShadowHolder_4.BorderColor3 = Color3.new(0, 0, 0)
+DropShadowHolder_4.BorderSizePixel = 0
+DropShadowHolder_4.BackgroundTransparency = 1
+DropShadowHolder_4.Parent = Warn4
+
+DropShadow_8.Name = "DropShadow"
+DropShadow_8.AnchorPoint = Vector2.new(0.5, 0.5)
+DropShadow_8.ZIndex = 0
+DropShadow_8.Size = UDim2.new(1, 47, 1, 47)
+DropShadow_8.BorderColor3 = Color3.new(0, 0, 0)
+DropShadow_8.BorderSizePixel = 0
+DropShadow_8.BackgroundTransparency = 1
+DropShadow_8.Position = UDim2.new(0.5, 0, 0.5, 0)
+DropShadow_8.ImageColor3 = Color3.new(0, 0, 0)
+DropShadow_8.ScaleType = Enum.ScaleType.Slice
+DropShadow_8.ImageTransparency = 0.5
+DropShadow_8.Image = "rbxassetid://6015897843"
+DropShadow_8.SliceCenter = Rect.new(Vector2.new(49, 49), Vector2.new(450, 450))
+DropShadow_8.Parent = DropShadowHolder_4
+
+TextLabel_4.Name = "TextLabel"
+TextLabel_4.AnchorPoint = Vector2.new(0.5, 0)
+TextLabel_4.Size = UDim2.new(0, 225, 0, 50)
+TextLabel_4.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.5, 0, 0, 8)
+TextLabel_4.BackgroundColor3 = Color3.new(0, 0, 0)
+TextLabel_4.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_4.Text = "Click Yes to start trolling all players using sounds, click Yes again to stop trolling. Are you doing this on purpose?"
+TextLabel_4.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+TextLabel_4.TextWrapped = true
+TextLabel_4.TextScaled = true
+TextLabel_4.Parent = Warn4
+
+UIStroke_19.Name = "UIStroke"
+UIStroke_19.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_19.Parent = TextLabel_4
+
+UITextSizeConstraint_22.Name = "UITextSizeConstraint"
+UITextSizeConstraint_22.MaxTextSize = 15
+UITextSizeConstraint_22.Parent = TextLabel_4
+
+Yes_4.Name = "Yes"
+Yes_4.AutoButtonColor = true
+Yes_4.AnchorPoint = Vector2.new(0, 1)
+Yes_4.Size = UDim2.new(0, 100, 0, 30)
+Yes_4.BorderColor3 = Color3.new(0, 0, 0)
+Yes_4.BorderSizePixel = 0
+Yes_4.Position = UDim2.new(0, 12, 1, -6)
+Yes_4.BackgroundColor3 = Color3.new(0, 0, 0)
+Yes_4.TextColor3 = Color3.new(0, 0, 0)
+Yes_4.Text = "Yes"
+Yes_4.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Yes_4.TextWrapped = true
+Yes_4.TextScaled = true
+Yes_4.Parent = Warn4
+
+UITextSizeConstraint_23.Name = "UITextSizeConstraint"
+UITextSizeConstraint_23.MaxTextSize = 20
+UITextSizeConstraint_23.Parent = Yes_4
+
+No_5.Name = "No"
+No_5.AutoButtonColor = true
+No_5.AnchorPoint = Vector2.new(1, 1)
+No_5.Size = UDim2.new(0, 100, 0, 30)
+No_5.BorderColor3 = Color3.new(0, 0, 0)
+No_5.BorderSizePixel = 0
+No_5.Position = UDim2.new(1, -13, 1, -6)
+No_5.BackgroundColor3 = Color3.new(0, 0, 0)
+No_5.TextColor3 = Color3.new(0, 0, 0)
+No_5.Text = "No"
+No_5.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+No_5.TextWrapped = true
+No_5.TextScaled = true
+No_5.Parent = Warn4
+
+UITextSizeConstraint_24.Name = "UITextSizeConstraint"
+UITextSizeConstraint_24.MaxTextSize = 20
+UITextSizeConstraint_24.Parent = No_5
+
+AccountAge.Name = "AccountAge"
+AccountAge.AnchorPoint = Vector2.new(1, 0)
+AccountAge.Size = UDim2.new(0, 125, 0, 16)
+AccountAge.BorderColor3 = Color3.new(0, 0, 0)
+AccountAge.BorderSizePixel = 0
+AccountAge.BackgroundTransparency = 0.5
+AccountAge.Position = UDim2.new(1, -533, 0, 4)
+AccountAge.BackgroundColor3 = Color3.new(0, 0, 0)
+AccountAge.TextColor3 = Color3.new(1, 1, 1)
+AccountAge.Text = "Account Age:"
+AccountAge.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+AccountAge.TextWrapped = true
+AccountAge.TextScaled = true
+AccountAge.Parent = SGUI
+
+UIStroke_20.Name = "UIStroke"
+UIStroke_20.Parent = AccountAge
+
+UICorner_3.Name = "UICorner"
+UICorner_3.Parent = AccountAge
+
+UITextSizeConstraint_25.Name = "UITextSizeConstraint"
+UITextSizeConstraint_25.MaxTextSize = 16
+UITextSizeConstraint_25.Parent = AccountAge
+
+Pages.Name = "Pages"
+Pages.AnchorPoint = Vector2.new(1, 0)
+Pages.Size = UDim2.new(0, 125, 0, 16)
+Pages.BorderColor3 = Color3.new(0, 0, 0)
+Pages.BorderSizePixel = 0
+Pages.BackgroundTransparency = 0.5
+Pages.Position = UDim2.new(1, -275, 0, 4)
+Pages.BackgroundColor3 = Color3.new(0, 0, 0)
+Pages.TextColor3 = Color3.new(1, 1, 1)
+Pages.Text = "Total Pages:"
+Pages.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Pages.TextWrapped = true
+Pages.TextScaled = true
+Pages.Parent = SGUI
+
+UIStroke_21.Name = "UIStroke"
+UIStroke_21.Parent = Pages
+
+UICorner_4.Name = "UICorner"
+UICorner_4.Parent = Pages
+
+UITextSizeConstraint_26.Name = "UITextSizeConstraint"
+UITextSizeConstraint_26.MaxTextSize = 16
+UITextSizeConstraint_26.Parent = Pages
+
+Versi0n.Name = "Versi0n"
+Versi0n.AnchorPoint = Vector2.new(1, 0)
+Versi0n.Size = UDim2.new(0, 125, 0, 16)
+Versi0n.BorderColor3 = Color3.new(0, 0, 0)
+Versi0n.BorderSizePixel = 0
+Versi0n.BackgroundTransparency = 0.5
+Versi0n.Position = UDim2.new(1, -404, 0, 4)
+Versi0n.BackgroundColor3 = Color3.new(0, 0, 0)
+Versi0n.TextColor3 = Color3.new(1, 1, 1)
+Versi0n.Text = "Hack Version:"
+Versi0n.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Versi0n.TextWrapped = true
+Versi0n.TextScaled = true
+Versi0n.Parent = SGUI
+
+UIStroke_22.Name = "UIStroke"
+UIStroke_22.Parent = Versi0n
+
+UICorner_5.Name = "UICorner"
+UICorner_5.Parent = Versi0n
+
+UITextSizeConstraint_27.Name = "UITextSizeConstraint"
+UITextSizeConstraint_27.MaxTextSize = 16
+UITextSizeConstraint_27.Parent = Versi0n
+
+WhoIsSlender.Name = "WhoIsSlender"
+WhoIsSlender.AnchorPoint = Vector2.new(1, 0)
+WhoIsSlender.Size = UDim2.new(0, 175, 0, 16)
+WhoIsSlender.BorderColor3 = Color3.new(0, 0, 0)
+WhoIsSlender.BorderSizePixel = 0
+WhoIsSlender.BackgroundTransparency = 0.5
+WhoIsSlender.Position = UDim2.new(1, -96, 0, 4)
+WhoIsSlender.BackgroundColor3 = Color3.new(0, 0, 0)
+WhoIsSlender.TextColor3 = Color3.new(1, 1, 1)
+WhoIsSlender.Text = "Slender:"
+WhoIsSlender.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+WhoIsSlender.TextWrapped = true
+WhoIsSlender.TextScaled = true
+WhoIsSlender.Parent = SGUI
+
+UIStroke_23.Name = "UIStroke"
+UIStroke_23.Parent = WhoIsSlender
+
+UICorner_6.Name = "UICorner"
+UICorner_6.Parent = WhoIsSlender
+
+UITextSizeConstraint_28.Name = "UITextSizeConstraint"
+UITextSizeConstraint_28.MaxTextSize = 16
+UITextSizeConstraint_28.Parent = WhoIsSlender
+
+InfoTeller.Name = "InfoTeller"
+InfoTeller.AnchorPoint = Vector2.new(1, 0)
+InfoTeller.Size = UDim2.new(0.5, 0, 0, 20)
+InfoTeller.BorderColor3 = Color3.new(0, 0, 0)
+InfoTeller.BorderSizePixel = 0
+InfoTeller.BackgroundTransparency = 1
+InfoTeller.Position = UDim2.new(1, 0, 0, 150)
+InfoTeller.BackgroundColor3 = Color3.new(0, 0, 0)
+InfoTeller.TextStrokeColor3 = Color3.new(1, 1, 1)
+InfoTeller.TextColor3 = Color3.new(1, 1, 1)
+InfoTeller.Text = "Hi."
+InfoTeller.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+InfoTeller.TextWrapped = true
+InfoTeller.TextXAlignment = Enum.TextXAlignment.Right
+InfoTeller.TextScaled = true
+InfoTeller.Parent = SGUI
+
+UIStroke_24.Name = "UIStroke"
+UIStroke_24.Parent = InfoTeller
+
+UIPadding.Name = "UIPadding"
+UIPadding.PaddingRight = UDim.new(0, 7)
+UIPadding.Parent = InfoTeller
+
+SGUI.Parent = game.CoreGui
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", HistoryLabel)
 	local textLabel = script.Parent
 	
 	textLabel.Changed:Connect(function()
 		task.wait(3)
 		textLabel.Text = ""
 	end)
-end;
-task.spawn(C_3);
--- Workspace.SGUI.History
-local function C_6()
-local script = G2L["6"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", SGUI)
 	local screenGui = script.Parent
 	
 	for _, button in pairs(screenGui:GetDescendants()) do
@@ -1250,31 +1086,31 @@ local script = G2L["6"];
 				elseif button.Name == "PoopEggs" then
 					historyLabel.Text = "Toggled Place Eggs"
 				elseif button.Name == "UndetectedSpeedHack" then
-					historyLabel.Text = "Clicked Fast Walk"
+					historyLabel.Text = "Clicked Speed Hack"
 				elseif button.Name == "Provoke" then
 					historyLabel.Text = "Animated Provoke"
 				elseif button.Name == "CheatButton" then
 					historyLabel.Text = "Toggled UI"
 				elseif button.Name == "Refresh" then
 					historyLabel.Text = "Clicked Refresh, Refreshing..."
+				elseif button.Name == "DestroyGUI" then
+					historyLabel.Text = "See you soon"
 				end
 				--===========================================================--
 			end)
 		end
 	end
 	
-end;
-task.spawn(C_6);
--- Workspace.SGUI.RTOpenLootbox
-local function C_7()
-local script = G2L["7"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", SGUI)
 	local Event = game:GetService("ReplicatedStorage").Remotes.PremiumLootbox
 	Event:FireServer()
-end;
-task.spawn(C_7);
--- Workspace.SGUI.LoadedMessage
-local function C_8()
-local script = G2L["8"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", SGUI)
 	local StarterGui = game:GetService("StarterGui")
 	
 	StarterGui:SetCore("SendNotification", {
@@ -1282,20 +1118,18 @@ local script = G2L["8"];
 		Text = "~SCRIPT EXECUTED~",
 		Duration = 5
 	})
-end;
-task.spawn(C_8);
--- Workspace.SGUI.PDaccess
-local function C_9()
-local script = G2L["9"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", SGUI)
 	local plr = game.Players.LocalPlayer
 	
 	game.ReplicatedStorage.PD[plr.Name].active.sixth.Value = true
 	game.ReplicatedStorage.PD[plr.Name].active.stamina.Value = true
-end;
-task.spawn(C_9);
--- Workspace.SGUI.AutoLB
-local function C_a()
-local script = G2L["a"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", SGUI)
 	local StarterGui = game:GetService("StarterGui")
 	local leaderboard = Enum.CoreGuiType.PlayerList
 	local coreGuiType = leaderboard
@@ -1307,11 +1141,10 @@ local script = G2L["a"];
 	end
 	
 	
-end;
-task.spawn(C_a);
--- Workspace.SGUI.Warn.Yes.LocalScript
-local function C_13()
-local script = G2L["13"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", Yes)
 	local speaker = game.Players.LocalPlayer
 	
 	local function getRoot(char)
@@ -1329,19 +1162,72 @@ local script = G2L["13"];
 		end
 		script.Parent.Parent.Visible = false
 	end)
-end;
-task.spawn(C_13);
--- Workspace.SGUI.Warn.No.LocalScript
-local function C_16()
-local script = G2L["16"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", No)
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
-end;
-task.spawn(C_16);
--- Workspace.SGUI.Warn2.Yes.LocalScript
-local function C_1f()
-local script = G2L["1f"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", Warn)
+	local RunService = game:GetService("RunService")
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	
+	local Parent = script.Parent
+	local ParentPosition = Parent.Position
+	local ParentOffset = ParentPosition
+	
+	local X = {
+		Goal = 0,
+		Tween = nil,
+		Value = Instance.new("NumberValue")
+	}
+	
+	local Y = {
+		Goal = 0,
+		Tween = nil,
+		Value = Instance.new("NumberValue")
+	}
+	
+	local TweenInfoParams = {
+		Time = 0.2,
+		EasingStyle = Enum.EasingStyle.Quad,
+		EasingDirection = Enum.EasingDirection.InOut,
+	}
+	
+	local MovementMultiplier = 10
+	
+	local function createTween(property, goal)
+		if property.Tween then
+			property.Tween:Cancel()
+		end
+		property.Goal = goal
+		property.Tween = TweenService:Create(property.Value, TweenInfo.new(TweenInfoParams.Time, TweenInfoParams.EasingStyle, TweenInfoParams.EasingDirection), { Value = goal })
+		property.Tween:Play()
+	end
+	
+	RunService.RenderStepped:Connect(function(deltaTime)
+		local mouseDelta = UserInputService:GetMouseDelta() * MovementMultiplier
+	
+		if X.Goal ~= mouseDelta.X then
+			createTween(X, mouseDelta.X)
+		end
+	
+		if Y.Goal ~= mouseDelta.Y then
+			createTween(Y, mouseDelta.Y)
+		end
+	
+		ParentOffset = UDim2.fromOffset(X.Value.Value, Y.Value.Value)
+		Parent.Position = ParentPosition + ParentOffset
+	end)
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", Yes_2)
 	local StarterGui = game:GetService("StarterGui")
 	
 	script.Parent.MouseButton1Click:Connect(function()	
@@ -1358,19 +1244,72 @@ local script = G2L["1f"];
 			})
 		end
 	end)
-end;
-task.spawn(C_1f);
--- Workspace.SGUI.Warn2.No.LocalScript
-local function C_22()
-local script = G2L["22"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", No_2)
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
-end;
-task.spawn(C_22);
--- Workspace.SGUI.CheatButton.Frame.Page.LocalScript
-local function C_27()
-local script = G2L["27"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", Warn2)
+	local RunService = game:GetService("RunService")
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	
+	local Parent = script.Parent
+	local ParentPosition = Parent.Position
+	local ParentOffset = ParentPosition
+	
+	local X = {
+		Goal = 0,
+		Tween = nil,
+		Value = Instance.new("NumberValue")
+	}
+	
+	local Y = {
+		Goal = 0,
+		Tween = nil,
+		Value = Instance.new("NumberValue")
+	}
+	
+	local TweenInfoParams = {
+		Time = 0.2,
+		EasingStyle = Enum.EasingStyle.Quad,
+		EasingDirection = Enum.EasingDirection.InOut,
+	}
+	
+	local MovementMultiplier = 10
+	
+	local function createTween(property, goal)
+		if property.Tween then
+			property.Tween:Cancel()
+		end
+		property.Goal = goal
+		property.Tween = TweenService:Create(property.Value, TweenInfo.new(TweenInfoParams.Time, TweenInfoParams.EasingStyle, TweenInfoParams.EasingDirection), { Value = goal })
+		property.Tween:Play()
+	end
+	
+	RunService.RenderStepped:Connect(function(deltaTime)
+		local mouseDelta = UserInputService:GetMouseDelta() * MovementMultiplier
+	
+		if X.Goal ~= mouseDelta.X then
+			createTween(X, mouseDelta.X)
+		end
+	
+		if Y.Goal ~= mouseDelta.Y then
+			createTween(Y, mouseDelta.Y)
+		end
+	
+		ParentOffset = UDim2.fromOffset(X.Value.Value, Y.Value.Value)
+		Parent.Position = ParentPosition + ParentOffset
+	end)
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", Page)
 	local function createGuiPages(parent)
 		local function mathfloor(var)
 			return math.floor((workspace.CurrentCamera.CFrame.Position - var.CFrame.Position).magnitude)
@@ -1448,53 +1387,36 @@ local script = G2L["27"];
 			end
 		end
 	end)
-end;
-task.spawn(C_27);
--- Workspace.SGUI.CheatButton.Frame.Slender.LocalScript
-local function C_2b()
-local script = G2L["2b"];
-    for x, y in pairs(workspace:GetChildren()) do
-        if y:IsA("TextLabel") and y.Text == "Slender" then
-            y.Parent:Destroy()
-        end
-    end
+end)()
 
-    local function createGuiSlender(parent)
-        local browse = parent:FindFirstChild("STracker")
-        if browse then
-            browse:Destroy()
-        end
-
-		local BGui = Instance.new("BillboardGui")
-		BGui.Parent = parent
-        BGui.Name = "STracker"
-		BGui.AlwaysOnTop = true
-		BGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-		BGui.StudsOffset = Vector3.new(0, 3, 0)
-		BGui.Size = UDim2.new(0, 55, 0, 45)
-	
-		local text = Instance.new("TextLabel")
-		text.Parent = BGui
-		text.Text = "Slender"
-        text.TextStrokeTransparency = 0
-		text.TextScaled = true
-		text.BackgroundTransparency = 1
-		text.Size = UDim2.new(1, 0, 1, 0)
-		text.TextColor3 = Color3.fromRGB(255, 0, 0)
-	end
-
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", Slender)
 	script.Parent.MouseButton1Click:Connect(function()
-		for _, v in pairs(workspace:GetChildren()) do
-			if v:FindFirstChild("SlenderProp") then
-				createGuiSlender(v)
+		local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
+		
+		ESP.Tracers = false
+		ESP.Players = false
+		ESP.Names = true
+		ESP.Boxes = true
+		ESP:Toggle(true)
+		
+		for _, v in pairs(workspace:GetDescendants()) do 
+			if v:IsA("Model") and v.Name == "SlenderProp" and v.Parent then
+				ESP:AddObjectListener(v, {
+					Name = "SlenderProp",
+					CustomName = "SLENDY",
+					Color = Color3.fromRGB(255,0,0),
+					IsEnabled = "slender"
+				})
 			end
 		end
+		
+		ESP.slender = true
 	end)
-end;
-task.spawn(C_2b);
--- Workspace.SGUI.CheatButton.Frame.Generator.LocalScript
-local function C_2e()
-local script = G2L["2e"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", Generator)
 	local function createGuiGens(parent)
 		local BGui = Instance.new("BillboardGui")
 		BGui.Parent = parent
@@ -1533,11 +1455,10 @@ local script = G2L["2e"];
 			end
 		end
 	end)
-end;
-task.spawn(C_2e);
--- Workspace.SGUI.CheatButton.ScrollingFrame.FullBright.LocalScript
-local function C_33()
-local script = G2L["33"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", FullBright)
 	local Lighting = game.Lighting
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1547,22 +1468,20 @@ local script = G2L["33"];
 		Lighting.GlobalShadows = false
 		Lighting.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
 	end)
-end;
-task.spawn(C_33);
--- Workspace.SGUI.CheatButton.ScrollingFrame.ResetCharacter.LocalScript
-local function C_35()
-local script = G2L["35"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", ResetCharacter)
 	local textButton = script.Parent
 	local Warn = script.Parent.Parent.Parent.Parent.Warn3
 	
 	textButton.MouseButton1Click:Connect(function()
 		Warn.Visible = true
 	end)
-end;
-task.spawn(C_35);
--- Workspace.SGUI.CheatButton.ScrollingFrame.PoopEggs.LocalScript
-local function C_37()
-local script = G2L["37"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", PoopEggs)
 	local enable = false
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1577,11 +1496,10 @@ local script = G2L["37"];
 			enable = false
 		end
 	end)
-end;
-task.spawn(C_37);
--- Workspace.SGUI.CheatButton.ScrollingFrame.UndetectedSpeedHack.LocalScript
-local function C_39()
-local script = G2L["39"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", UndetectedSpeedHack)
 	local enable = false
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1598,33 +1516,78 @@ local script = G2L["39"];
 			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 14
 		end
 	end)
-end;
-task.spawn(C_39);
--- Workspace.SGUI.CheatButton.ScrollingFrame.ImmuneAgainstSlender.LocalScript
-local function C_3b()
-local script = G2L["3b"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", ImmuneAgainstSlender)
 	local textButton = script.Parent
 	local Warn = script.Parent.Parent.Parent.Parent.Warn2
 	
 	textButton.MouseButton1Click:Connect(function()
 		Warn.Visible = true
 	end)
-end;
-task.spawn(C_3b);
--- Workspace.SGUI.CheatButton.ScrollingFrame2.Lay.LocalScript
-local function C_3f()
-local script = G2L["3f"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", CheatButton)
+	local aud = Instance.new("Sound", game.ReplicatedStorage)
+	aud.SoundId = "rbxassetid://2202103138"
+	aud:Play()
+	aud.Ended:Connect(function()
+		aud:Destroy()
+	end)
+	
+	local function playSound(sound)
+		script.Parent[sound]:Play()
+	end
+	
+	for _, v in pairs(script.Parent:GetDescendants()) do
+		if v:IsA('TextButton') or v:IsA('ImageButton') then
+			v.MouseButton1Click:Connect(function()
+				playSound("clicking")
+			end)
+		end
+	end
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", CheatButton)
+	local enabled = true
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if enabled == true then
+			enabled = false
+	
+			script.Parent.ClipsDescendants = true
+		else
+			enabled = true
+	
+			script.Parent.ClipsDescendants = false
+		end
+	end)
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", DestroyGUI)
 	local textButton = script.Parent
-	local Warn = script.Parent.Parent.Parent.Parent.Warn
+	local plr = game.Players.LocalPlayer
 	
 	textButton.MouseButton1Click:Connect(function()
-		Warn.Visible = true
+		script.Parent.Parent.Parent.ClipsDescendants = true
+		wait(1)
+		script.Parent.Parent.Parent:TweenPosition(
+			UDim2.new(1, -60, -1, 4),
+			Enum.EasingDirection.InOut,
+			Enum.EasingStyle.Quint,
+			1
+		)
+		wait(1)
+		script.Parent.Parent.Parent.Parent:Destroy()
 	end)
-end;
-task.spawn(C_3f);
--- Workspace.SGUI.CheatButton.ScrollingFrame2.Provoke.LocalScript
-local function C_41()
-local script = G2L["41"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", Provoke)
 	local TextChatService = game:GetService("TextChatService")
 	local isLegacyChat = TextChatService.ChatVersion == Enum.ChatVersion.LegacyChatService
 	
@@ -1649,183 +1612,75 @@ local script = G2L["41"];
 	
 	
 	
-end;
-task.spawn(C_41);
--- Workspace.SGUI.CheatButton.ScrollingFrame2.Refresh.LocalScript
-local function C_43()
-local script = G2L["43"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", Refresh)
 	local textButton = script.Parent
 	
 	textButton.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://pastebin.com/raw/0fPk2cXF"))()
 	end)
-end;
-task.spawn(C_43);
--- Workspace.SGUI.CheatButton.ScrollingFrame2.DestroyGUI.LocalScript
-local function C_45()
-local script = G2L["45"];
-	local textButton = script.Parent
-	local plr = game.Players.LocalPlayer
-	
-	textButton.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.ClipsDescendants = true
-		wait(1)
-		script.Parent.Parent.Parent:TweenPosition(
-			UDim2.new(1, -100, -1, 20),
-			Enum.EasingDirection.InOut,
-			Enum.EasingStyle.Quint,
-			1
-		)
-		wait(1)
-		script.Parent.Parent.Parent.Parent:Destroy()
-	end)
-end;
-task.spawn(C_45);
--- Workspace.SGUI.CheatButton.ScrollingFrame2.TrollSounds.LocalScript
-local function C_47()
-local script = G2L["47"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", TrollSounds)
 	local textButton = script.Parent
 	local Warn = script.Parent.Parent.Parent.Parent.Warn4
 	
 	textButton.MouseButton1Click:Connect(function()
 		Warn.Visible = true
 	end)
-end;
-task.spawn(C_47);
--- Workspace.SGUI.CheatButton.WhoIsSlender.LocalScript
-local function C_4b()
-local script = G2L["4b"];
-	local GameValues = game.ReplicatedStorage.GameValues
-	local Players = game:GetService("Players")
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", Lay_3)
+	local textButton = script.Parent
+	local Warn = script.Parent.Parent.Parent.Parent.Warn
 	
-	local function checkPlayerUsername()
-		local lastSlenderUsername = GameValues.lastslender.Value
-		for _, player in Players:GetPlayers() do
-			if player.Name == lastSlenderUsername then
-				script.Parent.Text = "SLENDER: " .. player.DisplayName
-				return
-			end
-		end
-	end
-	
-	checkPlayerUsername()
-	
-	GameValues.lastslender.Changed:Connect(checkPlayerUsername)
-	
-end;
-task.spawn(C_4b);
--- Workspace.SGUI.CheatButton.Pages.LocalScript
-local function C_50()
-local script = G2L["50"];
-	local plr = game.Players.LocalPlayer
-	local tha = plr.leaderstats["Total Pages"]
-	local sp = script.Parent
-	
-	while task.wait() do
-		script.Parent.Text = "TOTAL PAGES: " .. tha.Value
-	end
-end;
-task.spawn(C_50);
--- Workspace.SGUI.CheatButton.SoundSystem
-local function C_52()
-local script = G2L["52"];
-	local aud = Instance.new("Sound", game.ReplicatedStorage)
-	aud.SoundId = "rbxassetid://2202103138"
-	aud:Play()
-	aud.Ended:Connect(function()
-		aud:Destroy()
+	textButton.MouseButton1Click:Connect(function()
+		Warn.Visible = true
 	end)
-	
-	local function playSound(sound)
-		script.Parent[sound]:Play()
-	end
-	
-	for _, v in pairs(script.Parent:GetDescendants()) do
-		if v:IsA('TextButton') or v:IsA('ImageButton') then
-			v.MouseButton1Click:Connect(function()
-				playSound("clicking")
-			end)
-		end
-	end
-end;
-task.spawn(C_52);
--- Workspace.SGUI.CheatButton.LocalScript
-local function C_54()
-local script = G2L["54"];
-	local enabled = true
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if enabled == true then
-			enabled = false
-	
-			script.Parent.ClipsDescendants = true
-		else
-			enabled = true
-	
-			script.Parent.ClipsDescendants = false
-		end
-	end)
-end;
-task.spawn(C_54);
--- Workspace.SGUI.CheatButton.AccountAge.LocalScript
-local function C_57()
-local script = G2L["57"];
-	local player = game.Players.LocalPlayer
-	
-	repeat
-		script.Parent.Text  = "ACCOUNT AGE: " .. player.AccountAge
-		task.wait()
-	until false
-end;
-task.spawn(C_57);
--- Workspace.SGUI.CheatButton.Versi0n.LocalScript
-local function C_5f()
-local script = G2L["5f"];
-	script.Parent.Text = "HACK VERSION: " .. ver
-end;
-task.spawn(C_5f);
--- Workspace.SGUI.UsersOnJoin
-local function C_63()
-local script = G2L["63"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", SGUI)
 	local screenGui = script.Parent
 	local noticerLabel = screenGui:FindFirstChild("Noticer")
 	
 	game.Players.PlayerAdded:Connect(function(player)
 		noticerLabel.Visible = true
-		noticerLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
+		noticerLabel.TextColor3 = Color3.fromRGB(0, 170, 0)
 		noticerLabel.Text = player.Name .. " has joined"
 	end)
 	
 	game.Players.PlayerRemoving:Connect(function(player)
 		noticerLabel.Visible = true
-		noticerLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+		noticerLabel.TextColor3 = Color3.fromRGB(170, 0, 0)
 		noticerLabel.Text = player.Name .. " has left"
 	end)
-end;
-task.spawn(C_63);
--- Workspace.SGUI.Noticer.LocalScript
-local function C_65()
-local script = G2L["65"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", Noticer)
 	local textLabel = script.Parent
 	
 	textLabel.Changed:Connect(function()
 		task.wait(3)
 		textLabel.Visible = false
 	end)
-end;
-task.spawn(C_65);
--- Workspace.SGUI.Interfacedit
-local function C_69()
-local script = G2L["69"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", SGUI)
 	if game:IsLoaded() then
 		game.ReplicatedStorage.UI.Citizens.CitizenIntro.Enabled = false
 		game.ReplicatedStorage.UI.Citizens.CitizenGui.LimitY:Destroy()
 	end
-end;
-task.spawn(C_69);
--- Workspace.SGUI.AutoC
-local function C_6b()
-local script = G2L["6b"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", SGUI)
 	local StarterGui = game:GetService("StarterGui")
 	local chat = Enum.CoreGuiType.Chat
 	local coreGuiType2 = chat
@@ -1837,35 +1692,87 @@ local script = G2L["6b"];
 	end
 	
 	
-end;
-task.spawn(C_6b);
--- Workspace.SGUI.Warn3.Yes.LocalScript
-local function C_74()
-local script = G2L["74"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", Yes_3)
 	script.Parent.MouseButton1Click:Connect(function()
 		game.Players.LocalPlayer.Character.Humanoid.Health = 0
 		
 		script.Parent.Parent.Visible = false
 	end)
-end;
-task.spawn(C_74);
--- Workspace.SGUI.Warn3.No.LocalScript
-local function C_77()
-local script = G2L["77"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", No_4)
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
-end;
-task.spawn(C_77);
--- Workspace.SGUI.HolderButtonInfo
-local function C_78()
-local script = G2L["78"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", Warn3)
+	local RunService = game:GetService("RunService")
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	
+	local Parent = script.Parent
+	local ParentPosition = Parent.Position
+	local ParentOffset = ParentPosition
+	
+	local X = {
+		Goal = 0,
+		Tween = nil,
+		Value = Instance.new("NumberValue")
+	}
+	
+	local Y = {
+		Goal = 0,
+		Tween = nil,
+		Value = Instance.new("NumberValue")
+	}
+	
+	local TweenInfoParams = {
+		Time = 0.2,
+		EasingStyle = Enum.EasingStyle.Quad,
+		EasingDirection = Enum.EasingDirection.InOut,
+	}
+	
+	local MovementMultiplier = 10
+	
+	local function createTween(property, goal)
+		if property.Tween then
+			property.Tween:Cancel()
+		end
+		property.Goal = goal
+		property.Tween = TweenService:Create(property.Value, TweenInfo.new(TweenInfoParams.Time, TweenInfoParams.EasingStyle, TweenInfoParams.EasingDirection), { Value = goal })
+		property.Tween:Play()
+	end
+	
+	RunService.RenderStepped:Connect(function(deltaTime)
+		local mouseDelta = UserInputService:GetMouseDelta() * MovementMultiplier
+	
+		if X.Goal ~= mouseDelta.X then
+			createTween(X, mouseDelta.X)
+		end
+	
+		if Y.Goal ~= mouseDelta.Y then
+			createTween(Y, mouseDelta.Y)
+		end
+	
+		ParentOffset = UDim2.fromOffset(X.Value.Value, Y.Value.Value)
+		Parent.Position = ParentPosition + ParentOffset
+	end)
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", SGUI)
 	local screenGui = script.Parent
 	
 	for _, v in pairs(screenGui:GetDescendants()) do
 		if v:IsA("TextButton") or v:IsA("TextLabel") then
 			v.MouseEnter:Connect(function()
-				local hoverinfo = screenGui.CheatButton:FindFirstChild("ButtonInfoTeller")
+				local hoverinfo = screenGui:FindFirstChild("InfoTeller")
 				--===========================================================--
 				if v.Name == "Generator" then
 					hoverinfo.Text = "Generator radar"
@@ -1884,20 +1791,20 @@ local script = G2L["78"];
 				elseif v.Name == "CheatButton" then
 					hoverinfo.Text = "Toggles the UI"
 				elseif v.Name == "Refresh" then
-					hoverinfo.Text = "Refreshes this script"
+					hoverinfo.Text = "Refreshes this cheat"
 				elseif v.Name == "ResetCharacter" then
 					hoverinfo.Text = "Resets your character normally"
 				elseif v.Name == "ImmuneAgainstSlender" then
 					hoverinfo.Text = "Nothing happens when you look at Slender"
 				elseif v.Name == "Lay" then
-					hoverinfo.Text = "Makes your character lay down"
+					hoverinfo.Text = "Makes your character lie down"
 				elseif v.Name == "DestroyGUI" then
 					hoverinfo.Text = "Destroys this cheat"
 				elseif v.Name == "TrollSounds" then
 					hoverinfo.Text = "Troll others by playing some noises"
 				elseif v.Name == "AccountAge" then
 					hoverinfo.Text = "Describes your account age in days"
-				elseif v.Name == "ButtonInfoTeller" then
+				elseif v.Name == "InfoTeller" then
 					hoverinfo.Text = "Informations for you"
 				elseif v.Name == "Pages" then
 					hoverinfo.Text = "Describes your total pages"
@@ -1910,11 +1817,10 @@ local script = G2L["78"];
 			end)
 		end
 	end
-end;
-task.spawn(C_78);
--- Workspace.SGUI.Warn4.Yes.LocalScript
-local function C_81()
-local script = G2L["81"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", Yes_4)
 	local enabled = false
 	local PlayAllSounds = function()
 		for _, sound in next, game:GetDescendants() do
@@ -1943,15 +1849,127 @@ local script = G2L["81"];
 			script.Parent.Parent.Visible = false
 		end
 	end)
-end;
-task.spawn(C_81);
--- Workspace.SGUI.Warn4.No.LocalScript
-local function C_84()
-local script = G2L["84"];
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", No_5)
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
-end;
-task.spawn(C_84);
+end)()
 
-return G2L["1"], require;
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", Warn4)
+	local RunService = game:GetService("RunService")
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	
+	local Parent = script.Parent
+	local ParentPosition = Parent.Position
+	local ParentOffset = ParentPosition
+	
+	local X = {
+		Goal = 0,
+		Tween = nil,
+		Value = Instance.new("NumberValue")
+	}
+	
+	local Y = {
+		Goal = 0,
+		Tween = nil,
+		Value = Instance.new("NumberValue")
+	}
+	
+	local TweenInfoParams = {
+		Time = 0.2,
+		EasingStyle = Enum.EasingStyle.Quad,
+		EasingDirection = Enum.EasingDirection.InOut,
+	}
+	
+	local MovementMultiplier = 10
+	
+	local function createTween(property, goal)
+		if property.Tween then
+			property.Tween:Cancel()
+		end
+		property.Goal = goal
+		property.Tween = TweenService:Create(property.Value, TweenInfo.new(TweenInfoParams.Time, TweenInfoParams.EasingStyle, TweenInfoParams.EasingDirection), { Value = goal })
+		property.Tween:Play()
+	end
+	
+	RunService.RenderStepped:Connect(function(deltaTime)
+		local mouseDelta = UserInputService:GetMouseDelta() * MovementMultiplier
+	
+		if X.Goal ~= mouseDelta.X then
+			createTween(X, mouseDelta.X)
+		end
+	
+		if Y.Goal ~= mouseDelta.Y then
+			createTween(Y, mouseDelta.Y)
+		end
+	
+		ParentOffset = UDim2.fromOffset(X.Value.Value, Y.Value.Value)
+		Parent.Position = ParentPosition + ParentOffset
+	end)
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", AccountAge)
+	local player = game.Players.LocalPlayer
+	
+	repeat
+		script.Parent.Text  = "Account Age: " .. player.AccountAge
+		task.wait()
+	until false
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", Pages)
+	local plr = game.Players.LocalPlayer
+	local tha = plr.leaderstats["Total Pages"]
+	local sp = script.Parent
+	
+	while task.wait() do
+		script.Parent.Text = "TOTAL PAGES: " .. tha.Value
+	end
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", Versi0n)
+	script.Parent.Text = "Hack Version: " .. ver
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", WhoIsSlender)
+	local GameValues = game.ReplicatedStorage.GameValues
+	local Players = game:GetService("Players")
+	
+	local function checkPlayerUsername()
+		local lastSlenderUsername = GameValues.lastslender.Value
+		for _, player in Players:GetPlayers() do
+			if player.Name == lastSlenderUsername then
+				script.Parent.Text = "Slender: " .. player.DisplayName
+				return
+			end
+		end
+	end
+	
+	checkPlayerUsername()
+	
+	GameValues.lastslender.Changed:Connect(checkPlayerUsername)
+	
+end)()
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", SGUI)
+	local CB = script.Parent.CheatButton
+	local IT = script.Parent.InfoTeller
+	
+	CB.MouseButton1Click:Connect(function()
+		if CB.ClipsDescendants == false then
+			IT.Position = UDim2.new(1, 0, 0, 42)
+		else
+			IT.Position = UDim2.new(1, 0, 0, 150)
+		end
+	end)
+end)()
