@@ -3,1071 +3,1104 @@ if fsgui then
 	fsgui:Destroy()
 end
 
-local ver = "8.6"
-local SGUI = Instance.new("ScreenGui")
-local HistoryLabel = Instance.new("TextLabel")
-local UIStroke = Instance.new("UIStroke")
-local Warn = Instance.new("Frame")
-local DropShadowHolder = Instance.new("Frame")
-local DropShadow_2 = Instance.new("ImageLabel")
-local TextLabel = Instance.new("TextLabel")
-local UIStroke_2 = Instance.new("UIStroke")
-local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
-local Yes = Instance.new("TextButton")
-local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
-local No = Instance.new("TextButton")
-local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
-local Warn2 = Instance.new("Frame")
-local DropShadowHolder_2 = Instance.new("Frame")
-local DropShadow_4 = Instance.new("ImageLabel")
-local TextLabel_2 = Instance.new("TextLabel")
-local UIStroke_3 = Instance.new("UIStroke")
-local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
-local Yes_2 = Instance.new("TextButton")
-local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
-local No_2 = Instance.new("TextButton")
-local UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint")
-local CheatButton = Instance.new("TextButton")
-local Frame = Instance.new("Frame")
-local Page = Instance.new("TextButton")
-local UIStroke_4 = Instance.new("UIStroke")
-local Slender = Instance.new("TextButton")
-local UIStroke_5 = Instance.new("UIStroke")
-local Generator = Instance.new("TextButton")
-local UIStroke_6 = Instance.new("UIStroke")
-local UIListLayout = Instance.new("UIListLayout")
-local ScrollingFrame = Instance.new("ScrollingFrame")
-local FullBright = Instance.new("TextButton")
-local UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint")
-local UIStroke_7 = Instance.new("UIStroke")
-local ResetCharacter = Instance.new("TextButton")
-local UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint")
-local UIStroke_8 = Instance.new("UIStroke")
-local PoopEggs = Instance.new("TextButton")
-local UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint")
-local UIStroke_9 = Instance.new("UIStroke")
-local UndetectedSpeedHack = Instance.new("TextButton")
-local UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint")
-local UIStroke_10 = Instance.new("UIStroke")
-local ImmuneAgainstSlender = Instance.new("TextButton")
-local UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint")
-local UIStroke_11 = Instance.new("UIStroke")
-local UIListLayout_2 = Instance.new("UIListLayout")
-local clicking = Instance.new("Sound")
-local UICorner = Instance.new("UICorner")
-local UITextSizeConstraint_12 = Instance.new("UITextSizeConstraint")
-local ScrollingFrame_2 = Instance.new("ScrollingFrame")
-local DestroyGUI = Instance.new("TextButton")
-local UITextSizeConstraint_13 = Instance.new("UITextSizeConstraint")
-local UIStroke_12 = Instance.new("UIStroke")
-local Provoke = Instance.new("TextButton")
-local UITextSizeConstraint_14 = Instance.new("UITextSizeConstraint")
-local UIStroke_13 = Instance.new("UIStroke")
-local Refresh = Instance.new("TextButton")
-local UITextSizeConstraint_15 = Instance.new("UITextSizeConstraint")
-local UIStroke_14 = Instance.new("UIStroke")
-local TrollSounds = Instance.new("TextButton")
-local UITextSizeConstraint_16 = Instance.new("UITextSizeConstraint")
-local UIStroke_15 = Instance.new("UIStroke")
-local Lay_3 = Instance.new("TextButton")
-local UITextSizeConstraint_17 = Instance.new("UITextSizeConstraint")
-local UIStroke_16 = Instance.new("UIStroke")
-local UIListLayout_3 = Instance.new("UIListLayout")
-local Noticer = Instance.new("TextLabel")
-local UICorner_2 = Instance.new("UICorner")
-local UIStroke_17 = Instance.new("UIStroke")
-local UITextSizeConstraint_18 = Instance.new("UITextSizeConstraint")
-local laugh = Instance.new("Sound")
-local Warn3 = Instance.new("Frame")
-local DropShadowHolder_3 = Instance.new("Frame")
-local DropShadow_6 = Instance.new("ImageLabel")
-local TextLabel_3 = Instance.new("TextLabel")
-local UIStroke_18 = Instance.new("UIStroke")
-local UITextSizeConstraint_19 = Instance.new("UITextSizeConstraint")
-local Yes_3 = Instance.new("TextButton")
-local UITextSizeConstraint_20 = Instance.new("UITextSizeConstraint")
-local No_4 = Instance.new("TextButton")
-local UITextSizeConstraint_21 = Instance.new("UITextSizeConstraint")
-local Warn4 = Instance.new("Frame")
-local DropShadowHolder_4 = Instance.new("Frame")
-local DropShadow_8 = Instance.new("ImageLabel")
-local TextLabel_4 = Instance.new("TextLabel")
-local UIStroke_19 = Instance.new("UIStroke")
-local UITextSizeConstraint_22 = Instance.new("UITextSizeConstraint")
-local Yes_4 = Instance.new("TextButton")
-local UITextSizeConstraint_23 = Instance.new("UITextSizeConstraint")
-local No_5 = Instance.new("TextButton")
-local UITextSizeConstraint_24 = Instance.new("UITextSizeConstraint")
-local AccountAge = Instance.new("TextLabel")
-local UIStroke_20 = Instance.new("UIStroke")
-local UICorner_3 = Instance.new("UICorner")
-local UITextSizeConstraint_25 = Instance.new("UITextSizeConstraint")
-local Pages = Instance.new("TextLabel")
-local UIStroke_21 = Instance.new("UIStroke")
-local UICorner_4 = Instance.new("UICorner")
-local UITextSizeConstraint_26 = Instance.new("UITextSizeConstraint")
-local Versi0n = Instance.new("TextLabel")
-local UIStroke_22 = Instance.new("UIStroke")
-local UICorner_5 = Instance.new("UICorner")
-local UITextSizeConstraint_27 = Instance.new("UITextSizeConstraint")
-local WhoIsSlender = Instance.new("TextLabel")
-local UIStroke_23 = Instance.new("UIStroke")
-local UICorner_6 = Instance.new("UICorner")
-local UITextSizeConstraint_28 = Instance.new("UITextSizeConstraint")
-local InfoTeller = Instance.new("TextLabel")
-local UIStroke_24 = Instance.new("UIStroke")
-local UIPadding = Instance.new("UIPadding")
-
-SGUI.Name = "SGUI"
-SGUI.IgnoreGuiInset = true
-SGUI.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
-
-HistoryLabel.Name = "HistoryLabel"
-HistoryLabel.AnchorPoint = Vector2.new(0.5, 1)
-HistoryLabel.Size = UDim2.new(0.5, 0, 0, 20)
-HistoryLabel.BorderColor3 = Color3.new(0, 0, 0)
-HistoryLabel.BorderSizePixel = 0
-HistoryLabel.BackgroundTransparency = 1
-HistoryLabel.Position = UDim2.new(0.5, 0, 1, -55)
-HistoryLabel.BackgroundColor3 = Color3.new(1, 1, 1)
-HistoryLabel.TextStrokeTransparency = 0.699999988079071
-HistoryLabel.TextColor3 = Color3.new(1, 1, 1)
-HistoryLabel.Text = ""
-HistoryLabel.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-HistoryLabel.TextWrapped = true
-HistoryLabel.Parent = SGUI
-
-UIStroke.Name = "UIStroke"
-UIStroke.Parent = HistoryLabel
-
-Warn.Name = "Warn"
-Warn.AnchorPoint = Vector2.new(0.5, 0.5)
-Warn.Visible = false
-Warn.Size = UDim2.new(0, 250, 0, 100)
-Warn.BorderColor3 = Color3.new(0, 0, 0)
-Warn.BorderSizePixel = 0
-Warn.Position = UDim2.new(0.5, 0, 0.5, 0)
-Warn.BackgroundColor3 = Color3.new(0, 0, 0)
-Warn.Parent = SGUI
-
-DropShadowHolder.Name = "DropShadowHolder"
-DropShadowHolder.ZIndex = 0
-DropShadowHolder.Size = UDim2.new(1, 0, 1, 0)
-DropShadowHolder.BorderColor3 = Color3.new(0, 0, 0)
-DropShadowHolder.BorderSizePixel = 0
-DropShadowHolder.BackgroundTransparency = 1
-DropShadowHolder.Parent = Warn
-
-DropShadow_2.Name = "DropShadow"
-DropShadow_2.AnchorPoint = Vector2.new(0.5, 0.5)
-DropShadow_2.ZIndex = 0
-DropShadow_2.Size = UDim2.new(1, 47, 1, 47)
-DropShadow_2.BorderColor3 = Color3.new(0, 0, 0)
-DropShadow_2.BorderSizePixel = 0
-DropShadow_2.BackgroundTransparency = 1
-DropShadow_2.Position = UDim2.new(0.5, 0, 0.5, 0)
-DropShadow_2.ImageColor3 = Color3.new(0, 0, 0)
-DropShadow_2.ScaleType = Enum.ScaleType.Slice
-DropShadow_2.ImageTransparency = 0.5
-DropShadow_2.Image = "rbxassetid://6015897843"
-DropShadow_2.SliceCenter = Rect.new(Vector2.new(49, 49), Vector2.new(450, 450))
-DropShadow_2.Parent = DropShadowHolder
-
-TextLabel.Name = "TextLabel"
-TextLabel.AnchorPoint = Vector2.new(0.5, 0)
-TextLabel.Size = UDim2.new(0, 225, 0, 50)
-TextLabel.BorderColor3 = Color3.new(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.5, 0, 0, 8)
-TextLabel.BackgroundColor3 = Color3.new(0, 0, 0)
-TextLabel.TextColor3 = Color3.new(1, 1, 1)
-TextLabel.Text = "Click Yes to lie down, means your character will be in a flat position. Are you doing this on purpose?"
-TextLabel.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-TextLabel.TextWrapped = true
-TextLabel.TextScaled = true
-TextLabel.Parent = Warn
-
-UIStroke_2.Name = "UIStroke"
-UIStroke_2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-UIStroke_2.Parent = TextLabel
-
-UITextSizeConstraint.Name = "UITextSizeConstraint"
-UITextSizeConstraint.MaxTextSize = 15
-UITextSizeConstraint.Parent = TextLabel
-
-Yes.Name = "Yes"
-Yes.AutoButtonColor = true
-Yes.AnchorPoint = Vector2.new(0, 1)
-Yes.Size = UDim2.new(0, 100, 0, 30)
-Yes.BorderColor3 = Color3.new(0, 0, 0)
-Yes.BorderSizePixel = 0
-Yes.Position = UDim2.new(0, 12, 1, -6)
-Yes.BackgroundColor3 = Color3.new(0, 0, 0)
-Yes.TextColor3 = Color3.new(0, 0, 0)
-Yes.Text = "Yes"
-Yes.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Yes.TextWrapped = true
-Yes.TextScaled = true
-Yes.Parent = Warn
-
-UITextSizeConstraint_2.Name = "UITextSizeConstraint"
-UITextSizeConstraint_2.MaxTextSize = 20
-UITextSizeConstraint_2.Parent = Yes
-
-No.Name = "No"
-No.AutoButtonColor = true
-No.AnchorPoint = Vector2.new(1, 1)
-No.Size = UDim2.new(0, 100, 0, 30)
-No.BorderColor3 = Color3.new(0, 0, 0)
-No.BorderSizePixel = 0
-No.Position = UDim2.new(1, -13, 1, -6)
-No.BackgroundColor3 = Color3.new(0, 0, 0)
-No.TextColor3 = Color3.new(0, 0, 0)
-No.Text = "No"
-No.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-No.TextWrapped = true
-No.TextScaled = true
-No.Parent = Warn
-
-UITextSizeConstraint_3.Name = "UITextSizeConstraint"
-UITextSizeConstraint_3.MaxTextSize = 20
-UITextSizeConstraint_3.Parent = No
-
-Warn2.Name = "Warn2"
-Warn2.AnchorPoint = Vector2.new(0.5, 0.5)
-Warn2.Visible = false
-Warn2.Size = UDim2.new(0, 250, 0, 100)
-Warn2.BorderColor3 = Color3.new(0, 0, 0)
-Warn2.BorderSizePixel = 0
-Warn2.Position = UDim2.new(0.5, 0, 0.5, 0)
-Warn2.BackgroundColor3 = Color3.new(0, 0, 0)
-Warn2.Parent = SGUI
-
-DropShadowHolder_2.Name = "DropShadowHolder"
-DropShadowHolder_2.ZIndex = 0
-DropShadowHolder_2.Size = UDim2.new(1, 0, 1, 0)
-DropShadowHolder_2.BorderColor3 = Color3.new(0, 0, 0)
-DropShadowHolder_2.BorderSizePixel = 0
-DropShadowHolder_2.BackgroundTransparency = 1
-DropShadowHolder_2.Parent = Warn2
-
-DropShadow_4.Name = "DropShadow"
-DropShadow_4.AnchorPoint = Vector2.new(0.5, 0.5)
-DropShadow_4.ZIndex = 0
-DropShadow_4.Size = UDim2.new(1, 47, 1, 47)
-DropShadow_4.BorderColor3 = Color3.new(0, 0, 0)
-DropShadow_4.BorderSizePixel = 0
-DropShadow_4.BackgroundTransparency = 1
-DropShadow_4.Position = UDim2.new(0.5, 0, 0.5, 0)
-DropShadow_4.ImageColor3 = Color3.new(0, 0, 0)
-DropShadow_4.ScaleType = Enum.ScaleType.Slice
-DropShadow_4.ImageTransparency = 0.5
-DropShadow_4.Image = "rbxassetid://6015897843"
-DropShadow_4.SliceCenter = Rect.new(Vector2.new(49, 49), Vector2.new(450, 450))
-DropShadow_4.Parent = DropShadowHolder_2
-
-TextLabel_2.Name = "TextLabel"
-TextLabel_2.AnchorPoint = Vector2.new(0.5, 0)
-TextLabel_2.Size = UDim2.new(0, 225, 0, 50)
-TextLabel_2.BorderColor3 = Color3.new(0, 0, 0)
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(0.5, 0, 0, 8)
-TextLabel_2.BackgroundColor3 = Color3.new(0, 0, 0)
-TextLabel_2.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_2.Text = "Click Yes to stop damaging you when you looking at Slender. Are you doing this on purpose?"
-TextLabel_2.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-TextLabel_2.TextWrapped = true
-TextLabel_2.TextScaled = true
-TextLabel_2.Parent = Warn2
-
-UIStroke_3.Name = "UIStroke"
-UIStroke_3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-UIStroke_3.Parent = TextLabel_2
-
-UITextSizeConstraint_4.Name = "UITextSizeConstraint"
-UITextSizeConstraint_4.MaxTextSize = 15
-UITextSizeConstraint_4.Parent = TextLabel_2
-
-Yes_2.Name = "Yes"
-Yes_2.AutoButtonColor = true
-Yes_2.AnchorPoint = Vector2.new(0, 1)
-Yes_2.Size = UDim2.new(0, 100, 0, 30)
-Yes_2.BorderColor3 = Color3.new(0, 0, 0)
-Yes_2.BorderSizePixel = 0
-Yes_2.Position = UDim2.new(0, 12, 1, -6)
-Yes_2.BackgroundColor3 = Color3.new(0, 0, 0)
-Yes_2.TextColor3 = Color3.new(0, 0, 0)
-Yes_2.Text = "Yes"
-Yes_2.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Yes_2.TextWrapped = true
-Yes_2.TextScaled = true
-Yes_2.Parent = Warn2
-
-UITextSizeConstraint_5.Name = "UITextSizeConstraint"
-UITextSizeConstraint_5.MaxTextSize = 20
-UITextSizeConstraint_5.Parent = Yes_2
-
-No_2.Name = "No"
-No_2.AutoButtonColor = true
-No_2.AnchorPoint = Vector2.new(1, 1)
-No_2.Size = UDim2.new(0, 100, 0, 30)
-No_2.BorderColor3 = Color3.new(0, 0, 0)
-No_2.BorderSizePixel = 0
-No_2.Position = UDim2.new(1, -13, 1, -6)
-No_2.BackgroundColor3 = Color3.new(0, 0, 0)
-No_2.TextColor3 = Color3.new(0, 0, 0)
-No_2.Text = "No"
-No_2.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-No_2.TextWrapped = true
-No_2.TextScaled = true
-No_2.Parent = Warn2
-
-UITextSizeConstraint_6.Name = "UITextSizeConstraint"
-UITextSizeConstraint_6.MaxTextSize = 20
-UITextSizeConstraint_6.Parent = No_2
-
-CheatButton.Name = "CheatButton"
-CheatButton.AutoButtonColor = true
-CheatButton.AnchorPoint = Vector2.new(1, 0)
-CheatButton.Size = UDim2.new(0, 32, 0, 32)
-CheatButton.BorderColor3 = Color3.new(0, 0, 0)
-CheatButton.BorderSizePixel = 0
-CheatButton.BackgroundTransparency = 0.5
-CheatButton.Position = UDim2.new(1, -60, 0, 4)
-CheatButton.BackgroundColor3 = Color3.new(0, 0, 0)
-CheatButton.TextColor3 = Color3.new(1, 1, 1)
-CheatButton.Text = "🖥"
-CheatButton.FontFace = Font.new("rbxasset://fonts/families/Arial.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-CheatButton.TextWrapped = true
-CheatButton.TextScaled = true
-CheatButton.Parent = SGUI
-
-Frame.Name = "Frame"
-Frame.AnchorPoint = Vector2.new(1, 0)
-Frame.Size = UDim2.new(0, 100, 0, 105)
-Frame.BorderColor3 = Color3.new(0, 0, 0)
-Frame.BorderSizePixel = 0
-Frame.BackgroundTransparency = 1
-Frame.Position = UDim2.new(1, -17, 1, 6)
-Frame.BackgroundColor3 = Color3.new(1, 1, 1)
-Frame.Parent = CheatButton
-
-Page.Name = "Page"
-Page.AutoButtonColor = true
-Page.LayoutOrder = 1
-Page.AnchorPoint = Vector2.new(0.5, 0.5)
-Page.Size = UDim2.new(1, 0, 0, 35)
-Page.BorderColor3 = Color3.new(0, 0, 0)
-Page.BorderSizePixel = 0
-Page.BackgroundTransparency = 0.5
-Page.Position = UDim2.new(0.5, 0, 0.5, -35)
-Page.BackgroundColor3 = Color3.new(0, 0, 0)
-Page.TextColor3 = Color3.new(1, 1, 1)
-Page.Text = "Page"
-Page.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Page.TextWrapped = true
-Page.Parent = Frame
-
-UIStroke_4.Name = "UIStroke"
-UIStroke_4.Parent = Page
-
-Slender.Name = "Slender"
-Slender.AutoButtonColor = true
-Slender.LayoutOrder = 1
-Slender.AnchorPoint = Vector2.new(0.5, 0.5)
-Slender.Size = UDim2.new(1, 0, 0, 35)
-Slender.BorderColor3 = Color3.new(0, 0, 0)
-Slender.BorderSizePixel = 0
-Slender.BackgroundTransparency = 0.5
-Slender.Position = UDim2.new(0.5, 0, 0.5, 0)
-Slender.BackgroundColor3 = Color3.new(0, 0, 0)
-Slender.TextStrokeColor3 = Color3.new(1, 1, 1)
-Slender.TextColor3 = Color3.new(1, 1, 1)
-Slender.Text = "Slender"
-Slender.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Slender.TextWrapped = true
-Slender.Parent = Frame
-
-UIStroke_5.Name = "UIStroke"
-UIStroke_5.Parent = Slender
-
-Generator.Name = "Generator"
-Generator.AutoButtonColor = true
-Generator.LayoutOrder = 1
-Generator.AnchorPoint = Vector2.new(0.5, 0.5)
-Generator.Size = UDim2.new(1, 0, 0, 35)
-Generator.BorderColor3 = Color3.new(0, 0, 0)
-Generator.BorderSizePixel = 0
-Generator.BackgroundTransparency = 0.5
-Generator.Position = UDim2.new(0.5, 0, 0.5, 35)
-Generator.BackgroundColor3 = Color3.new(0, 0, 0)
-Generator.TextStrokeColor3 = Color3.new(1, 1, 1)
-Generator.TextColor3 = Color3.new(1, 1, 1)
-Generator.Text = "Generator"
-Generator.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Generator.TextWrapped = true
-Generator.Parent = Frame
-
-UIStroke_6.Name = "UIStroke"
-UIStroke_6.Parent = Generator
-
-UIListLayout.Name = "UIListLayout"
-UIListLayout.Parent = Frame
-
-ScrollingFrame.Name = "ScrollingFrame"
-ScrollingFrame.Size = UDim2.new(0, 33, 0, 105)
-ScrollingFrame.ClipsDescendants = false
-ScrollingFrame.BorderColor3 = Color3.new(0, 0, 0)
-ScrollingFrame.Selectable = false
-ScrollingFrame.BorderSizePixel = 0
-ScrollingFrame.BackgroundTransparency = 1
-ScrollingFrame.Position = UDim2.new(1, -15, 1, 6)
-ScrollingFrame.BackgroundColor3 = Color3.new(0, 0, 0)
-ScrollingFrame.ScrollingDirection = Enum.ScrollingDirection.X
-ScrollingFrame.MidImage = ""
-ScrollingFrame.ElasticBehavior = Enum.ElasticBehavior.Always
-ScrollingFrame.TopImage = ""
-ScrollingFrame.ScrollingEnabled = false
-ScrollingFrame.BottomImage = ""
-ScrollingFrame.ScrollBarThickness = 0
-ScrollingFrame.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
-ScrollingFrame.Parent = CheatButton
-
-FullBright.Name = "FullBright"
-FullBright.AutoButtonColor = true
-FullBright.LayoutOrder = 1
-FullBright.AnchorPoint = Vector2.new(0.5, 0.5)
-FullBright.Size = UDim2.new(1, 0, 0, 21)
-FullBright.BorderColor3 = Color3.new(0, 0, 0)
-FullBright.BorderSizePixel = 0
-FullBright.BackgroundTransparency = 0.5
-FullBright.Position = UDim2.new(0.5, 0, 0.5, -42)
-FullBright.BackgroundColor3 = Color3.new(0, 0, 0)
-FullBright.TextColor3 = Color3.new(1, 1, 1)
-FullBright.Text = "Fb"
-FullBright.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-FullBright.TextWrapped = true
-FullBright.TextScaled = true
-FullBright.Parent = ScrollingFrame
-
-UITextSizeConstraint_7.Name = "UITextSizeConstraint"
-UITextSizeConstraint_7.MaxTextSize = 16
-UITextSizeConstraint_7.Parent = FullBright
-
-UIStroke_7.Name = "UIStroke"
-UIStroke_7.Parent = FullBright
-
-ResetCharacter.Name = "ResetCharacter"
-ResetCharacter.AutoButtonColor = true
-ResetCharacter.LayoutOrder = 1
-ResetCharacter.AnchorPoint = Vector2.new(0.5, 0.5)
-ResetCharacter.Size = UDim2.new(1, 0, 0, 21)
-ResetCharacter.BorderColor3 = Color3.new(0, 0, 0)
-ResetCharacter.BorderSizePixel = 0
-ResetCharacter.BackgroundTransparency = 0.5
-ResetCharacter.Position = UDim2.new(0.5, 0, 0.5, -21)
-ResetCharacter.BackgroundColor3 = Color3.new(0, 0, 0)
-ResetCharacter.TextColor3 = Color3.new(1, 1, 1)
-ResetCharacter.Text = "Rc"
-ResetCharacter.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-ResetCharacter.TextWrapped = true
-ResetCharacter.TextScaled = true
-ResetCharacter.Parent = ScrollingFrame
-
-UITextSizeConstraint_8.Name = "UITextSizeConstraint"
-UITextSizeConstraint_8.MaxTextSize = 16
-UITextSizeConstraint_8.Parent = ResetCharacter
-
-UIStroke_8.Name = "UIStroke"
-UIStroke_8.Parent = ResetCharacter
-
-PoopEggs.Name = "PoopEggs"
-PoopEggs.AutoButtonColor = true
-PoopEggs.LayoutOrder = 1
-PoopEggs.AnchorPoint = Vector2.new(0.5, 0.5)
-PoopEggs.Size = UDim2.new(1, 0, 0, 21)
-PoopEggs.BorderColor3 = Color3.new(0, 0, 0)
-PoopEggs.BorderSizePixel = 0
-PoopEggs.BackgroundTransparency = 0.5
-PoopEggs.Position = UDim2.new(0.5, 0, 0.5, 0)
-PoopEggs.BackgroundColor3 = Color3.new(0, 0, 0)
-PoopEggs.TextColor3 = Color3.new(1, 1, 1)
-PoopEggs.Text = "Pe"
-PoopEggs.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-PoopEggs.TextWrapped = true
-PoopEggs.TextScaled = true
-PoopEggs.Parent = ScrollingFrame
-
-UITextSizeConstraint_9.Name = "UITextSizeConstraint"
-UITextSizeConstraint_9.MaxTextSize = 16
-UITextSizeConstraint_9.Parent = PoopEggs
-
-UIStroke_9.Name = "UIStroke"
-UIStroke_9.Parent = PoopEggs
-
-UndetectedSpeedHack.Name = "UndetectedSpeedHack"
-UndetectedSpeedHack.AutoButtonColor = true
-UndetectedSpeedHack.LayoutOrder = 1
-UndetectedSpeedHack.AnchorPoint = Vector2.new(0.5, 0.5)
-UndetectedSpeedHack.Size = UDim2.new(1, 0, 0, 21)
-UndetectedSpeedHack.BorderColor3 = Color3.new(0, 0, 0)
-UndetectedSpeedHack.BorderSizePixel = 0
-UndetectedSpeedHack.BackgroundTransparency = 0.5
-UndetectedSpeedHack.Position = UDim2.new(0.5, 0, 0.5, 21)
-UndetectedSpeedHack.BackgroundColor3 = Color3.new(0, 0, 0)
-UndetectedSpeedHack.TextColor3 = Color3.new(1, 1, 1)
-UndetectedSpeedHack.Text = "Sh"
-UndetectedSpeedHack.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-UndetectedSpeedHack.TextWrapped = true
-UndetectedSpeedHack.TextScaled = true
-UndetectedSpeedHack.Parent = ScrollingFrame
-
-UITextSizeConstraint_10.Name = "UITextSizeConstraint"
-UITextSizeConstraint_10.MaxTextSize = 16
-UITextSizeConstraint_10.Parent = UndetectedSpeedHack
-
-UIStroke_10.Name = "UIStroke"
-UIStroke_10.Parent = UndetectedSpeedHack
-
-ImmuneAgainstSlender.Name = "ImmuneAgainstSlender"
-ImmuneAgainstSlender.AutoButtonColor = true
-ImmuneAgainstSlender.LayoutOrder = 1
-ImmuneAgainstSlender.AnchorPoint = Vector2.new(0.5, 0.5)
-ImmuneAgainstSlender.Size = UDim2.new(1, 0, 0, 21)
-ImmuneAgainstSlender.BorderColor3 = Color3.new(0, 0, 0)
-ImmuneAgainstSlender.BorderSizePixel = 0
-ImmuneAgainstSlender.BackgroundTransparency = 0.5
-ImmuneAgainstSlender.Position = UDim2.new(0.5, 0, 0.5, 42)
-ImmuneAgainstSlender.BackgroundColor3 = Color3.new(0, 0, 0)
-ImmuneAgainstSlender.TextColor3 = Color3.new(1, 1, 1)
-ImmuneAgainstSlender.Text = "Im"
-ImmuneAgainstSlender.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-ImmuneAgainstSlender.TextWrapped = true
-ImmuneAgainstSlender.TextScaled = true
-ImmuneAgainstSlender.Parent = ScrollingFrame
-
-UITextSizeConstraint_11.Name = "UITextSizeConstraint"
-UITextSizeConstraint_11.MaxTextSize = 16
-UITextSizeConstraint_11.Parent = ImmuneAgainstSlender
-
-UIStroke_11.Name = "UIStroke"
-UIStroke_11.Parent = ImmuneAgainstSlender
-
-UIListLayout_2.Name = "UIListLayout"
-UIListLayout_2.Parent = ScrollingFrame
-
-clicking.Name = "clicking"
-clicking.Volume = 1
-clicking.TimeLength = 0.8169375
-clicking.SoundId = "rbxassetid://9125397823"
-clicking.Parent = CheatButton
-
-UICorner.Name = "UICorner"
-UICorner.Parent = CheatButton
-
-UITextSizeConstraint_12.Name = "UITextSizeConstraint"
-UITextSizeConstraint_12.MaxTextSize = 20
-UITextSizeConstraint_12.Parent = CheatButton
-
-ScrollingFrame_2.Name = "ScrollingFrame"
-ScrollingFrame_2.Size = UDim2.new(0, 33, 0, 105)
-ScrollingFrame_2.ClipsDescendants = false
-ScrollingFrame_2.BorderColor3 = Color3.new(0, 0, 0)
-ScrollingFrame_2.Selectable = false
-ScrollingFrame_2.BorderSizePixel = 0
-ScrollingFrame_2.BackgroundTransparency = 1
-ScrollingFrame_2.Position = UDim2.new(1, 20, 1, 6)
-ScrollingFrame_2.BackgroundColor3 = Color3.new(0, 0, 0)
-ScrollingFrame_2.ScrollingDirection = Enum.ScrollingDirection.X
-ScrollingFrame_2.MidImage = ""
-ScrollingFrame_2.ElasticBehavior = Enum.ElasticBehavior.Always
-ScrollingFrame_2.TopImage = ""
-ScrollingFrame_2.ScrollingEnabled = false
-ScrollingFrame_2.BottomImage = ""
-ScrollingFrame_2.ScrollBarThickness = 0
-ScrollingFrame_2.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
-ScrollingFrame_2.Parent = CheatButton
-
-DestroyGUI.Name = "DestroyGUI"
-DestroyGUI.AutoButtonColor = true
-DestroyGUI.LayoutOrder = 1
-DestroyGUI.AnchorPoint = Vector2.new(0.5, 0.5)
-DestroyGUI.Size = UDim2.new(1, 0, 0, 21)
-DestroyGUI.BorderColor3 = Color3.new(0, 0, 0)
-DestroyGUI.BorderSizePixel = 0
-DestroyGUI.BackgroundTransparency = 0.5
-DestroyGUI.Position = UDim2.new(0.5, 0, 0.5, 42)
-DestroyGUI.BackgroundColor3 = Color3.new(0, 0, 0)
-DestroyGUI.TextColor3 = Color3.new(1, 1, 1)
-DestroyGUI.Text = "De"
-DestroyGUI.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-DestroyGUI.TextWrapped = true
-DestroyGUI.TextScaled = true
-DestroyGUI.Parent = ScrollingFrame_2
-
-UITextSizeConstraint_13.Name = "UITextSizeConstraint"
-UITextSizeConstraint_13.MaxTextSize = 16
-UITextSizeConstraint_13.Parent = DestroyGUI
-
-UIStroke_12.Name = "UIStroke"
-UIStroke_12.Parent = DestroyGUI
-
-Provoke.Name = "Provoke"
-Provoke.AutoButtonColor = true
-Provoke.LayoutOrder = 1
-Provoke.AnchorPoint = Vector2.new(0.5, 0.5)
-Provoke.Size = UDim2.new(1, 0, 0, 21)
-Provoke.BorderColor3 = Color3.new(0, 0, 0)
-Provoke.BorderSizePixel = 0
-Provoke.BackgroundTransparency = 0.5
-Provoke.Position = UDim2.new(0.5, 0, 0.5, -42)
-Provoke.BackgroundColor3 = Color3.new(0, 0, 0)
-Provoke.TextColor3 = Color3.new(1, 1, 1)
-Provoke.Text = "Pr"
-Provoke.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Provoke.TextWrapped = true
-Provoke.TextScaled = true
-Provoke.Parent = ScrollingFrame_2
-
-UITextSizeConstraint_14.Name = "UITextSizeConstraint"
-UITextSizeConstraint_14.MaxTextSize = 16
-UITextSizeConstraint_14.Parent = Provoke
-
-UIStroke_13.Name = "UIStroke"
-UIStroke_13.Parent = Provoke
-
-Refresh.Name = "Refresh"
-Refresh.AutoButtonColor = true
-Refresh.LayoutOrder = 1
-Refresh.AnchorPoint = Vector2.new(0.5, 0.5)
-Refresh.Size = UDim2.new(1, 0, 0, 21)
-Refresh.BorderColor3 = Color3.new(0, 0, 0)
-Refresh.BorderSizePixel = 0
-Refresh.BackgroundTransparency = 0.5
-Refresh.Position = UDim2.new(0.5, 0, 0.5, 21)
-Refresh.BackgroundColor3 = Color3.new(0, 0, 0)
-Refresh.TextColor3 = Color3.new(1, 1, 1)
-Refresh.Text = "Rs"
-Refresh.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Refresh.TextWrapped = true
-Refresh.TextScaled = true
-Refresh.Parent = ScrollingFrame_2
-
-UITextSizeConstraint_15.Name = "UITextSizeConstraint"
-UITextSizeConstraint_15.MaxTextSize = 16
-UITextSizeConstraint_15.Parent = Refresh
-
-UIStroke_14.Name = "UIStroke"
-UIStroke_14.Parent = Refresh
-
-TrollSounds.Name = "TrollSounds"
-TrollSounds.AutoButtonColor = true
-TrollSounds.LayoutOrder = 1
-TrollSounds.AnchorPoint = Vector2.new(0.5, 0.5)
-TrollSounds.Size = UDim2.new(1, 0, 0, 21)
-TrollSounds.BorderColor3 = Color3.new(0, 0, 0)
-TrollSounds.BorderSizePixel = 0
-TrollSounds.BackgroundTransparency = 0.5
-TrollSounds.Position = UDim2.new(0.5, 0, 0.5, -21)
-TrollSounds.BackgroundColor3 = Color3.new(0, 0, 0)
-TrollSounds.TextColor3 = Color3.new(1, 1, 1)
-TrollSounds.Text = "Ts"
-TrollSounds.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-TrollSounds.TextWrapped = true
-TrollSounds.TextScaled = true
-TrollSounds.Parent = ScrollingFrame_2
-
-UITextSizeConstraint_16.Name = "UITextSizeConstraint"
-UITextSizeConstraint_16.MaxTextSize = 16
-UITextSizeConstraint_16.Parent = TrollSounds
-
-UIStroke_15.Name = "UIStroke"
-UIStroke_15.Parent = TrollSounds
-
-Lay_3.Name = "Lay"
-Lay_3.AutoButtonColor = true
-Lay_3.LayoutOrder = 1
-Lay_3.AnchorPoint = Vector2.new(0.5, 0.5)
-Lay_3.Size = UDim2.new(1, 0, 0, 21)
-Lay_3.BorderColor3 = Color3.new(0, 0, 0)
-Lay_3.BorderSizePixel = 0
-Lay_3.BackgroundTransparency = 0.5
-Lay_3.Position = UDim2.new(0.5, 0, 0.5, 0)
-Lay_3.BackgroundColor3 = Color3.new(0, 0, 0)
-Lay_3.TextColor3 = Color3.new(1, 1, 1)
-Lay_3.Text = "Ld"
-Lay_3.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Lay_3.TextWrapped = true
-Lay_3.TextScaled = true
-Lay_3.Parent = ScrollingFrame_2
-
-UITextSizeConstraint_17.Name = "UITextSizeConstraint"
-UITextSizeConstraint_17.MaxTextSize = 16
-UITextSizeConstraint_17.Parent = Lay_3
-
-UIStroke_16.Name = "UIStroke"
-UIStroke_16.Parent = Lay_3
-
-UIListLayout_3.Name = "UIListLayout"
-UIListLayout_3.Parent = ScrollingFrame_2
-
-Noticer.Name = "Noticer"
-Noticer.AnchorPoint = Vector2.new(0.5, 1)
-Noticer.Visible = false
-Noticer.Size = UDim2.new(0.5, 0, 0, 25)
-Noticer.BorderColor3 = Color3.new(0, 0, 0)
-Noticer.BorderSizePixel = 0
-Noticer.BackgroundTransparency = 0.5
-Noticer.Position = UDim2.new(0.5, 0, 1, -30)
-Noticer.BackgroundColor3 = Color3.new(0, 0, 0)
-Noticer.TextColor3 = Color3.new(1, 1, 1)
-Noticer.Text = "???"
-Noticer.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Noticer.TextWrapped = true
-Noticer.TextScaled = true
-Noticer.Parent = SGUI
-
-UICorner_2.Name = "UICorner"
-UICorner_2.CornerRadius = UDim.new(1, 0)
-UICorner_2.Parent = Noticer
-
-UIStroke_17.Name = "UIStroke"
-UIStroke_17.Parent = Noticer
-
-UITextSizeConstraint_18.Name = "UITextSizeConstraint"
-UITextSizeConstraint_18.MaxTextSize = 25
-UITextSizeConstraint_18.Parent = Noticer
-
-laugh.Name = "laugh"
-laugh.Volume = 1
-laugh.TimeLength = 0.768
-laugh.SoundId = "rbxassetid://79502215207744"
-laugh.Parent = SGUI
-
-Warn3.Name = "Warn3"
-Warn3.AnchorPoint = Vector2.new(0.5, 0.5)
-Warn3.Visible = false
-Warn3.Size = UDim2.new(0, 250, 0, 100)
-Warn3.BorderColor3 = Color3.new(0, 0, 0)
-Warn3.BorderSizePixel = 0
-Warn3.Position = UDim2.new(0.5, 0, 0.5, 0)
-Warn3.BackgroundColor3 = Color3.new(0, 0, 0)
-Warn3.Parent = SGUI
-
-DropShadowHolder_3.Name = "DropShadowHolder"
-DropShadowHolder_3.ZIndex = 0
-DropShadowHolder_3.Size = UDim2.new(1, 0, 1, 0)
-DropShadowHolder_3.BorderColor3 = Color3.new(0, 0, 0)
-DropShadowHolder_3.BorderSizePixel = 0
-DropShadowHolder_3.BackgroundTransparency = 1
-DropShadowHolder_3.Parent = Warn3
-
-DropShadow_6.Name = "DropShadow"
-DropShadow_6.AnchorPoint = Vector2.new(0.5, 0.5)
-DropShadow_6.ZIndex = 0
-DropShadow_6.Size = UDim2.new(1, 47, 1, 47)
-DropShadow_6.BorderColor3 = Color3.new(0, 0, 0)
-DropShadow_6.BorderSizePixel = 0
-DropShadow_6.BackgroundTransparency = 1
-DropShadow_6.Position = UDim2.new(0.5, 0, 0.5, 0)
-DropShadow_6.ImageColor3 = Color3.new(0, 0, 0)
-DropShadow_6.ScaleType = Enum.ScaleType.Slice
-DropShadow_6.ImageTransparency = 0.5
-DropShadow_6.Image = "rbxassetid://6015897843"
-DropShadow_6.SliceCenter = Rect.new(Vector2.new(49, 49), Vector2.new(450, 450))
-DropShadow_6.Parent = DropShadowHolder_3
-
-TextLabel_3.Name = "TextLabel"
-TextLabel_3.AnchorPoint = Vector2.new(0.5, 0)
-TextLabel_3.Size = UDim2.new(0, 225, 0, 50)
-TextLabel_3.BorderColor3 = Color3.new(0, 0, 0)
-TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(0.5, 0, 0, 8)
-TextLabel_3.BackgroundColor3 = Color3.new(0, 0, 0)
-TextLabel_3.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_3.Text = "Click Yes to reset character. Are you doing this on purpose?"
-TextLabel_3.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-TextLabel_3.TextWrapped = true
-TextLabel_3.TextScaled = true
-TextLabel_3.Parent = Warn3
-
-UIStroke_18.Name = "UIStroke"
-UIStroke_18.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-UIStroke_18.Parent = TextLabel_3
-
-UITextSizeConstraint_19.Name = "UITextSizeConstraint"
-UITextSizeConstraint_19.MaxTextSize = 15
-UITextSizeConstraint_19.Parent = TextLabel_3
-
-Yes_3.Name = "Yes"
-Yes_3.AutoButtonColor = true
-Yes_3.AnchorPoint = Vector2.new(0, 1)
-Yes_3.Size = UDim2.new(0, 100, 0, 30)
-Yes_3.BorderColor3 = Color3.new(0, 0, 0)
-Yes_3.BorderSizePixel = 0
-Yes_3.Position = UDim2.new(0, 12, 1, -6)
-Yes_3.BackgroundColor3 = Color3.new(0, 0, 0)
-Yes_3.TextColor3 = Color3.new(0, 0, 0)
-Yes_3.Text = "Yes"
-Yes_3.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Yes_3.TextWrapped = true
-Yes_3.TextScaled = true
-Yes_3.Parent = Warn3
-
-UITextSizeConstraint_20.Name = "UITextSizeConstraint"
-UITextSizeConstraint_20.MaxTextSize = 20
-UITextSizeConstraint_20.Parent = Yes_3
-
-No_4.Name = "No"
-No_4.AutoButtonColor = true
-No_4.AnchorPoint = Vector2.new(1, 1)
-No_4.Size = UDim2.new(0, 100, 0, 30)
-No_4.BorderColor3 = Color3.new(0, 0, 0)
-No_4.BorderSizePixel = 0
-No_4.Position = UDim2.new(1, -13, 1, -6)
-No_4.BackgroundColor3 = Color3.new(0, 0, 0)
-No_4.TextColor3 = Color3.new(0, 0, 0)
-No_4.Text = "No"
-No_4.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-No_4.TextWrapped = true
-No_4.TextScaled = true
-No_4.Parent = Warn3
-
-UITextSizeConstraint_21.Name = "UITextSizeConstraint"
-UITextSizeConstraint_21.MaxTextSize = 20
-UITextSizeConstraint_21.Parent = No_4
-
-Warn4.Name = "Warn4"
-Warn4.AnchorPoint = Vector2.new(0.5, 0.5)
-Warn4.Visible = false
-Warn4.Size = UDim2.new(0, 250, 0, 100)
-Warn4.BorderColor3 = Color3.new(0, 0, 0)
-Warn4.BorderSizePixel = 0
-Warn4.Position = UDim2.new(0.5, 0, 0.5, 0)
-Warn4.BackgroundColor3 = Color3.new(0, 0, 0)
-Warn4.Parent = SGUI
-
-DropShadowHolder_4.Name = "DropShadowHolder"
-DropShadowHolder_4.ZIndex = 0
-DropShadowHolder_4.Size = UDim2.new(1, 0, 1, 0)
-DropShadowHolder_4.BorderColor3 = Color3.new(0, 0, 0)
-DropShadowHolder_4.BorderSizePixel = 0
-DropShadowHolder_4.BackgroundTransparency = 1
-DropShadowHolder_4.Parent = Warn4
-
-DropShadow_8.Name = "DropShadow"
-DropShadow_8.AnchorPoint = Vector2.new(0.5, 0.5)
-DropShadow_8.ZIndex = 0
-DropShadow_8.Size = UDim2.new(1, 47, 1, 47)
-DropShadow_8.BorderColor3 = Color3.new(0, 0, 0)
-DropShadow_8.BorderSizePixel = 0
-DropShadow_8.BackgroundTransparency = 1
-DropShadow_8.Position = UDim2.new(0.5, 0, 0.5, 0)
-DropShadow_8.ImageColor3 = Color3.new(0, 0, 0)
-DropShadow_8.ScaleType = Enum.ScaleType.Slice
-DropShadow_8.ImageTransparency = 0.5
-DropShadow_8.Image = "rbxassetid://6015897843"
-DropShadow_8.SliceCenter = Rect.new(Vector2.new(49, 49), Vector2.new(450, 450))
-DropShadow_8.Parent = DropShadowHolder_4
-
-TextLabel_4.Name = "TextLabel"
-TextLabel_4.AnchorPoint = Vector2.new(0.5, 0)
-TextLabel_4.Size = UDim2.new(0, 225, 0, 50)
-TextLabel_4.BorderColor3 = Color3.new(0, 0, 0)
-TextLabel_4.BorderSizePixel = 0
-TextLabel_4.Position = UDim2.new(0.5, 0, 0, 8)
-TextLabel_4.BackgroundColor3 = Color3.new(0, 0, 0)
-TextLabel_4.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_4.Text = "Click Yes to start trolling all players using sounds, click Yes again to stop trolling. Are you doing this on purpose?"
-TextLabel_4.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-TextLabel_4.TextWrapped = true
-TextLabel_4.TextScaled = true
-TextLabel_4.Parent = Warn4
-
-UIStroke_19.Name = "UIStroke"
-UIStroke_19.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-UIStroke_19.Parent = TextLabel_4
-
-UITextSizeConstraint_22.Name = "UITextSizeConstraint"
-UITextSizeConstraint_22.MaxTextSize = 15
-UITextSizeConstraint_22.Parent = TextLabel_4
-
-Yes_4.Name = "Yes"
-Yes_4.AutoButtonColor = true
-Yes_4.AnchorPoint = Vector2.new(0, 1)
-Yes_4.Size = UDim2.new(0, 100, 0, 30)
-Yes_4.BorderColor3 = Color3.new(0, 0, 0)
-Yes_4.BorderSizePixel = 0
-Yes_4.Position = UDim2.new(0, 12, 1, -6)
-Yes_4.BackgroundColor3 = Color3.new(0, 0, 0)
-Yes_4.TextColor3 = Color3.new(0, 0, 0)
-Yes_4.Text = "Yes"
-Yes_4.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Yes_4.TextWrapped = true
-Yes_4.TextScaled = true
-Yes_4.Parent = Warn4
-
-UITextSizeConstraint_23.Name = "UITextSizeConstraint"
-UITextSizeConstraint_23.MaxTextSize = 20
-UITextSizeConstraint_23.Parent = Yes_4
-
-No_5.Name = "No"
-No_5.AutoButtonColor = true
-No_5.AnchorPoint = Vector2.new(1, 1)
-No_5.Size = UDim2.new(0, 100, 0, 30)
-No_5.BorderColor3 = Color3.new(0, 0, 0)
-No_5.BorderSizePixel = 0
-No_5.Position = UDim2.new(1, -13, 1, -6)
-No_5.BackgroundColor3 = Color3.new(0, 0, 0)
-No_5.TextColor3 = Color3.new(0, 0, 0)
-No_5.Text = "No"
-No_5.FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-No_5.TextWrapped = true
-No_5.TextScaled = true
-No_5.Parent = Warn4
-
-UITextSizeConstraint_24.Name = "UITextSizeConstraint"
-UITextSizeConstraint_24.MaxTextSize = 20
-UITextSizeConstraint_24.Parent = No_5
-
-AccountAge.Name = "AccountAge"
-AccountAge.AnchorPoint = Vector2.new(1, 0)
-AccountAge.Size = UDim2.new(0, 125, 0, 16)
-AccountAge.BorderColor3 = Color3.new(0, 0, 0)
-AccountAge.BorderSizePixel = 0
-AccountAge.BackgroundTransparency = 0.5
-AccountAge.Position = UDim2.new(1, -533, 0, 4)
-AccountAge.BackgroundColor3 = Color3.new(0, 0, 0)
-AccountAge.TextColor3 = Color3.new(1, 1, 1)
-AccountAge.Text = "Account Age:"
-AccountAge.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-AccountAge.TextWrapped = true
-AccountAge.TextScaled = true
-AccountAge.Parent = SGUI
-
-UIStroke_20.Name = "UIStroke"
-UIStroke_20.Parent = AccountAge
-
-UICorner_3.Name = "UICorner"
-UICorner_3.Parent = AccountAge
-
-UITextSizeConstraint_25.Name = "UITextSizeConstraint"
-UITextSizeConstraint_25.MaxTextSize = 16
-UITextSizeConstraint_25.Parent = AccountAge
-
-Pages.Name = "Pages"
-Pages.AnchorPoint = Vector2.new(1, 0)
-Pages.Size = UDim2.new(0, 125, 0, 16)
-Pages.BorderColor3 = Color3.new(0, 0, 0)
-Pages.BorderSizePixel = 0
-Pages.BackgroundTransparency = 0.5
-Pages.Position = UDim2.new(1, -275, 0, 4)
-Pages.BackgroundColor3 = Color3.new(0, 0, 0)
-Pages.TextColor3 = Color3.new(1, 1, 1)
-Pages.Text = "Total Pages:"
-Pages.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Pages.TextWrapped = true
-Pages.TextScaled = true
-Pages.Parent = SGUI
-
-UIStroke_21.Name = "UIStroke"
-UIStroke_21.Parent = Pages
-
-UICorner_4.Name = "UICorner"
-UICorner_4.Parent = Pages
-
-UITextSizeConstraint_26.Name = "UITextSizeConstraint"
-UITextSizeConstraint_26.MaxTextSize = 16
-UITextSizeConstraint_26.Parent = Pages
-
-Versi0n.Name = "Versi0n"
-Versi0n.AnchorPoint = Vector2.new(1, 0)
-Versi0n.Size = UDim2.new(0, 125, 0, 16)
-Versi0n.BorderColor3 = Color3.new(0, 0, 0)
-Versi0n.BorderSizePixel = 0
-Versi0n.BackgroundTransparency = 0.5
-Versi0n.Position = UDim2.new(1, -404, 0, 4)
-Versi0n.BackgroundColor3 = Color3.new(0, 0, 0)
-Versi0n.TextColor3 = Color3.new(1, 1, 1)
-Versi0n.Text = "Hack Version:"
-Versi0n.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Versi0n.TextWrapped = true
-Versi0n.TextScaled = true
-Versi0n.Parent = SGUI
-
-UIStroke_22.Name = "UIStroke"
-UIStroke_22.Parent = Versi0n
-
-UICorner_5.Name = "UICorner"
-UICorner_5.Parent = Versi0n
-
-UITextSizeConstraint_27.Name = "UITextSizeConstraint"
-UITextSizeConstraint_27.MaxTextSize = 16
-UITextSizeConstraint_27.Parent = Versi0n
-
-WhoIsSlender.Name = "WhoIsSlender"
-WhoIsSlender.AnchorPoint = Vector2.new(1, 0)
-WhoIsSlender.Size = UDim2.new(0, 175, 0, 16)
-WhoIsSlender.BorderColor3 = Color3.new(0, 0, 0)
-WhoIsSlender.BorderSizePixel = 0
-WhoIsSlender.BackgroundTransparency = 0.5
-WhoIsSlender.Position = UDim2.new(1, -96, 0, 4)
-WhoIsSlender.BackgroundColor3 = Color3.new(0, 0, 0)
-WhoIsSlender.TextColor3 = Color3.new(1, 1, 1)
-WhoIsSlender.Text = "Slender:"
-WhoIsSlender.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-WhoIsSlender.TextWrapped = true
-WhoIsSlender.TextScaled = true
-WhoIsSlender.Parent = SGUI
-
-UIStroke_23.Name = "UIStroke"
-UIStroke_23.Parent = WhoIsSlender
-
-UICorner_6.Name = "UICorner"
-UICorner_6.Parent = WhoIsSlender
-
-UITextSizeConstraint_28.Name = "UITextSizeConstraint"
-UITextSizeConstraint_28.MaxTextSize = 16
-UITextSizeConstraint_28.Parent = WhoIsSlender
-
-InfoTeller.Name = "InfoTeller"
-InfoTeller.AnchorPoint = Vector2.new(1, 0)
-InfoTeller.Size = UDim2.new(0.5, 0, 0, 20)
-InfoTeller.BorderColor3 = Color3.new(0, 0, 0)
-InfoTeller.BorderSizePixel = 0
-InfoTeller.BackgroundTransparency = 1
-InfoTeller.Position = UDim2.new(1, 0, 0, 150)
-InfoTeller.BackgroundColor3 = Color3.new(0, 0, 0)
-InfoTeller.TextStrokeColor3 = Color3.new(1, 1, 1)
-InfoTeller.TextColor3 = Color3.new(1, 1, 1)
-InfoTeller.Text = "Hi."
-InfoTeller.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-InfoTeller.TextWrapped = true
-InfoTeller.TextXAlignment = Enum.TextXAlignment.Right
-InfoTeller.TextScaled = true
-InfoTeller.Parent = SGUI
-
-UIStroke_24.Name = "UIStroke"
-UIStroke_24.Parent = InfoTeller
-
-UIPadding.Name = "UIPadding"
-UIPadding.PaddingRight = UDim.new(0, 7)
-UIPadding.Parent = InfoTeller
-
-SGUI.Parent = game.CoreGui
-
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", HistoryLabel)
+local ver = "8.7"
+
+local l = {
+	["_SGUI"] = Instance.new("ScreenGui");
+	["_HistoryLabel"] = Instance.new("TextLabel");
+	["_LocalScript"] = Instance.new("LocalScript");
+	["_UIStroke"] = Instance.new("UIStroke");
+	["_UITextSizeConstraint"] = Instance.new("UITextSizeConstraint");
+	["_History"] = Instance.new("LocalScript");
+	["_RTOpenLootbox"] = Instance.new("LocalScript");
+	["_LoadedMessage"] = Instance.new("LocalScript");
+	["_PDaccess"] = Instance.new("LocalScript");
+	["_AutoLB"] = Instance.new("LocalScript");
+	["_Warn"] = Instance.new("Frame");
+	["_DropShadowHolder"] = Instance.new("Frame");
+	["_DropShadow"] = Instance.new("ImageLabel");
+	["_TextLabel"] = Instance.new("TextLabel");
+	["_UIStroke1"] = Instance.new("UIStroke");
+	["_UITextSizeConstraint1"] = Instance.new("UITextSizeConstraint");
+	["_Yes"] = Instance.new("TextButton");
+	["_UITextSizeConstraint2"] = Instance.new("UITextSizeConstraint");
+	["_LocalScript1"] = Instance.new("LocalScript");
+	["_No"] = Instance.new("TextButton");
+	["_UITextSizeConstraint3"] = Instance.new("UITextSizeConstraint");
+	["_LocalScript2"] = Instance.new("LocalScript");
+	["_GuiSway"] = Instance.new("LocalScript");
+	["_Warn2"] = Instance.new("Frame");
+	["_DropShadowHolder1"] = Instance.new("Frame");
+	["_DropShadow1"] = Instance.new("ImageLabel");
+	["_TextLabel1"] = Instance.new("TextLabel");
+	["_UIStroke2"] = Instance.new("UIStroke");
+	["_UITextSizeConstraint4"] = Instance.new("UITextSizeConstraint");
+	["_Yes1"] = Instance.new("TextButton");
+	["_UITextSizeConstraint5"] = Instance.new("UITextSizeConstraint");
+	["_LocalScript3"] = Instance.new("LocalScript");
+	["_No1"] = Instance.new("TextButton");
+	["_UITextSizeConstraint6"] = Instance.new("UITextSizeConstraint");
+	["_LocalScript4"] = Instance.new("LocalScript");
+	["_GuiSway1"] = Instance.new("LocalScript");
+	["_CheatButton"] = Instance.new("TextButton");
+	["_Frame"] = Instance.new("Frame");
+	["_Page"] = Instance.new("TextButton");
+	["_LocalScript5"] = Instance.new("LocalScript");
+	["_UIStroke3"] = Instance.new("UIStroke");
+	["_UITextSizeConstraint7"] = Instance.new("UITextSizeConstraint");
+	["_Slender"] = Instance.new("TextButton");
+	["_LocalScript6"] = Instance.new("LocalScript");
+	["_UIStroke4"] = Instance.new("UIStroke");
+	["_UITextSizeConstraint8"] = Instance.new("UITextSizeConstraint");
+	["_Generator"] = Instance.new("TextButton");
+	["_LocalScript7"] = Instance.new("LocalScript");
+	["_UIStroke5"] = Instance.new("UIStroke");
+	["_UITextSizeConstraint9"] = Instance.new("UITextSizeConstraint");
+	["_UIListLayout"] = Instance.new("UIListLayout");
+	["_ScrollingFrame"] = Instance.new("ScrollingFrame");
+	["_FullBright"] = Instance.new("TextButton");
+	["_LocalScript8"] = Instance.new("LocalScript");
+	["_UITextSizeConstraint10"] = Instance.new("UITextSizeConstraint");
+	["_UIStroke6"] = Instance.new("UIStroke");
+	["_ResetCharacter"] = Instance.new("TextButton");
+	["_LocalScript9"] = Instance.new("LocalScript");
+	["_UITextSizeConstraint11"] = Instance.new("UITextSizeConstraint");
+	["_UIStroke7"] = Instance.new("UIStroke");
+	["_PoopEggs"] = Instance.new("TextButton");
+	["_LocalScript10"] = Instance.new("LocalScript");
+	["_UITextSizeConstraint12"] = Instance.new("UITextSizeConstraint");
+	["_UIStroke8"] = Instance.new("UIStroke");
+	["_UndetectedSpeedHack"] = Instance.new("TextButton");
+	["_LocalScript11"] = Instance.new("LocalScript");
+	["_UITextSizeConstraint13"] = Instance.new("UITextSizeConstraint");
+	["_UIStroke9"] = Instance.new("UIStroke");
+	["_ImmuneAgainstSlender"] = Instance.new("TextButton");
+	["_LocalScript12"] = Instance.new("LocalScript");
+	["_UITextSizeConstraint14"] = Instance.new("UITextSizeConstraint");
+	["_UIStroke10"] = Instance.new("UIStroke");
+	["_UIListLayout1"] = Instance.new("UIListLayout");
+	["_SoundSystem"] = Instance.new("LocalScript");
+	["_clicking"] = Instance.new("Sound");
+	["_LocalScript13"] = Instance.new("LocalScript");
+	["_UICorner"] = Instance.new("UICorner");
+	["_UITextSizeConstraint15"] = Instance.new("UITextSizeConstraint");
+	["_ScrollingFrame1"] = Instance.new("ScrollingFrame");
+	["_DestroyGUI"] = Instance.new("TextButton");
+	["_LocalScript14"] = Instance.new("LocalScript");
+	["_UITextSizeConstraint16"] = Instance.new("UITextSizeConstraint");
+	["_UIStroke11"] = Instance.new("UIStroke");
+	["_Provoke"] = Instance.new("TextButton");
+	["_LocalScript15"] = Instance.new("LocalScript");
+	["_UITextSizeConstraint17"] = Instance.new("UITextSizeConstraint");
+	["_UIStroke12"] = Instance.new("UIStroke");
+	["_Refresh"] = Instance.new("TextButton");
+	["_LocalScript16"] = Instance.new("LocalScript");
+	["_UITextSizeConstraint18"] = Instance.new("UITextSizeConstraint");
+	["_UIStroke13"] = Instance.new("UIStroke");
+	["_TrollSounds"] = Instance.new("TextButton");
+	["_LocalScript17"] = Instance.new("LocalScript");
+	["_UITextSizeConstraint19"] = Instance.new("UITextSizeConstraint");
+	["_UIStroke14"] = Instance.new("UIStroke");
+	["_Lay"] = Instance.new("TextButton");
+	["_LocalScript18"] = Instance.new("LocalScript");
+	["_UITextSizeConstraint20"] = Instance.new("UITextSizeConstraint");
+	["_UIStroke15"] = Instance.new("UIStroke");
+	["_UIListLayout2"] = Instance.new("UIListLayout");
+	["_UsersOnJoin"] = Instance.new("LocalScript");
+	["_Noticer"] = Instance.new("TextLabel");
+	["_LocalScript19"] = Instance.new("LocalScript");
+	["_UICorner1"] = Instance.new("UICorner");
+	["_UIStroke16"] = Instance.new("UIStroke");
+	["_UITextSizeConstraint21"] = Instance.new("UITextSizeConstraint");
+	["_Interfacedit"] = Instance.new("LocalScript");
+	["_laugh"] = Instance.new("Sound");
+	["_AutoC"] = Instance.new("LocalScript");
+	["_Warn3"] = Instance.new("Frame");
+	["_DropShadowHolder2"] = Instance.new("Frame");
+	["_DropShadow2"] = Instance.new("ImageLabel");
+	["_TextLabel2"] = Instance.new("TextLabel");
+	["_UIStroke17"] = Instance.new("UIStroke");
+	["_UITextSizeConstraint22"] = Instance.new("UITextSizeConstraint");
+	["_Yes2"] = Instance.new("TextButton");
+	["_UITextSizeConstraint23"] = Instance.new("UITextSizeConstraint");
+	["_LocalScript20"] = Instance.new("LocalScript");
+	["_No2"] = Instance.new("TextButton");
+	["_UITextSizeConstraint24"] = Instance.new("UITextSizeConstraint");
+	["_LocalScript21"] = Instance.new("LocalScript");
+	["_GuiSway2"] = Instance.new("LocalScript");
+	["_HolderInfo"] = Instance.new("LocalScript");
+	["_Warn4"] = Instance.new("Frame");
+	["_DropShadowHolder3"] = Instance.new("Frame");
+	["_DropShadow3"] = Instance.new("ImageLabel");
+	["_TextLabel3"] = Instance.new("TextLabel");
+	["_UIStroke18"] = Instance.new("UIStroke");
+	["_UITextSizeConstraint25"] = Instance.new("UITextSizeConstraint");
+	["_Yes3"] = Instance.new("TextButton");
+	["_UITextSizeConstraint26"] = Instance.new("UITextSizeConstraint");
+	["_LocalScript22"] = Instance.new("LocalScript");
+	["_No3"] = Instance.new("TextButton");
+	["_UITextSizeConstraint27"] = Instance.new("UITextSizeConstraint");
+	["_LocalScript23"] = Instance.new("LocalScript");
+	["_GuiSway3"] = Instance.new("LocalScript");
+	["_AccountAge"] = Instance.new("TextLabel");
+	["_LocalScript24"] = Instance.new("LocalScript");
+	["_UIStroke19"] = Instance.new("UIStroke");
+	["_UICorner2"] = Instance.new("UICorner");
+	["_UITextSizeConstraint28"] = Instance.new("UITextSizeConstraint");
+	["_Pages"] = Instance.new("TextLabel");
+	["_LocalScript25"] = Instance.new("LocalScript");
+	["_UIStroke20"] = Instance.new("UIStroke");
+	["_UICorner3"] = Instance.new("UICorner");
+	["_UITextSizeConstraint29"] = Instance.new("UITextSizeConstraint");
+	["_Versi0n"] = Instance.new("TextLabel");
+	["_LocalScript26"] = Instance.new("LocalScript");
+	["_UIStroke21"] = Instance.new("UIStroke");
+	["_UICorner4"] = Instance.new("UICorner");
+	["_UITextSizeConstraint30"] = Instance.new("UITextSizeConstraint");
+	["_WhoIsSlender"] = Instance.new("TextLabel");
+	["_LocalScript27"] = Instance.new("LocalScript");
+	["_UIStroke22"] = Instance.new("UIStroke");
+	["_UICorner5"] = Instance.new("UICorner");
+	["_UITextSizeConstraint31"] = Instance.new("UITextSizeConstraint");
+	["_InfoTeller"] = Instance.new("TextLabel");
+	["_UIStroke23"] = Instance.new("UIStroke");
+	["_UIPadding"] = Instance.new("UIPadding");
+	["_RepositionInfoTeller"] = Instance.new("LocalScript");
+}
+
+l["_SGUI"].IgnoreGuiInset = true
+l["_SGUI"].ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
+l["_SGUI"].Name = "SGUI"
+
+l["_HistoryLabel"].Font = Enum.Font.SourceSans
+l["_HistoryLabel"].Text = ""
+l["_HistoryLabel"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_HistoryLabel"].TextScaled = true
+l["_HistoryLabel"].TextSize = 20
+l["_HistoryLabel"].TextStrokeTransparency = 0.699999988079071
+l["_HistoryLabel"].TextWrapped = true
+l["_HistoryLabel"].AnchorPoint = Vector2.new(0.5, 1)
+l["_HistoryLabel"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+l["_HistoryLabel"].BackgroundTransparency = 1
+l["_HistoryLabel"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_HistoryLabel"].BorderSizePixel = 0
+l["_HistoryLabel"].Position = UDim2.new(0.5, 0, 1, -55)
+l["_HistoryLabel"].Size = UDim2.new(0.5, 0, 0, 20)
+l["_HistoryLabel"].Name = "HistoryLabel"
+l["_HistoryLabel"].Parent = l["_SGUI"]
+
+l["_UIStroke"].Parent = l["_HistoryLabel"]
+
+l["_UITextSizeConstraint"].MaxTextSize = 20
+l["_UITextSizeConstraint"].Parent = l["_HistoryLabel"]
+
+l["_Warn"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_Warn"].BackgroundColor3 = Color3.fromRGB(34.00000177323818, 40.00000141561031, 34.00000177323818)
+l["_Warn"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_Warn"].BorderSizePixel = 0
+l["_Warn"].Position = UDim2.new(0.5, 0, 0.5, 0)
+l["_Warn"].Size = UDim2.new(0, 250, 0, 100)
+l["_Warn"].Visible = false
+l["_Warn"].Name = "Warn"
+l["_Warn"].Parent = l["_SGUI"]
+
+l["_DropShadowHolder"].BackgroundTransparency = 1
+l["_DropShadowHolder"].BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036)
+l["_DropShadowHolder"].BorderSizePixel = 0
+l["_DropShadowHolder"].Size = UDim2.new(1, 0, 1, 0)
+l["_DropShadowHolder"].ZIndex = 0
+l["_DropShadowHolder"].Name = "DropShadowHolder"
+l["_DropShadowHolder"].Parent = l["_Warn"]
+
+l["_DropShadow"].Image = "rbxassetid://6015897843"
+l["_DropShadow"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+l["_DropShadow"].ImageTransparency = 0.5
+l["_DropShadow"].ScaleType = Enum.ScaleType.Slice
+l["_DropShadow"].SliceCenter = Rect.new(49, 49, 450, 450)
+l["_DropShadow"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_DropShadow"].BackgroundTransparency = 1
+l["_DropShadow"].BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036)
+l["_DropShadow"].BorderSizePixel = 0
+l["_DropShadow"].Position = UDim2.new(0.5, 0, 0.5, 0)
+l["_DropShadow"].Size = UDim2.new(1, 47, 1, 47)
+l["_DropShadow"].ZIndex = 0
+l["_DropShadow"].Name = "DropShadow"
+l["_DropShadow"].Parent = l["_DropShadowHolder"]
+
+l["_TextLabel"].Font = Enum.Font.SourceSans
+l["_TextLabel"].Text = "Click Yes to lie down, means your character will be in a flat position. Are you doing this on purpose?"
+l["_TextLabel"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_TextLabel"].TextScaled = true
+l["_TextLabel"].TextSize = 15
+l["_TextLabel"].TextWrapped = true
+l["_TextLabel"].AnchorPoint = Vector2.new(0.5, 0)
+l["_TextLabel"].BackgroundColor3 = Color3.fromRGB(34.00000177323818, 40.00000141561031, 34.00000177323818)
+l["_TextLabel"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_TextLabel"].BorderSizePixel = 0
+l["_TextLabel"].Position = UDim2.new(0.5, 0, 0, 8)
+l["_TextLabel"].Size = UDim2.new(0, 225, 0, 50)
+l["_TextLabel"].Parent = l["_Warn"]
+
+l["_UIStroke1"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+l["_UIStroke1"].Parent = l["_TextLabel"]
+
+l["_UITextSizeConstraint1"].MaxTextSize = 15
+l["_UITextSizeConstraint1"].Parent = l["_TextLabel"]
+
+l["_Yes"].Font = Enum.Font.SourceSans
+l["_Yes"].Text = "Yes"
+l["_Yes"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_Yes"].TextScaled = true
+l["_Yes"].TextSize = 20
+l["_Yes"].TextWrapped = true
+l["_Yes"].AnchorPoint = Vector2.new(0, 1)
+l["_Yes"].BackgroundColor3 = Color3.fromRGB(0, 170.0000050663948, 0)
+l["_Yes"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_Yes"].BorderSizePixel = 0
+l["_Yes"].Position = UDim2.new(0, 12, 1, -6)
+l["_Yes"].Size = UDim2.new(0, 100, 0, 30)
+l["_Yes"].Name = "Yes"
+l["_Yes"].Parent = l["_Warn"]
+
+l["_UITextSizeConstraint2"].MaxTextSize = 20
+l["_UITextSizeConstraint2"].Parent = l["_Yes"]
+
+l["_No"].Font = Enum.Font.SourceSans
+l["_No"].Text = "No"
+l["_No"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_No"].TextScaled = true
+l["_No"].TextSize = 20
+l["_No"].TextWrapped = true
+l["_No"].AnchorPoint = Vector2.new(1, 1)
+l["_No"].BackgroundColor3 = Color3.fromRGB(170.0000050663948, 0, 0)
+l["_No"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_No"].BorderSizePixel = 0
+l["_No"].Position = UDim2.new(1, -13, 1, -6)
+l["_No"].Size = UDim2.new(0, 100, 0, 30)
+l["_No"].Name = "No"
+l["_No"].Parent = l["_Warn"]
+
+l["_UITextSizeConstraint3"].MaxTextSize = 20
+l["_UITextSizeConstraint3"].Parent = l["_No"]
+
+l["_Warn2"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_Warn2"].BackgroundColor3 = Color3.fromRGB(34.00000177323818, 40.00000141561031, 34.00000177323818)
+l["_Warn2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_Warn2"].BorderSizePixel = 0
+l["_Warn2"].Position = UDim2.new(0.5, 0, 0.5, 0)
+l["_Warn2"].Size = UDim2.new(0, 250, 0, 100)
+l["_Warn2"].Visible = false
+l["_Warn2"].Name = "Warn2"
+l["_Warn2"].Parent = l["_SGUI"]
+
+l["_DropShadowHolder1"].BackgroundTransparency = 1
+l["_DropShadowHolder1"].BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036)
+l["_DropShadowHolder1"].BorderSizePixel = 0
+l["_DropShadowHolder1"].Size = UDim2.new(1, 0, 1, 0)
+l["_DropShadowHolder1"].ZIndex = 0
+l["_DropShadowHolder1"].Name = "DropShadowHolder"
+l["_DropShadowHolder1"].Parent = l["_Warn2"]
+
+l["_DropShadow1"].Image = "rbxassetid://6015897843"
+l["_DropShadow1"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+l["_DropShadow1"].ImageTransparency = 0.5
+l["_DropShadow1"].ScaleType = Enum.ScaleType.Slice
+l["_DropShadow1"].SliceCenter = Rect.new(49, 49, 450, 450)
+l["_DropShadow1"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_DropShadow1"].BackgroundTransparency = 1
+l["_DropShadow1"].BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036)
+l["_DropShadow1"].BorderSizePixel = 0
+l["_DropShadow1"].Position = UDim2.new(0.5, 0, 0.5, 0)
+l["_DropShadow1"].Size = UDim2.new(1, 47, 1, 47)
+l["_DropShadow1"].ZIndex = 0
+l["_DropShadow1"].Name = "DropShadow"
+l["_DropShadow1"].Parent = l["_DropShadowHolder1"]
+
+l["_TextLabel1"].Font = Enum.Font.SourceSans
+l["_TextLabel1"].Text = "Click Yes to stop damaging you when you looking at Slender. Are you doing this on purpose?"
+l["_TextLabel1"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_TextLabel1"].TextScaled = true
+l["_TextLabel1"].TextSize = 15
+l["_TextLabel1"].TextWrapped = true
+l["_TextLabel1"].AnchorPoint = Vector2.new(0.5, 0)
+l["_TextLabel1"].BackgroundColor3 = Color3.fromRGB(34.00000177323818, 40.00000141561031, 34.00000177323818)
+l["_TextLabel1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_TextLabel1"].BorderSizePixel = 0
+l["_TextLabel1"].Position = UDim2.new(0.5, 0, 0, 8)
+l["_TextLabel1"].Size = UDim2.new(0, 225, 0, 50)
+l["_TextLabel1"].Parent = l["_Warn2"]
+
+l["_UIStroke2"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+l["_UIStroke2"].Parent = l["_TextLabel1"]
+
+l["_UITextSizeConstraint4"].MaxTextSize = 15
+l["_UITextSizeConstraint4"].Parent = l["_TextLabel1"]
+
+l["_Yes1"].Font = Enum.Font.SourceSans
+l["_Yes1"].Text = "Yes"
+l["_Yes1"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_Yes1"].TextScaled = true
+l["_Yes1"].TextSize = 20
+l["_Yes1"].TextWrapped = true
+l["_Yes1"].AnchorPoint = Vector2.new(0, 1)
+l["_Yes1"].BackgroundColor3 = Color3.fromRGB(0, 170.0000050663948, 0)
+l["_Yes1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_Yes1"].BorderSizePixel = 0
+l["_Yes1"].Position = UDim2.new(0, 12, 1, -6)
+l["_Yes1"].Size = UDim2.new(0, 100, 0, 30)
+l["_Yes1"].Name = "Yes"
+l["_Yes1"].Parent = l["_Warn2"]
+
+l["_UITextSizeConstraint5"].MaxTextSize = 20
+l["_UITextSizeConstraint5"].Parent = l["_Yes1"]
+
+l["_No1"].Font = Enum.Font.SourceSans
+l["_No1"].Text = "No"
+l["_No1"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_No1"].TextScaled = true
+l["_No1"].TextSize = 20
+l["_No1"].TextWrapped = true
+l["_No1"].AnchorPoint = Vector2.new(1, 1)
+l["_No1"].BackgroundColor3 = Color3.fromRGB(170.0000050663948, 0, 0)
+l["_No1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_No1"].BorderSizePixel = 0
+l["_No1"].Position = UDim2.new(1, -13, 1, -6)
+l["_No1"].Size = UDim2.new(0, 100, 0, 30)
+l["_No1"].Name = "No"
+l["_No1"].Parent = l["_Warn2"]
+
+l["_UITextSizeConstraint6"].MaxTextSize = 20
+l["_UITextSizeConstraint6"].Parent = l["_No1"]
+
+l["_CheatButton"].Font = Enum.Font.Arial
+l["_CheatButton"].Text = "🖥"
+l["_CheatButton"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_CheatButton"].TextScaled = true
+l["_CheatButton"].TextSize = 20
+l["_CheatButton"].TextWrapped = true
+l["_CheatButton"].AnchorPoint = Vector2.new(1, 0)
+l["_CheatButton"].BackgroundColor3 = Color3.fromRGB(34.00000177323818, 40.00000141561031, 34.00000177323818)
+l["_CheatButton"].BackgroundTransparency = 0.5
+l["_CheatButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_CheatButton"].BorderSizePixel = 0
+l["_CheatButton"].Position = UDim2.new(1, -60, 0, 4)
+l["_CheatButton"].Size = UDim2.new(0, 32, 0, 32)
+l["_CheatButton"].Name = "CheatButton"
+l["_CheatButton"].Parent = l["_SGUI"]
+
+l["_Frame"].AnchorPoint = Vector2.new(1, 0)
+l["_Frame"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+l["_Frame"].BackgroundTransparency = 1
+l["_Frame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_Frame"].BorderSizePixel = 0
+l["_Frame"].Position = UDim2.new(1, -17, 1, 6)
+l["_Frame"].Size = UDim2.new(0, 100, 0, 105)
+l["_Frame"].Parent = l["_CheatButton"]
+
+l["_Page"].Font = Enum.Font.SourceSans
+l["_Page"].Text = "Page"
+l["_Page"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_Page"].TextScaled = true
+l["_Page"].TextSize = 20
+l["_Page"].TextWrapped = true
+l["_Page"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_Page"].BackgroundColor3 = Color3.fromRGB(34.00000177323818, 40.00000141561031, 34.00000177323818)
+l["_Page"].BackgroundTransparency = 0.5
+l["_Page"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_Page"].BorderSizePixel = 0
+l["_Page"].LayoutOrder = 1
+l["_Page"].Position = UDim2.new(0.5, 0, 0.5, -35)
+l["_Page"].Size = UDim2.new(1, 0, 0, 35)
+l["_Page"].Name = "Page"
+l["_Page"].Parent = l["_Frame"]
+
+l["_UIStroke3"].Parent = l["_Page"]
+
+l["_UITextSizeConstraint7"].MaxTextSize = 20
+l["_UITextSizeConstraint7"].Parent = l["_Page"]
+
+l["_Slender"].Font = Enum.Font.SourceSans
+l["_Slender"].Text = "Slender"
+l["_Slender"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_Slender"].TextScaled = true
+l["_Slender"].TextSize = 20
+l["_Slender"].TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+l["_Slender"].TextWrapped = true
+l["_Slender"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_Slender"].BackgroundColor3 = Color3.fromRGB(34.00000177323818, 40.00000141561031, 34.00000177323818)
+l["_Slender"].BackgroundTransparency = 0.5
+l["_Slender"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_Slender"].BorderSizePixel = 0
+l["_Slender"].LayoutOrder = 1
+l["_Slender"].Position = UDim2.new(0.5, 0, 0.5, 0)
+l["_Slender"].Size = UDim2.new(1, 0, 0, 35)
+l["_Slender"].Name = "Slender"
+l["_Slender"].Parent = l["_Frame"]
+
+l["_UIStroke4"].Parent = l["_Slender"]
+
+l["_UITextSizeConstraint8"].MaxTextSize = 20
+l["_UITextSizeConstraint8"].Parent = l["_Slender"]
+
+l["_Generator"].Font = Enum.Font.SourceSans
+l["_Generator"].Text = "Generator"
+l["_Generator"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_Generator"].TextScaled = true
+l["_Generator"].TextSize = 20
+l["_Generator"].TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+l["_Generator"].TextWrapped = true
+l["_Generator"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_Generator"].BackgroundColor3 = Color3.fromRGB(34.00000177323818, 40.00000141561031, 34.00000177323818)
+l["_Generator"].BackgroundTransparency = 0.5
+l["_Generator"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_Generator"].BorderSizePixel = 0
+l["_Generator"].LayoutOrder = 1
+l["_Generator"].Position = UDim2.new(0.5, 0, 0.5, 35)
+l["_Generator"].Size = UDim2.new(1, 0, 0, 35)
+l["_Generator"].Name = "Generator"
+l["_Generator"].Parent = l["_Frame"]
+
+l["_UIStroke5"].Parent = l["_Generator"]
+
+l["_UITextSizeConstraint9"].MaxTextSize = 20
+l["_UITextSizeConstraint9"].Parent = l["_Generator"]
+
+l["_UIListLayout"].HorizontalAlignment = Enum.HorizontalAlignment.Center
+l["_UIListLayout"].Parent = l["_Frame"]
+
+l["_ScrollingFrame"].BottomImage = ""
+l["_ScrollingFrame"].ElasticBehavior = Enum.ElasticBehavior.Always
+l["_ScrollingFrame"].HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+l["_ScrollingFrame"].MidImage = ""
+l["_ScrollingFrame"].ScrollBarThickness = 0
+l["_ScrollingFrame"].ScrollingDirection = Enum.ScrollingDirection.X
+l["_ScrollingFrame"].ScrollingEnabled = false
+l["_ScrollingFrame"].TopImage = ""
+l["_ScrollingFrame"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+l["_ScrollingFrame"].BackgroundTransparency = 1
+l["_ScrollingFrame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_ScrollingFrame"].BorderSizePixel = 0
+l["_ScrollingFrame"].ClipsDescendants = false
+l["_ScrollingFrame"].Position = UDim2.new(1, -15, 1, 6)
+l["_ScrollingFrame"].Selectable = false
+l["_ScrollingFrame"].Size = UDim2.new(0, 33, 0, 105)
+l["_ScrollingFrame"].Parent = l["_CheatButton"]
+
+l["_FullBright"].Font = Enum.Font.SourceSans
+l["_FullBright"].Text = "Fb"
+l["_FullBright"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_FullBright"].TextScaled = true
+l["_FullBright"].TextSize = 16
+l["_FullBright"].TextWrapped = true
+l["_FullBright"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_FullBright"].BackgroundColor3 = Color3.fromRGB(37.00000159442425, 37.00000159442425, 37.00000159442425)
+l["_FullBright"].BackgroundTransparency = 0.5
+l["_FullBright"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_FullBright"].BorderSizePixel = 0
+l["_FullBright"].LayoutOrder = 1
+l["_FullBright"].Position = UDim2.new(0.5, 0, 0.5, -42)
+l["_FullBright"].Size = UDim2.new(1, 0, 0, 21)
+l["_FullBright"].Name = "FullBright"
+l["_FullBright"].Parent = l["_ScrollingFrame"]
+
+l["_UITextSizeConstraint10"].MaxTextSize = 16
+l["_UITextSizeConstraint10"].Parent = l["_FullBright"]
+
+l["_UIStroke6"].Parent = l["_FullBright"]
+
+l["_ResetCharacter"].Font = Enum.Font.SourceSans
+l["_ResetCharacter"].Text = "Rc"
+l["_ResetCharacter"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_ResetCharacter"].TextScaled = true
+l["_ResetCharacter"].TextSize = 16
+l["_ResetCharacter"].TextWrapped = true
+l["_ResetCharacter"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_ResetCharacter"].BackgroundColor3 = Color3.fromRGB(37.00000159442425, 37.00000159442425, 37.00000159442425)
+l["_ResetCharacter"].BackgroundTransparency = 0.5
+l["_ResetCharacter"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_ResetCharacter"].BorderSizePixel = 0
+l["_ResetCharacter"].LayoutOrder = 1
+l["_ResetCharacter"].Position = UDim2.new(0.5, 0, 0.5, -21)
+l["_ResetCharacter"].Size = UDim2.new(1, 0, 0, 21)
+l["_ResetCharacter"].Name = "ResetCharacter"
+l["_ResetCharacter"].Parent = l["_ScrollingFrame"]
+
+l["_UITextSizeConstraint11"].MaxTextSize = 16
+l["_UITextSizeConstraint11"].Parent = l["_ResetCharacter"]
+
+l["_UIStroke7"].Parent = l["_ResetCharacter"]
+
+l["_PoopEggs"].Font = Enum.Font.SourceSans
+l["_PoopEggs"].Text = "Pe"
+l["_PoopEggs"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_PoopEggs"].TextScaled = true
+l["_PoopEggs"].TextSize = 16
+l["_PoopEggs"].TextWrapped = true
+l["_PoopEggs"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_PoopEggs"].BackgroundColor3 = Color3.fromRGB(37.00000159442425, 37.00000159442425, 37.00000159442425)
+l["_PoopEggs"].BackgroundTransparency = 0.5
+l["_PoopEggs"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_PoopEggs"].BorderSizePixel = 0
+l["_PoopEggs"].LayoutOrder = 1
+l["_PoopEggs"].Position = UDim2.new(0.5, 0, 0.5, 0)
+l["_PoopEggs"].Size = UDim2.new(1, 0, 0, 21)
+l["_PoopEggs"].Name = "PoopEggs"
+l["_PoopEggs"].Parent = l["_ScrollingFrame"]
+
+l["_UITextSizeConstraint12"].MaxTextSize = 16
+l["_UITextSizeConstraint12"].Parent = l["_PoopEggs"]
+
+l["_UIStroke8"].Parent = l["_PoopEggs"]
+
+l["_UndetectedSpeedHack"].Font = Enum.Font.SourceSans
+l["_UndetectedSpeedHack"].Text = "Sh"
+l["_UndetectedSpeedHack"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_UndetectedSpeedHack"].TextScaled = true
+l["_UndetectedSpeedHack"].TextSize = 16
+l["_UndetectedSpeedHack"].TextWrapped = true
+l["_UndetectedSpeedHack"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_UndetectedSpeedHack"].BackgroundColor3 = Color3.fromRGB(37.00000159442425, 37.00000159442425, 37.00000159442425)
+l["_UndetectedSpeedHack"].BackgroundTransparency = 0.5
+l["_UndetectedSpeedHack"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_UndetectedSpeedHack"].BorderSizePixel = 0
+l["_UndetectedSpeedHack"].LayoutOrder = 1
+l["_UndetectedSpeedHack"].Position = UDim2.new(0.5, 0, 0.5, 21)
+l["_UndetectedSpeedHack"].Size = UDim2.new(1, 0, 0, 21)
+l["_UndetectedSpeedHack"].Name = "UndetectedSpeedHack"
+l["_UndetectedSpeedHack"].Parent = l["_ScrollingFrame"]
+
+l["_UITextSizeConstraint13"].MaxTextSize = 16
+l["_UITextSizeConstraint13"].Parent = l["_UndetectedSpeedHack"]
+
+l["_UIStroke9"].Parent = l["_UndetectedSpeedHack"]
+
+l["_ImmuneAgainstSlender"].Font = Enum.Font.SourceSans
+l["_ImmuneAgainstSlender"].Text = "Im"
+l["_ImmuneAgainstSlender"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_ImmuneAgainstSlender"].TextScaled = true
+l["_ImmuneAgainstSlender"].TextSize = 16
+l["_ImmuneAgainstSlender"].TextWrapped = true
+l["_ImmuneAgainstSlender"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_ImmuneAgainstSlender"].BackgroundColor3 = Color3.fromRGB(37.00000159442425, 37.00000159442425, 37.00000159442425)
+l["_ImmuneAgainstSlender"].BackgroundTransparency = 0.5
+l["_ImmuneAgainstSlender"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_ImmuneAgainstSlender"].BorderSizePixel = 0
+l["_ImmuneAgainstSlender"].LayoutOrder = 1
+l["_ImmuneAgainstSlender"].Position = UDim2.new(0.5, 0, 0.5, 42)
+l["_ImmuneAgainstSlender"].Size = UDim2.new(1, 0, 0, 21)
+l["_ImmuneAgainstSlender"].Name = "ImmuneAgainstSlender"
+l["_ImmuneAgainstSlender"].Parent = l["_ScrollingFrame"]
+
+l["_UITextSizeConstraint14"].MaxTextSize = 16
+l["_UITextSizeConstraint14"].Parent = l["_ImmuneAgainstSlender"]
+
+l["_UIStroke10"].Parent = l["_ImmuneAgainstSlender"]
+
+l["_UIListLayout1"].HorizontalAlignment = Enum.HorizontalAlignment.Center
+l["_UIListLayout1"].Parent = l["_ScrollingFrame"]
+
+l["_clicking"].SoundId = "rbxassetid://9125397823"
+l["_clicking"].Volume = 1
+l["_clicking"].Name = "clicking"
+l["_clicking"].Parent = l["_CheatButton"]
+
+l["_UICorner"].Parent = l["_CheatButton"]
+
+l["_UITextSizeConstraint15"].MaxTextSize = 20
+l["_UITextSizeConstraint15"].Parent = l["_CheatButton"]
+
+l["_ScrollingFrame1"].BottomImage = ""
+l["_ScrollingFrame1"].ElasticBehavior = Enum.ElasticBehavior.Always
+l["_ScrollingFrame1"].HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+l["_ScrollingFrame1"].MidImage = ""
+l["_ScrollingFrame1"].ScrollBarThickness = 0
+l["_ScrollingFrame1"].ScrollingDirection = Enum.ScrollingDirection.X
+l["_ScrollingFrame1"].ScrollingEnabled = false
+l["_ScrollingFrame1"].TopImage = ""
+l["_ScrollingFrame1"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+l["_ScrollingFrame1"].BackgroundTransparency = 1
+l["_ScrollingFrame1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_ScrollingFrame1"].BorderSizePixel = 0
+l["_ScrollingFrame1"].ClipsDescendants = false
+l["_ScrollingFrame1"].Position = UDim2.new(1, 20, 1, 6)
+l["_ScrollingFrame1"].Selectable = false
+l["_ScrollingFrame1"].Size = UDim2.new(0, 33, 0, 105)
+l["_ScrollingFrame1"].Parent = l["_CheatButton"]
+
+l["_DestroyGUI"].Font = Enum.Font.SourceSans
+l["_DestroyGUI"].Text = "De"
+l["_DestroyGUI"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_DestroyGUI"].TextScaled = true
+l["_DestroyGUI"].TextSize = 16
+l["_DestroyGUI"].TextWrapped = true
+l["_DestroyGUI"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_DestroyGUI"].BackgroundColor3 = Color3.fromRGB(37.00000159442425, 37.00000159442425, 37.00000159442425)
+l["_DestroyGUI"].BackgroundTransparency = 0.5
+l["_DestroyGUI"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_DestroyGUI"].BorderSizePixel = 0
+l["_DestroyGUI"].LayoutOrder = 1
+l["_DestroyGUI"].Position = UDim2.new(0.5, 0, 0.5, 42)
+l["_DestroyGUI"].Size = UDim2.new(1, 0, 0, 21)
+l["_DestroyGUI"].Name = "DestroyGUI"
+l["_DestroyGUI"].Parent = l["_ScrollingFrame1"]
+
+l["_UITextSizeConstraint16"].MaxTextSize = 16
+l["_UITextSizeConstraint16"].Parent = l["_DestroyGUI"]
+
+l["_UIStroke11"].Parent = l["_DestroyGUI"]
+
+l["_Provoke"].Font = Enum.Font.SourceSans
+l["_Provoke"].Text = "Pr"
+l["_Provoke"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_Provoke"].TextScaled = true
+l["_Provoke"].TextSize = 16
+l["_Provoke"].TextWrapped = true
+l["_Provoke"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_Provoke"].BackgroundColor3 = Color3.fromRGB(37.00000159442425, 37.00000159442425, 37.00000159442425)
+l["_Provoke"].BackgroundTransparency = 0.5
+l["_Provoke"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_Provoke"].BorderSizePixel = 0
+l["_Provoke"].LayoutOrder = 1
+l["_Provoke"].Position = UDim2.new(0.5, 0, 0.5, -42)
+l["_Provoke"].Size = UDim2.new(1, 0, 0, 21)
+l["_Provoke"].Name = "Provoke"
+l["_Provoke"].Parent = l["_ScrollingFrame1"]
+
+l["_UITextSizeConstraint17"].MaxTextSize = 16
+l["_UITextSizeConstraint17"].Parent = l["_Provoke"]
+
+l["_UIStroke12"].Parent = l["_Provoke"]
+
+l["_Refresh"].Font = Enum.Font.SourceSans
+l["_Refresh"].Text = "Rs"
+l["_Refresh"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_Refresh"].TextScaled = true
+l["_Refresh"].TextSize = 16
+l["_Refresh"].TextWrapped = true
+l["_Refresh"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_Refresh"].BackgroundColor3 = Color3.fromRGB(37.00000159442425, 37.00000159442425, 37.00000159442425)
+l["_Refresh"].BackgroundTransparency = 0.5
+l["_Refresh"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_Refresh"].BorderSizePixel = 0
+l["_Refresh"].LayoutOrder = 1
+l["_Refresh"].Position = UDim2.new(0.5, 0, 0.5, 21)
+l["_Refresh"].Size = UDim2.new(1, 0, 0, 21)
+l["_Refresh"].Name = "Refresh"
+l["_Refresh"].Parent = l["_ScrollingFrame1"]
+
+l["_UITextSizeConstraint18"].MaxTextSize = 16
+l["_UITextSizeConstraint18"].Parent = l["_Refresh"]
+
+l["_UIStroke13"].Parent = l["_Refresh"]
+
+l["_TrollSounds"].Font = Enum.Font.SourceSans
+l["_TrollSounds"].LineHeight = 0
+l["_TrollSounds"].Text = "Ts"
+l["_TrollSounds"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_TrollSounds"].TextScaled = true
+l["_TrollSounds"].TextSize = 16
+l["_TrollSounds"].TextWrapped = true
+l["_TrollSounds"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_TrollSounds"].BackgroundColor3 = Color3.fromRGB(37.00000159442425, 37.00000159442425, 37.00000159442425)
+l["_TrollSounds"].BackgroundTransparency = 0.5
+l["_TrollSounds"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_TrollSounds"].BorderSizePixel = 0
+l["_TrollSounds"].LayoutOrder = 1
+l["_TrollSounds"].Position = UDim2.new(0.5, 0, 0.5, -21)
+l["_TrollSounds"].Size = UDim2.new(1, 0, 0, 21)
+l["_TrollSounds"].Name = "TrollSounds"
+l["_TrollSounds"].Parent = l["_ScrollingFrame1"]
+
+l["_UITextSizeConstraint19"].MaxTextSize = 16
+l["_UITextSizeConstraint19"].Parent = l["_TrollSounds"]
+
+l["_UIStroke14"].Parent = l["_TrollSounds"]
+
+l["_Lay"].Font = Enum.Font.SourceSans
+l["_Lay"].Text = "Ld"
+l["_Lay"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_Lay"].TextScaled = true
+l["_Lay"].TextSize = 16
+l["_Lay"].TextWrapped = true
+l["_Lay"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_Lay"].BackgroundColor3 = Color3.fromRGB(37.00000159442425, 37.00000159442425, 37.00000159442425)
+l["_Lay"].BackgroundTransparency = 0.5
+l["_Lay"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_Lay"].BorderSizePixel = 0
+l["_Lay"].LayoutOrder = 1
+l["_Lay"].Position = UDim2.new(0.5, 0, 0.5, 0)
+l["_Lay"].Size = UDim2.new(1, 0, 0, 21)
+l["_Lay"].Name = "Lay"
+l["_Lay"].Parent = l["_ScrollingFrame1"]
+
+l["_UITextSizeConstraint20"].MaxTextSize = 16
+l["_UITextSizeConstraint20"].Parent = l["_Lay"]
+
+l["_UIStroke15"].Parent = l["_Lay"]
+
+l["_UIListLayout2"].HorizontalAlignment = Enum.HorizontalAlignment.Center
+l["_UIListLayout2"].Parent = l["_ScrollingFrame1"]
+
+l["_Noticer"].Font = Enum.Font.SourceSans
+l["_Noticer"].Text = "???"
+l["_Noticer"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_Noticer"].TextScaled = true
+l["_Noticer"].TextSize = 25
+l["_Noticer"].TextWrapped = true
+l["_Noticer"].AnchorPoint = Vector2.new(0.5, 1)
+l["_Noticer"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+l["_Noticer"].BackgroundTransparency = 0.5
+l["_Noticer"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_Noticer"].BorderSizePixel = 0
+l["_Noticer"].Position = UDim2.new(0.5, 0, 1, -30)
+l["_Noticer"].Size = UDim2.new(0.5, 0, 0, 25)
+l["_Noticer"].Visible = false
+l["_Noticer"].Name = "Noticer"
+l["_Noticer"].Parent = l["_SGUI"]
+
+l["_UICorner1"].CornerRadius = UDim.new(1, 0)
+l["_UICorner1"].Parent = l["_Noticer"]
+
+l["_UIStroke16"].Parent = l["_Noticer"]
+
+l["_UITextSizeConstraint21"].MaxTextSize = 25
+l["_UITextSizeConstraint21"].Parent = l["_Noticer"]
+
+l["_laugh"].SoundId = "rbxassetid://79502215207744"
+l["_laugh"].Volume = 1
+l["_laugh"].Name = "laugh"
+l["_laugh"].Parent = l["_SGUI"]
+
+l["_Warn3"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_Warn3"].BackgroundColor3 = Color3.fromRGB(34.00000177323818, 40.00000141561031, 34.00000177323818)
+l["_Warn3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_Warn3"].BorderSizePixel = 0
+l["_Warn3"].Position = UDim2.new(0.5, 0, 0.5, 0)
+l["_Warn3"].Size = UDim2.new(0, 250, 0, 100)
+l["_Warn3"].Visible = false
+l["_Warn3"].Name = "Warn3"
+l["_Warn3"].Parent = l["_SGUI"]
+
+l["_DropShadowHolder2"].BackgroundTransparency = 1
+l["_DropShadowHolder2"].BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036)
+l["_DropShadowHolder2"].BorderSizePixel = 0
+l["_DropShadowHolder2"].Size = UDim2.new(1, 0, 1, 0)
+l["_DropShadowHolder2"].ZIndex = 0
+l["_DropShadowHolder2"].Name = "DropShadowHolder"
+l["_DropShadowHolder2"].Parent = l["_Warn3"]
+
+l["_DropShadow2"].Image = "rbxassetid://6015897843"
+l["_DropShadow2"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+l["_DropShadow2"].ImageTransparency = 0.5
+l["_DropShadow2"].ScaleType = Enum.ScaleType.Slice
+l["_DropShadow2"].SliceCenter = Rect.new(49, 49, 450, 450)
+l["_DropShadow2"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_DropShadow2"].BackgroundTransparency = 1
+l["_DropShadow2"].BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036)
+l["_DropShadow2"].BorderSizePixel = 0
+l["_DropShadow2"].Position = UDim2.new(0.5, 0, 0.5, 0)
+l["_DropShadow2"].Size = UDim2.new(1, 47, 1, 47)
+l["_DropShadow2"].ZIndex = 0
+l["_DropShadow2"].Name = "DropShadow"
+l["_DropShadow2"].Parent = l["_DropShadowHolder2"]
+
+l["_TextLabel2"].Font = Enum.Font.SourceSans
+l["_TextLabel2"].Text = "Click Yes to reset character. Are you doing this on purpose?"
+l["_TextLabel2"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_TextLabel2"].TextScaled = true
+l["_TextLabel2"].TextSize = 15
+l["_TextLabel2"].TextWrapped = true
+l["_TextLabel2"].AnchorPoint = Vector2.new(0.5, 0)
+l["_TextLabel2"].BackgroundColor3 = Color3.fromRGB(34.00000177323818, 40.00000141561031, 34.00000177323818)
+l["_TextLabel2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_TextLabel2"].BorderSizePixel = 0
+l["_TextLabel2"].Position = UDim2.new(0.5, 0, 0, 8)
+l["_TextLabel2"].Size = UDim2.new(0, 225, 0, 50)
+l["_TextLabel2"].Parent = l["_Warn3"]
+
+l["_UIStroke17"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+l["_UIStroke17"].Parent = l["_TextLabel2"]
+
+l["_UITextSizeConstraint22"].MaxTextSize = 15
+l["_UITextSizeConstraint22"].Parent = l["_TextLabel2"]
+
+l["_Yes2"].Font = Enum.Font.SourceSans
+l["_Yes2"].Text = "Yes"
+l["_Yes2"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_Yes2"].TextScaled = true
+l["_Yes2"].TextSize = 20
+l["_Yes2"].TextWrapped = true
+l["_Yes2"].AnchorPoint = Vector2.new(0, 1)
+l["_Yes2"].BackgroundColor3 = Color3.fromRGB(0, 170.0000050663948, 0)
+l["_Yes2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_Yes2"].BorderSizePixel = 0
+l["_Yes2"].Position = UDim2.new(0, 12, 1, -6)
+l["_Yes2"].Size = UDim2.new(0, 100, 0, 30)
+l["_Yes2"].Name = "Yes"
+l["_Yes2"].Parent = l["_Warn3"]
+
+l["_UITextSizeConstraint23"].MaxTextSize = 20
+l["_UITextSizeConstraint23"].Parent = l["_Yes2"]
+
+l["_No2"].Font = Enum.Font.SourceSans
+l["_No2"].Text = "No"
+l["_No2"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_No2"].TextScaled = true
+l["_No2"].TextSize = 20
+l["_No2"].TextWrapped = true
+l["_No2"].AnchorPoint = Vector2.new(1, 1)
+l["_No2"].BackgroundColor3 = Color3.fromRGB(170.0000050663948, 0, 0)
+l["_No2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_No2"].BorderSizePixel = 0
+l["_No2"].Position = UDim2.new(1, -13, 1, -6)
+l["_No2"].Size = UDim2.new(0, 100, 0, 30)
+l["_No2"].Name = "No"
+l["_No2"].Parent = l["_Warn3"]
+
+l["_UITextSizeConstraint24"].MaxTextSize = 20
+l["_UITextSizeConstraint24"].Parent = l["_No2"]
+
+l["_Warn4"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_Warn4"].BackgroundColor3 = Color3.fromRGB(34.00000177323818, 40.00000141561031, 34.00000177323818)
+l["_Warn4"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_Warn4"].BorderSizePixel = 0
+l["_Warn4"].Position = UDim2.new(0.5, 0, 0.5, 0)
+l["_Warn4"].Size = UDim2.new(0, 250, 0, 100)
+l["_Warn4"].Visible = false
+l["_Warn4"].Name = "Warn4"
+l["_Warn4"].Parent = l["_SGUI"]
+
+l["_DropShadowHolder3"].BackgroundTransparency = 1
+l["_DropShadowHolder3"].BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036)
+l["_DropShadowHolder3"].BorderSizePixel = 0
+l["_DropShadowHolder3"].Size = UDim2.new(1, 0, 1, 0)
+l["_DropShadowHolder3"].ZIndex = 0
+l["_DropShadowHolder3"].Name = "DropShadowHolder"
+l["_DropShadowHolder3"].Parent = l["_Warn4"]
+
+l["_DropShadow3"].Image = "rbxassetid://6015897843"
+l["_DropShadow3"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+l["_DropShadow3"].ImageTransparency = 0.5
+l["_DropShadow3"].ScaleType = Enum.ScaleType.Slice
+l["_DropShadow3"].SliceCenter = Rect.new(49, 49, 450, 450)
+l["_DropShadow3"].AnchorPoint = Vector2.new(0.5, 0.5)
+l["_DropShadow3"].BackgroundTransparency = 1
+l["_DropShadow3"].BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036)
+l["_DropShadow3"].BorderSizePixel = 0
+l["_DropShadow3"].Position = UDim2.new(0.5, 0, 0.5, 0)
+l["_DropShadow3"].Size = UDim2.new(1, 47, 1, 47)
+l["_DropShadow3"].ZIndex = 0
+l["_DropShadow3"].Name = "DropShadow"
+l["_DropShadow3"].Parent = l["_DropShadowHolder3"]
+
+l["_TextLabel3"].Font = Enum.Font.SourceSans
+l["_TextLabel3"].Text = "Click Yes to start trolling all players using sounds, click Yes again to stop trolling. Are you doing this on purpose?"
+l["_TextLabel3"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_TextLabel3"].TextScaled = true
+l["_TextLabel3"].TextSize = 15
+l["_TextLabel3"].TextWrapped = true
+l["_TextLabel3"].AnchorPoint = Vector2.new(0.5, 0)
+l["_TextLabel3"].BackgroundColor3 = Color3.fromRGB(34.00000177323818, 40.00000141561031, 34.00000177323818)
+l["_TextLabel3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_TextLabel3"].BorderSizePixel = 0
+l["_TextLabel3"].Position = UDim2.new(0.5, 0, 0, 8)
+l["_TextLabel3"].Size = UDim2.new(0, 225, 0, 50)
+l["_TextLabel3"].Parent = l["_Warn4"]
+
+l["_UIStroke18"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+l["_UIStroke18"].Parent = l["_TextLabel3"]
+
+l["_UITextSizeConstraint25"].MaxTextSize = 15
+l["_UITextSizeConstraint25"].Parent = l["_TextLabel3"]
+
+l["_Yes3"].Font = Enum.Font.SourceSans
+l["_Yes3"].Text = "Yes"
+l["_Yes3"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_Yes3"].TextScaled = true
+l["_Yes3"].TextSize = 20
+l["_Yes3"].TextWrapped = true
+l["_Yes3"].AnchorPoint = Vector2.new(0, 1)
+l["_Yes3"].BackgroundColor3 = Color3.fromRGB(0, 170.0000050663948, 0)
+l["_Yes3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_Yes3"].BorderSizePixel = 0
+l["_Yes3"].Position = UDim2.new(0, 12, 1, -6)
+l["_Yes3"].Size = UDim2.new(0, 100, 0, 30)
+l["_Yes3"].Name = "Yes"
+l["_Yes3"].Parent = l["_Warn4"]
+
+l["_UITextSizeConstraint26"].MaxTextSize = 20
+l["_UITextSizeConstraint26"].Parent = l["_Yes3"]
+
+l["_No3"].Font = Enum.Font.SourceSans
+l["_No3"].Text = "No"
+l["_No3"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_No3"].TextScaled = true
+l["_No3"].TextSize = 20
+l["_No3"].TextWrapped = true
+l["_No3"].AnchorPoint = Vector2.new(1, 1)
+l["_No3"].BackgroundColor3 = Color3.fromRGB(170.0000050663948, 0, 0)
+l["_No3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_No3"].BorderSizePixel = 0
+l["_No3"].Position = UDim2.new(1, -13, 1, -6)
+l["_No3"].Size = UDim2.new(0, 100, 0, 30)
+l["_No3"].Name = "No"
+l["_No3"].Parent = l["_Warn4"]
+
+l["_UITextSizeConstraint27"].MaxTextSize = 20
+l["_UITextSizeConstraint27"].Parent = l["_No3"]
+
+l["_AccountAge"].Font = Enum.Font.SourceSans
+l["_AccountAge"].Text = "Account Age:"
+l["_AccountAge"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_AccountAge"].TextScaled = true
+l["_AccountAge"].TextSize = 16
+l["_AccountAge"].TextWrapped = true
+l["_AccountAge"].AnchorPoint = Vector2.new(1, 0)
+l["_AccountAge"].BackgroundColor3 = Color3.fromRGB(34.00000177323818, 40.00000141561031, 34.00000177323818)
+l["_AccountAge"].BackgroundTransparency = 0.5
+l["_AccountAge"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_AccountAge"].BorderSizePixel = 0
+l["_AccountAge"].Position = UDim2.new(1, -533, 0, 4)
+l["_AccountAge"].Size = UDim2.new(0, 125, 0, 16)
+l["_AccountAge"].Name = "AccountAge"
+l["_AccountAge"].Parent = l["_SGUI"]
+
+l["_UIStroke19"].Parent = l["_AccountAge"]
+
+l["_UICorner2"].Parent = l["_AccountAge"]
+
+l["_UITextSizeConstraint28"].MaxTextSize = 16
+l["_UITextSizeConstraint28"].Parent = l["_AccountAge"]
+
+l["_Pages"].Font = Enum.Font.SourceSans
+l["_Pages"].Text = "Total Pages:"
+l["_Pages"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_Pages"].TextScaled = true
+l["_Pages"].TextSize = 16
+l["_Pages"].TextWrapped = true
+l["_Pages"].AnchorPoint = Vector2.new(1, 0)
+l["_Pages"].BackgroundColor3 = Color3.fromRGB(34.00000177323818, 40.00000141561031, 34.00000177323818)
+l["_Pages"].BackgroundTransparency = 0.5
+l["_Pages"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_Pages"].BorderSizePixel = 0
+l["_Pages"].Position = UDim2.new(1, -275, 0, 4)
+l["_Pages"].Size = UDim2.new(0, 125, 0, 16)
+l["_Pages"].Name = "Pages"
+l["_Pages"].Parent = l["_SGUI"]
+
+l["_UIStroke20"].Parent = l["_Pages"]
+
+l["_UICorner3"].Parent = l["_Pages"]
+
+l["_UITextSizeConstraint29"].MaxTextSize = 16
+l["_UITextSizeConstraint29"].Parent = l["_Pages"]
+
+l["_Versi0n"].Font = Enum.Font.SourceSans
+l["_Versi0n"].Text = "Hack Version:"
+l["_Versi0n"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_Versi0n"].TextScaled = true
+l["_Versi0n"].TextSize = 16
+l["_Versi0n"].TextWrapped = true
+l["_Versi0n"].AnchorPoint = Vector2.new(1, 0)
+l["_Versi0n"].BackgroundColor3 = Color3.fromRGB(34.00000177323818, 40.00000141561031, 34.00000177323818)
+l["_Versi0n"].BackgroundTransparency = 0.5
+l["_Versi0n"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_Versi0n"].BorderSizePixel = 0
+l["_Versi0n"].Position = UDim2.new(1, -404, 0, 4)
+l["_Versi0n"].Size = UDim2.new(0, 125, 0, 16)
+l["_Versi0n"].Name = "Versi0n"
+l["_Versi0n"].Parent = l["_SGUI"]
+
+l["_UIStroke21"].Parent = l["_Versi0n"]
+
+l["_UICorner4"].Parent = l["_Versi0n"]
+
+l["_UITextSizeConstraint30"].MaxTextSize = 16
+l["_UITextSizeConstraint30"].Parent = l["_Versi0n"]
+
+l["_WhoIsSlender"].Font = Enum.Font.SourceSans
+l["_WhoIsSlender"].Text = "Slender:"
+l["_WhoIsSlender"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_WhoIsSlender"].TextScaled = true
+l["_WhoIsSlender"].TextSize = 16
+l["_WhoIsSlender"].TextWrapped = true
+l["_WhoIsSlender"].AnchorPoint = Vector2.new(1, 0)
+l["_WhoIsSlender"].BackgroundColor3 = Color3.fromRGB(34.00000177323818, 40.00000141561031, 34.00000177323818)
+l["_WhoIsSlender"].BackgroundTransparency = 0.5
+l["_WhoIsSlender"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_WhoIsSlender"].BorderSizePixel = 0
+l["_WhoIsSlender"].Position = UDim2.new(1, -96, 0, 4)
+l["_WhoIsSlender"].Size = UDim2.new(0, 175, 0, 16)
+l["_WhoIsSlender"].Name = "WhoIsSlender"
+l["_WhoIsSlender"].Parent = l["_SGUI"]
+
+l["_UIStroke22"].Parent = l["_WhoIsSlender"]
+
+l["_UICorner5"].Parent = l["_WhoIsSlender"]
+
+l["_UITextSizeConstraint31"].MaxTextSize = 16
+l["_UITextSizeConstraint31"].Parent = l["_WhoIsSlender"]
+
+l["_InfoTeller"].Font = Enum.Font.SourceSans
+l["_InfoTeller"].Text = "Hi."
+l["_InfoTeller"].TextColor3 = Color3.fromRGB(255, 255, 255)
+l["_InfoTeller"].TextScaled = true
+l["_InfoTeller"].TextSize = 20
+l["_InfoTeller"].TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+l["_InfoTeller"].TextWrapped = true
+l["_InfoTeller"].TextXAlignment = Enum.TextXAlignment.Right
+l["_InfoTeller"].AnchorPoint = Vector2.new(1, 0)
+l["_InfoTeller"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+l["_InfoTeller"].BackgroundTransparency = 1
+l["_InfoTeller"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+l["_InfoTeller"].BorderSizePixel = 0
+l["_InfoTeller"].Position = UDim2.new(1, 0, 0, 150)
+l["_InfoTeller"].Size = UDim2.new(0.5, 0, 0, 20)
+l["_InfoTeller"].Name = "InfoTeller"
+l["_InfoTeller"].Parent = l["_SGUI"]
+
+l["_UIStroke23"].Parent = l["_InfoTeller"]
+
+l["_UIPadding"].PaddingRight = UDim.new(0, 7)
+l["_UIPadding"].Parent = l["_InfoTeller"]
+
+l["_SGUI"].Parent = game.CoreGui
+
+local fake_module_scripts = {}
+
+local function FBURAE_fake_script() -- Fake Script: Workspace.SGUI.HistoryLabel.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_HistoryLabel"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
 	local textLabel = script.Parent
 	
 	textLabel.Changed:Connect(function()
 		task.wait(3)
 		textLabel.Text = ""
 	end)
-end)()
+end
+local function XSHXWWY_fake_script() -- Fake Script: Workspace.SGUI.History
+    local script = Instance.new("LocalScript")
+    script.Name = "History"
+    script.Parent = l["_SGUI"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", SGUI)
 	local screenGui = script.Parent
 	
 	for _, button in pairs(screenGui:GetDescendants()) do
@@ -1101,16 +1134,36 @@ coroutine.wrap(function()
 		end
 	end
 	
-end)()
+end
+local function NSMQIVC_fake_script() -- Fake Script: Workspace.SGUI.RTOpenLootbox
+    local script = Instance.new("LocalScript")
+    script.Name = "RTOpenLootbox"
+    script.Parent = l["_SGUI"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", SGUI)
 	local Event = game:GetService("ReplicatedStorage").Remotes.PremiumLootbox
 	Event:FireServer()
-end)()
+end
+local function MBPR_fake_script() -- Fake Script: Workspace.SGUI.LoadedMessage
+    local script = Instance.new("LocalScript")
+    script.Name = "LoadedMessage"
+    script.Parent = l["_SGUI"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", SGUI)
 	local StarterGui = game:GetService("StarterGui")
 	
 	StarterGui:SetCore("SendNotification", {
@@ -1118,18 +1171,38 @@ coroutine.wrap(function()
 		Text = "~SCRIPT EXECUTED~",
 		Duration = 5
 	})
-end)()
+end
+local function AHURT_fake_script() -- Fake Script: Workspace.SGUI.PDaccess
+    local script = Instance.new("LocalScript")
+    script.Name = "PDaccess"
+    script.Parent = l["_SGUI"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", SGUI)
 	local plr = game.Players.LocalPlayer
 	
 	game.ReplicatedStorage.PD[plr.Name].active.sixth.Value = true
 	game.ReplicatedStorage.PD[plr.Name].active.stamina.Value = true
-end)()
+end
+local function VQKU_fake_script() -- Fake Script: Workspace.SGUI.AutoLB
+    local script = Instance.new("LocalScript")
+    script.Name = "AutoLB"
+    script.Parent = l["_SGUI"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", SGUI)
 	local StarterGui = game:GetService("StarterGui")
 	local leaderboard = Enum.CoreGuiType.PlayerList
 	local coreGuiType = leaderboard
@@ -1141,10 +1214,20 @@ coroutine.wrap(function()
 	end
 	
 	
-end)()
+end
+local function NGWLFOM_fake_script() -- Fake Script: Workspace.SGUI.Warn.Yes.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_Yes"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", Yes)
 	local speaker = game.Players.LocalPlayer
 	
 	local function getRoot(char)
@@ -1162,17 +1245,37 @@ coroutine.wrap(function()
 		end
 		script.Parent.Parent.Visible = false
 	end)
-end)()
+end
+local function HOZWETD_fake_script() -- Fake Script: Workspace.SGUI.Warn.No.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_No"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", No)
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
-end)()
+end
+local function XMWGFCK_fake_script() -- Fake Script: Workspace.SGUI.Warn.GuiSway
+    local script = Instance.new("LocalScript")
+    script.Name = "GuiSway"
+    script.Parent = l["_Warn"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", Warn)
 	local RunService = game:GetService("RunService")
 	local UserInputService = game:GetService("UserInputService")
 	local TweenService = game:GetService("TweenService")
@@ -1224,10 +1327,20 @@ coroutine.wrap(function()
 		ParentOffset = UDim2.fromOffset(X.Value.Value, Y.Value.Value)
 		Parent.Position = ParentPosition + ParentOffset
 	end)
-end)()
+end
+local function JZUZVW_fake_script() -- Fake Script: Workspace.SGUI.Warn2.Yes.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_Yes1"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", Yes_2)
 	local StarterGui = game:GetService("StarterGui")
 	
 	script.Parent.MouseButton1Click:Connect(function()	
@@ -1244,17 +1357,37 @@ coroutine.wrap(function()
 			})
 		end
 	end)
-end)()
+end
+local function KKFES_fake_script() -- Fake Script: Workspace.SGUI.Warn2.No.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_No1"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", No_2)
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
-end)()
+end
+local function ORNFXG_fake_script() -- Fake Script: Workspace.SGUI.Warn2.GuiSway
+    local script = Instance.new("LocalScript")
+    script.Name = "GuiSway"
+    script.Parent = l["_Warn2"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", Warn2)
 	local RunService = game:GetService("RunService")
 	local UserInputService = game:GetService("UserInputService")
 	local TweenService = game:GetService("TweenService")
@@ -1306,10 +1439,22 @@ coroutine.wrap(function()
 		ParentOffset = UDim2.fromOffset(X.Value.Value, Y.Value.Value)
 		Parent.Position = ParentPosition + ParentOffset
 	end)
-end)()
+end
+local function WIGVIJ_fake_script() -- Fake Script: Workspace.SGUI.CheatButton.Frame.Page.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_Page"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", Page)
+	local InS = game:GetService("UserInputService")
+	
 	local function createGuiPages(parent)
 		local function mathfloor(var)
 			return math.floor((workspace.CurrentCamera.CFrame.Position - var.CFrame.Position).magnitude)
@@ -1362,7 +1507,6 @@ coroutine.wrap(function()
 		end
 	end
 	
-	
 	script.Parent.MouseButton1Click:Connect(function()
 		if game.Workspace.MAP.Pages ~= nil and game.Workspace.MAP.HPageSpawns ~= nil then
 			local model1 = game.Workspace.MAP.Pages
@@ -1387,12 +1531,53 @@ coroutine.wrap(function()
 			end
 		end
 	end)
-end)()
+			
+	InS.InputBegan:Connect(function(input, GPE)
+		if input.KeyCode == Enum.KeyCode.Z then
+			if game.Workspace.MAP.Pages ~= nil and game.Workspace.MAP.HPageSpawns ~= nil then
+				local model1 = game.Workspace.MAP.Pages
+				for _, v in pairs(model1:GetChildren()) do
+					createGuiPages(v)
+					v.Changed:Connect(function()
+						if v.Transparency == 1 then
+							local BGui = v.BillboardGui
+							BGui:Destroy()
+						end
+					end)
+				end
+				local model2 = game.Workspace.MAP.HPageSpawns
+				for _, v in pairs(model2:GetChildren()) do
+					createGuiPages(v)
+					v.Changed:Connect(function()
+						if v.Transparency == 1 then
+							local BGui = v.BillboardGui
+							BGui:Destroy()
+						end
+					end)
+				end
+			end
+		end
+	end)
+		
+end
+local function EWFYSRP_fake_script() -- Fake Script: Workspace.SGUI.CheatButton.Frame.Slender.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_Slender"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", Slender)
+	local InS = game:GetService("UserInputService")
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
+		local slndr = game.ReplicatedStorage.GameValues.lastslender
 		
 		ESP.Tracers = false
 		ESP.Players = false
@@ -1400,8 +1585,8 @@ coroutine.wrap(function()
 		ESP.Boxes = true
 		ESP:Toggle(true)
 		
-		for _, v in pairs(workspace:GetDescendants()) do 
-			if v:IsA("Model") and v.Name == "SlenderProp" and v.Parent then
+		for x,v in pairs(workspace:GetChildren()) do 
+			if (slndr.Value == v.Name) then
 				ESP:AddObjectListener(v, {
 					Name = "SlenderProp",
 					CustomName = "SLENDY",
@@ -1413,10 +1598,49 @@ coroutine.wrap(function()
 		
 		ESP.slender = true
 	end)
-end)()
+	
+	InS.InputBegan:Connect(function(input, GPE)
+		if input.KeyCode == Enum.KeyCode.X then
+			local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
+			local slndr = game.ReplicatedStorage.GameValues.lastslender
+	
+			ESP.Tracers = false
+			ESP.Players = false
+			ESP.Names = true
+			ESP.Boxes = true
+			ESP:Toggle(true)
+	
+			for x,v in pairs(workspace:GetChildren()) do 
+				if (slndr.Value == v.Name) then
+					ESP:AddObjectListener(v, {
+						Name = "SlenderProp",
+						CustomName = "SLENDY",
+						Color = Color3.fromRGB(255,0,0),
+						IsEnabled = "slender"
+					})
+				end
+			end
+	
+			ESP.slender = true
+		end
+	end)
+		
+end
+local function CWJQ_fake_script() -- Fake Script: Workspace.SGUI.CheatButton.Frame.Generator.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_Generator"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", Generator)
+	local InS = game:GetService("UserInputService")
+	
 	local function createGuiGens(parent)
 		local BGui = Instance.new("BillboardGui")
 		BGui.Parent = parent
@@ -1455,10 +1679,37 @@ coroutine.wrap(function()
 			end
 		end
 	end)
-end)()
+			
+	InS.InputBegan:Connect(function(input, GPE)
+		if input.KeyCode == Enum.KeyCode.C then
+			for _, v in pairs(workspace.MAP.GENS:GetChildren()) do
+				createGuiGens(v)
+	
+				if v:FindFirstChild("On") then
+					local isOn = v.On
+	
+					isOn.Changed:Connect(function()
+						v.BillboardGui.TextLabel.Text = "Generator (Activated)"
+						v.BillboardGui.TextLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
+					end)
+				end
+			end
+		end
+	end)
+end
+local function UOTBEW_fake_script() -- Fake Script: Workspace.SGUI.CheatButton.ScrollingFrame.FullBright.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_FullBright"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", FullBright)
 	local Lighting = game.Lighting
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1468,20 +1719,40 @@ coroutine.wrap(function()
 		Lighting.GlobalShadows = false
 		Lighting.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
 	end)
-end)()
+end
+local function TBRKSKG_fake_script() -- Fake Script: Workspace.SGUI.CheatButton.ScrollingFrame.ResetCharacter.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_ResetCharacter"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", ResetCharacter)
 	local textButton = script.Parent
 	local Warn = script.Parent.Parent.Parent.Parent.Warn3
 	
 	textButton.MouseButton1Click:Connect(function()
 		Warn.Visible = true
 	end)
-end)()
+end
+local function QSXXF_fake_script() -- Fake Script: Workspace.SGUI.CheatButton.ScrollingFrame.PoopEggs.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_PoopEggs"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", PoopEggs)
 	local enable = false
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1496,10 +1767,20 @@ coroutine.wrap(function()
 			enable = false
 		end
 	end)
-end)()
+end
+local function ULSN_fake_script() -- Fake Script: Workspace.SGUI.CheatButton.ScrollingFrame.UndetectedSpeedHack.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_UndetectedSpeedHack"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", UndetectedSpeedHack)
 	local enable = false
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1516,20 +1797,40 @@ coroutine.wrap(function()
 			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 14
 		end
 	end)
-end)()
+end
+local function UCPHJV_fake_script() -- Fake Script: Workspace.SGUI.CheatButton.ScrollingFrame.ImmuneAgainstSlender.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_ImmuneAgainstSlender"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", ImmuneAgainstSlender)
 	local textButton = script.Parent
 	local Warn = script.Parent.Parent.Parent.Parent.Warn2
 	
 	textButton.MouseButton1Click:Connect(function()
 		Warn.Visible = true
 	end)
-end)()
+end
+local function NRGDB_fake_script() -- Fake Script: Workspace.SGUI.CheatButton.SoundSystem
+    local script = Instance.new("LocalScript")
+    script.Name = "SoundSystem"
+    script.Parent = l["_CheatButton"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", CheatButton)
 	local aud = Instance.new("Sound", game.ReplicatedStorage)
 	aud.SoundId = "rbxassetid://2202103138"
 	aud:Play()
@@ -1548,10 +1849,20 @@ coroutine.wrap(function()
 			end)
 		end
 	end
-end)()
+end
+local function CEQIHL_fake_script() -- Fake Script: Workspace.SGUI.CheatButton.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_CheatButton"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", CheatButton)
 	local enabled = true
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1565,10 +1876,20 @@ coroutine.wrap(function()
 			script.Parent.ClipsDescendants = false
 		end
 	end)
-end)()
+end
+local function VMQAB_fake_script() -- Fake Script: Workspace.SGUI.CheatButton.ScrollingFrame.DestroyGUI.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_DestroyGUI"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", DestroyGUI)
 	local textButton = script.Parent
 	local plr = game.Players.LocalPlayer
 	
@@ -1584,10 +1905,20 @@ coroutine.wrap(function()
 		wait(1)
 		script.Parent.Parent.Parent.Parent:Destroy()
 	end)
-end)()
+end
+local function IVANHWQ_fake_script() -- Fake Script: Workspace.SGUI.CheatButton.ScrollingFrame.Provoke.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_Provoke"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", Provoke)
 	local TextChatService = game:GetService("TextChatService")
 	local isLegacyChat = TextChatService.ChatVersion == Enum.ChatVersion.LegacyChatService
 	
@@ -1612,39 +1943,79 @@ coroutine.wrap(function()
 	
 	
 	
-end)()
+end
+local function VXVZNH_fake_script() -- Fake Script: Workspace.SGUI.CheatButton.ScrollingFrame.Refresh.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_Refresh"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", Refresh)
 	local textButton = script.Parent
 	
 	textButton.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://pastebin.com/raw/0fPk2cXF"))()
 	end)
-end)()
+end
+local function AARXYUM_fake_script() -- Fake Script: Workspace.SGUI.CheatButton.ScrollingFrame.TrollSounds.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_TrollSounds"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", TrollSounds)
 	local textButton = script.Parent
 	local Warn = script.Parent.Parent.Parent.Parent.Warn4
 	
 	textButton.MouseButton1Click:Connect(function()
 		Warn.Visible = true
 	end)
-end)()
+end
+local function TRETCM_fake_script() -- Fake Script: Workspace.SGUI.CheatButton.ScrollingFrame.Lay.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_Lay"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", Lay_3)
 	local textButton = script.Parent
 	local Warn = script.Parent.Parent.Parent.Parent.Warn
 	
 	textButton.MouseButton1Click:Connect(function()
 		Warn.Visible = true
 	end)
-end)()
+end
+local function VBZJNR_fake_script() -- Fake Script: Workspace.SGUI.UsersOnJoin
+    local script = Instance.new("LocalScript")
+    script.Name = "UsersOnJoin"
+    script.Parent = l["_SGUI"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", SGUI)
 	local screenGui = script.Parent
 	local noticerLabel = screenGui:FindFirstChild("Noticer")
 	
@@ -1659,28 +2030,58 @@ coroutine.wrap(function()
 		noticerLabel.TextColor3 = Color3.fromRGB(170, 0, 0)
 		noticerLabel.Text = player.Name .. " has left"
 	end)
-end)()
+end
+local function XKTMII_fake_script() -- Fake Script: Workspace.SGUI.Noticer.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_Noticer"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", Noticer)
 	local textLabel = script.Parent
 	
 	textLabel.Changed:Connect(function()
 		task.wait(3)
 		textLabel.Visible = false
 	end)
-end)()
+end
+local function HBXH_fake_script() -- Fake Script: Workspace.SGUI.Interfacedit
+    local script = Instance.new("LocalScript")
+    script.Name = "Interfacedit"
+    script.Parent = l["_SGUI"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", SGUI)
 	if game:IsLoaded() then
 		game.ReplicatedStorage.UI.Citizens.CitizenIntro.Enabled = false
 		game.ReplicatedStorage.UI.Citizens.CitizenGui.LimitY:Destroy()
 	end
-end)()
+end
+local function PEKYJI_fake_script() -- Fake Script: Workspace.SGUI.AutoC
+    local script = Instance.new("LocalScript")
+    script.Name = "AutoC"
+    script.Parent = l["_SGUI"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", SGUI)
 	local StarterGui = game:GetService("StarterGui")
 	local chat = Enum.CoreGuiType.Chat
 	local coreGuiType2 = chat
@@ -1692,26 +2093,56 @@ coroutine.wrap(function()
 	end
 	
 	
-end)()
+end
+local function HKPFN_fake_script() -- Fake Script: Workspace.SGUI.Warn3.Yes.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_Yes2"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", Yes_3)
 	script.Parent.MouseButton1Click:Connect(function()
 		game.Players.LocalPlayer.Character.Humanoid.Health = 0
 		
 		script.Parent.Parent.Visible = false
 	end)
-end)()
+end
+local function WIMHONM_fake_script() -- Fake Script: Workspace.SGUI.Warn3.No.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_No2"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", No_4)
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
-end)()
+end
+local function NWDSTZ_fake_script() -- Fake Script: Workspace.SGUI.Warn3.GuiSway
+    local script = Instance.new("LocalScript")
+    script.Name = "GuiSway"
+    script.Parent = l["_Warn3"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", Warn3)
 	local RunService = game:GetService("RunService")
 	local UserInputService = game:GetService("UserInputService")
 	local TweenService = game:GetService("TweenService")
@@ -1763,10 +2194,20 @@ coroutine.wrap(function()
 		ParentOffset = UDim2.fromOffset(X.Value.Value, Y.Value.Value)
 		Parent.Position = ParentPosition + ParentOffset
 	end)
-end)()
+end
+local function DQMIP_fake_script() -- Fake Script: Workspace.SGUI.HolderInfo
+    local script = Instance.new("LocalScript")
+    script.Name = "HolderInfo"
+    script.Parent = l["_SGUI"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", SGUI)
 	local screenGui = script.Parent
 	
 	for _, v in pairs(screenGui:GetDescendants()) do
@@ -1817,10 +2258,20 @@ coroutine.wrap(function()
 			end)
 		end
 	end
-end)()
+end
+local function MENC_fake_script() -- Fake Script: Workspace.SGUI.Warn4.Yes.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_Yes3"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", Yes_4)
 	local enabled = false
 	local PlayAllSounds = function()
 		for _, sound in next, game:GetDescendants() do
@@ -1849,17 +2300,37 @@ coroutine.wrap(function()
 			script.Parent.Parent.Visible = false
 		end
 	end)
-end)()
+end
+local function EOQN_fake_script() -- Fake Script: Workspace.SGUI.Warn4.No.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_No3"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", No_5)
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
-end)()
+end
+local function PNKF_fake_script() -- Fake Script: Workspace.SGUI.Warn4.GuiSway
+    local script = Instance.new("LocalScript")
+    script.Name = "GuiSway"
+    script.Parent = l["_Warn4"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", Warn4)
 	local RunService = game:GetService("RunService")
 	local UserInputService = game:GetService("UserInputService")
 	local TweenService = game:GetService("TweenService")
@@ -1911,36 +2382,76 @@ coroutine.wrap(function()
 		ParentOffset = UDim2.fromOffset(X.Value.Value, Y.Value.Value)
 		Parent.Position = ParentPosition + ParentOffset
 	end)
-end)()
+end
+local function OTQMVU_fake_script() -- Fake Script: Workspace.SGUI.AccountAge.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_AccountAge"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", AccountAge)
 	local player = game.Players.LocalPlayer
 	
 	repeat
 		script.Parent.Text  = "Account Age: " .. player.AccountAge
 		task.wait()
 	until false
-end)()
+end
+local function PWXXI_fake_script() -- Fake Script: Workspace.SGUI.Pages.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_Pages"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", Pages)
 	local plr = game.Players.LocalPlayer
 	local tha = plr.leaderstats["Total Pages"]
 	local sp = script.Parent
 	
 	while task.wait() do
-		script.Parent.Text = "TOTAL PAGES: " .. tha.Value
+		script.Parent.Text = "Total Pages: " .. tha.Value
 	end
-end)()
+end
+local function MFQUXFI_fake_script() -- Fake Script: Workspace.SGUI.Versi0n.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_Versi0n"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", Versi0n)
 	script.Parent.Text = "Hack Version: " .. ver
-end)()
+end
+local function VOZT_fake_script() -- Fake Script: Workspace.SGUI.WhoIsSlender.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = l["_WhoIsSlender"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", WhoIsSlender)
 	local GameValues = game.ReplicatedStorage.GameValues
 	local Players = game:GetService("Players")
 	
@@ -1958,10 +2469,20 @@ coroutine.wrap(function()
 	
 	GameValues.lastslender.Changed:Connect(checkPlayerUsername)
 	
-end)()
+end
+local function OZWEM_fake_script() -- Fake Script: Workspace.SGUI.RepositionInfoTeller
+    local script = Instance.new("LocalScript")
+    script.Name = "RepositionInfoTeller"
+    script.Parent = l["_SGUI"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(function()
-	local script = Instance.new("LocalScript", SGUI)
 	local CB = script.Parent.CheatButton
 	local IT = script.Parent.InfoTeller
 	
@@ -1972,4 +2493,48 @@ coroutine.wrap(function()
 			IT.Position = UDim2.new(1, 0, 0, 150)
 		end
 	end)
-end)()
+end
+
+coroutine.wrap(FBURAE_fake_script)()
+coroutine.wrap(XSHXWWY_fake_script)()
+coroutine.wrap(NSMQIVC_fake_script)()
+coroutine.wrap(MBPR_fake_script)()
+coroutine.wrap(AHURT_fake_script)()
+coroutine.wrap(VQKU_fake_script)()
+coroutine.wrap(NGWLFOM_fake_script)()
+coroutine.wrap(HOZWETD_fake_script)()
+coroutine.wrap(XMWGFCK_fake_script)()
+coroutine.wrap(JZUZVW_fake_script)()
+coroutine.wrap(KKFES_fake_script)()
+coroutine.wrap(ORNFXG_fake_script)()
+coroutine.wrap(WIGVIJ_fake_script)()
+coroutine.wrap(EWFYSRP_fake_script)()
+coroutine.wrap(CWJQ_fake_script)()
+coroutine.wrap(UOTBEW_fake_script)()
+coroutine.wrap(TBRKSKG_fake_script)()
+coroutine.wrap(QSXXF_fake_script)()
+coroutine.wrap(ULSN_fake_script)()
+coroutine.wrap(UCPHJV_fake_script)()
+coroutine.wrap(NRGDB_fake_script)()
+coroutine.wrap(CEQIHL_fake_script)()
+coroutine.wrap(VMQAB_fake_script)()
+coroutine.wrap(IVANHWQ_fake_script)()
+coroutine.wrap(VXVZNH_fake_script)()
+coroutine.wrap(AARXYUM_fake_script)()
+coroutine.wrap(TRETCM_fake_script)()
+coroutine.wrap(VBZJNR_fake_script)()
+coroutine.wrap(XKTMII_fake_script)()
+coroutine.wrap(HBXH_fake_script)()
+coroutine.wrap(PEKYJI_fake_script)()
+coroutine.wrap(HKPFN_fake_script)()
+coroutine.wrap(WIMHONM_fake_script)()
+coroutine.wrap(NWDSTZ_fake_script)()
+coroutine.wrap(DQMIP_fake_script)()
+coroutine.wrap(MENC_fake_script)()
+coroutine.wrap(EOQN_fake_script)()
+coroutine.wrap(PNKF_fake_script)()
+coroutine.wrap(OTQMVU_fake_script)()
+coroutine.wrap(PWXXI_fake_script)()
+coroutine.wrap(MFQUXFI_fake_script)()
+coroutine.wrap(VOZT_fake_script)()
+coroutine.wrap(OZWEM_fake_script)()
