@@ -2066,7 +2066,11 @@ local function HBXH_fake_script() -- Fake Script: Workspace.SGUI.Interfacedit
 
 	if game:IsLoaded() then
 		game.ReplicatedStorage.UI.Citizens.CitizenIntro.Enabled = false
-		game.ReplicatedStorage.UI.Citizens.CitizenGui.LimitY:Destroy()
+		local brws = game.ReplicatedStorage.UI.Citizens.CitizenGui:FindFirstChild("LimitY")
+
+        if brws then
+            brws:Destroy()
+        end 
 	end
 end
 local function PEKYJI_fake_script() -- Fake Script: Workspace.SGUI.AutoC
@@ -2398,10 +2402,9 @@ local function OTQMVU_fake_script() -- Fake Script: Workspace.SGUI.AccountAge.Lo
 
 	local player = game.Players.LocalPlayer
 	
-	repeat
+	while wait() do
 		script.Parent.Text  = "Account Age: " .. player.AccountAge
-		task.wait()
-	until false
+    end
 end
 local function PWXXI_fake_script() -- Fake Script: Workspace.SGUI.Pages.LocalScript
     local script = Instance.new("LocalScript")
@@ -2420,7 +2423,7 @@ local function PWXXI_fake_script() -- Fake Script: Workspace.SGUI.Pages.LocalScr
 	local tha = plr.leaderstats["Total Pages"]
 	local sp = script.Parent
 	
-	while task.wait() do
+	while wait() do
 		script.Parent.Text = "Total Pages: " .. tha.Value
 	end
 end
